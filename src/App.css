@@ -1,6 +1,6 @@
 /* Filename: App.css */
 
-.app
+/*.app
 {
     display: flex;
     flex-direction: column;
@@ -9,6 +9,17 @@
     background: linear-gradient(135deg, #0f172a, #1e293b);
     color: #f1f5f9;
     font-family: 'Inter', sans-serif;
+}*/
+
+.app
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #1a0f29, #0d0815 80%);
+    overflow: hidden;
 }
 
 .app-header
@@ -19,14 +30,14 @@
     color: #facc15;
 }
 
-main
+/*main
 {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
-}
+}*/
 
 .app-footer
 {

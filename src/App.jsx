@@ -11,15 +11,7 @@ function App()
 {
   return (
     <div className="app">
-      <header className="app-header">
-        <h1>Analog Clock</h1>
-      </header>
-      <main>
-        <AnalogClock />
-      </main>
-      <footer className="app-footer">
-        <p>Built with React and Vite | Hosted on GitHub Pages</p>
-      </footer>
+      <AnalogClock />
     </div>
   );
 }

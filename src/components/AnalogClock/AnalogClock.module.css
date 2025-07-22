@@ -1,52 +1,57 @@
-/* AnalogClock.module.css */
+/* Filename: AnalogClock.module.css */
 
 .clockContainer
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3rem;
-    background: radial-gradient(ellipse at center, #100c2a 0%, #090613 100%);
-    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
-    z-index: 10;
-}
-
-.clockFace
-{
-    position: relative;
-    width: min(90vmin, 38rem);
-    height: min(90vmin, 38rem);
-    border-radius: 50%;
-    background: radial-gradient(circle at 32% 32%, #1c153b, #0f0a1e 70%);
-    box-shadow:
-      0 0 80px rgba(212, 175, 55, 0.4),
-      inset 0 0 30px rgba(0, 0, 0, 0.75),
-      inset 0 0 80px rgba(255, 255, 255, 0.04);
-    border: 8px double transparent;
-    border-image: linear-gradient(145deg, #facc15, #fef3c7, #eab308) 1;
+    /*padding: 3rem;*/
+    width: 100vw;
+    height: 100vw;
+    background: radial-gradient(circle at center, #1a0f29 0%, #0d0815 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    /*box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
+    z-index: 10;*/
     overflow: hidden;
 }
 
+/* Main Clock Face. */
+.clockFace
+{
+    position: relative;
+    width: min(95vmin, 95vmin);
+    height: min(95vmin, 95vmin);
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #1f1637, #0a0814 70%);
+    border: 12px double transparent;
+    border-image: linear-gradient(145deg, #f5d76e, #fff3c7, #cfae3d) 1;
+    box-shadow:
+      0 0 120px rgba(212, 175, 55, 0.7),
+      inset 0 0 40px rgba(0, 0, 0, 0.85),
+      inset 0 0 100px rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glass Overlay with Shimmer Visual Effects. */
 .glassOverlay
 {
     position: absolute;
     inset: 0;
     border-radius: 50%;
     background: radial-gradient(
-        circle at 30% 30%,
-        rgba(255, 255, 255, 0.12),
-        rgba(255, 255, 255, 0.04) 40%,
-        transparent 70%);
-    backdrop-filter: blur(2px);
+        circle at 40% 40%,
+        rgba(255, 255, 255, 0.15),
+        rgba(255, 255, 255, 0.05) 50%,
+        transparent 80%);
+    backdrop-filter: blur(3px);
     pointer-events: none;
+    z-index: 5;
 }
 
-.ticks
-{
-    width: 100%;
-    height: 100%;
-}
-
+/* Ticks. */
 .tick
 {
     stroke: #fef9c3;
@@ -54,51 +59,52 @@
     transition: stroke 0.3s, stroke-width 0.3s;
 }
 
-/* Golden hour ticks... */
-/*.tick:nth-of-type(5n)
+/*.tick
 {
-    stroke-width: 4;
-    stroke: #ffe66d;
-    filter: drop-shadow(0 0 4px rgba(255, 214, 10, 0.4));
+    stroke: #fef9c3;
+    stroke-width: 1.75;
+    transition: stroke 0.3s, stroke-width 0.3s;
 }*/
 
 /* Golden hour ticks... */
 .hourTick
 {
-    stroke-width: 4;
+    stroke-width: 6;
     stroke: #ffe66d;
-    filter: drop-shadow(0 0 4px rgba(255, 214, 10, 0.4));
+    filter: drop-shadow(0 0 10px rgba(255, 220, 80, 0.8));
 }
 
 .active
 {
-    stroke: #facc15;
-    stroke-width: 5;
-    filter: drop-shadow(0 0 6px rgba(250, 204, 21, 0.7));
+    stroke: #ffd700;
+    stroke-width: 6;
+    filter: drop-shadow(0 0 12px rgba(255, 215, 0, 1));
     animation: pulse 0.4s ease-in-out;
 }
 
 @keyframes pulse
 {
     0% { stroke-opacity: 0.3; transform: scale(1); }
-    50% { stroke-opacity: 1; transform: scale(1.15); }
-    100% { stroke-opacity: 0.5; transform: scale(1); }
+    50% { stroke-opacity: 1; transform: scale(1.25); }
+    100% { stroke-opacity: 0.6; transform: scale(1); }
 }
 
+/* Roman Numerals Styles. */
 .numeral
 {
-    font-famly: 'Cinzel Decorative', 'Cinzel', serif;
-    font-size: 1.65rem;
-    fill: #fef9c3;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-family: 'Cinzel Decorative', 'Cinzel', serif;
+    /*font-size: 3rem;*/
+    fill: #fef3c7;
+    font-weight: 900;
+    /*letter-spacing: 1px;*/
     text-anchor: middle;
     dominant-baseline: middle;
     text-shadow:
-      0 0 6px rgba(255, 215, 0, 0.35),
-      1px 1px 2px rgba(0, 0, 0, 0.4);
+      0 0 8px rgba(255, 215, 0, 0.5),
+      2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
+/* Hands. */
 .hands
 {
     position: absolute;
@@ -126,38 +132,36 @@
 
 .hourHand
 {
-    width: 0.5rem;
-    height: 5.5rem;
-    background: linear-gradient(to bottom, #d4af37, #a67c00);
+    width: 1rem;
+    height: 8rem;
+    background: linear-gradient(to bottom, #ffd700, #a67c00);
     border-radius: 0.5rem;
-    box-shadow: 0 0 4px rgba(250, 204, 21, 0.3);
-
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
     transform: rotate(var(--hourDeg, 0deg));
 }
 
 .minuteHand
 {
-    width: 0.35rem;
-    height: 7.75rem;
-    background: linear-gradient(to bottom, #fef08a, #d97706);
+    width: 0.6rem;
+    height: 11rem;
+    background: linear-gradient(to bottom, #fef08a, #b58900);
     border-radius: 0.35rem;
-    box-shadow: 0 0 5px rgba(255, 230, 130, 0.35);
-
+    box-shadow: 0 0 10px rgba(255, 230, 130, 0.5);
     transform: rotate(var(--minuteDeg, 0deg));
 }
 
 .secondHand
 {
-    width: 0.2rem;
-    height: 9.25rem;
-    background: linear-gradient(to bottom, #f87171, #7f1d1d);
+    width: 0.3rem;
+    height: 13rem;
+    background: linear-gradient(to bottom, #ff4444, #7f1d1d);
     border-radius: 0.2rem;
-    box-shadow: 0 0 6px rgba(255, 128, 128, 0.3);
-    transition: transform 0.1s linear;
-
+    box-shadow: 0 0 12px rgba(255, 80, 80, 0.8);
     transform: rotate(var(--secondDeg, 0deg));
+    transition: transform 0.1s linear;
 }
 
+/* Tick Ring Rotation Styles. */
 .tickRing
 {
     transform: rotate(-90deg);
