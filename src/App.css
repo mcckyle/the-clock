@@ -1,16 +1,5 @@
 /* Filename: App.css */
 
-/*.app
-{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    text-align: center;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: #f1f5f9;
-    font-family: 'Inter', sans-serif;
-}*/
-
 .app
 {
     width: 100vw;
@@ -18,31 +7,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle at center, #1a0f29, #0d0815 80%);
+    background: radial-gradient(circle at center, #1b122a 0%, #0e0918 90%);
+    background-image:
+        radial-gradient(circle at 30% 20%, rgba(255, 223, 105, 0.05), transparent 60%),
+        radial-gradient(circle at 70% 80%, rgba(234, 179, 8, 0.05), transparent 60%);
     overflow: hidden;
 }
 
 .app-header
 {
-    padding: 1rem;
-    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
-    color: #facc15;
+    color: #fcd34d;
+    text-align: center;
+    text-shadow: 0 0 12px rgba(252, 211, 77, 0.4);
+    margin-bottom: 1rem;
 }
-
-/*main
-{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}*/
 
 .app-footer
 {
-    padding: 1rem;
     font-size: 0.875rem;
-    color: #94a3b9;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #d4d4d8;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.05em;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 0.5rem;
+    text-align: center;
 }

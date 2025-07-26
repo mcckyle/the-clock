@@ -5,11 +5,11 @@ A dedicated **Analog Clock** built with **React**, **Vite**, and styled with **C
 ---
 
 ## 🚀 Features
-- ✅ Real-time clock synchronized with your system time.
-- ✅ Classic **Roman numerals** and **animated hands** (hour, minute, second).
-- ✅ Smooth **tick highlight effect** for the current second.
-- ✅ Fully responsive layout with a **dark-themed design**.
-- ✅ Built using **React + Vite** for speed and simplicity.
+- Real-time clock synchronized with your system time.
+- Classic **Roman numerals** and **animated hands** (hour, minute, second).
+- Smooth **tick highlight effect** for the current second.
+- Fully responsive layout with a **dark-themed design**.
+- Built using **React + Vite** for speed and simplicity.
 
 ---
 

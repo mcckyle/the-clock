@@ -5,34 +5,84 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /*padding: 3rem;*/
     width: 100vw;
     height: 100vw;
     background: radial-gradient(circle at center, #1a0f29 0%, #0d0815 100%);
     background-attachment: fixed;
     background-size: cover;
-    /*box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
-    z-index: 10;*/
     overflow: hidden;
+}
+
+.clockContainer:hover .clockFace
+{
+    box-shadow:
+      0 0 14px rgba(255, 220, 80, 0.45),
+      inset 0 0 55px rgba(0, 0, 0, 0.9),
+      inset 0 0 120px rgba(255, 255, 255, 0.1);
 }
 
 /* Main Clock Face. */
 .clockFace
 {
     position: relative;
-    width: min(95vmin, 95vmin);
-    height: min(95vmin, 95vmin);
+    width: min(95vmin, 46rem);
+    height: min(95vmin, 46rem);
     border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, #1f1637, #0a0814 70%);
-    border: 12px double transparent;
-    border-image: linear-gradient(145deg, #f5d76e, #fff3c7, #cfae3d) 1;
+    background:
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.01) 0px 1px, transparent 1px 4px),
+        radial-gradient(circle at 30% 30%, #1a122a, #090510 80%);
+    border: 14px solid transparent;
+    border-image: linear-gradient(135deg, #f5d76e, #fff9e6, #d4af37) 1;
     box-shadow:
-      0 0 120px rgba(212, 175, 55, 0.7),
-      inset 0 0 40px rgba(0, 0, 0, 0.85),
-      inset 0 0 100px rgba(255, 255, 255, 0.08);
+      0 0 120px rgba(234, 179, 8, 0.35),
+      inset 0 0 45px rgba(0, 0, 0, 0.8),
+      inset 0 0 100px rgba(255, 255, 255, 0.06);
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+
+    transition: box-shadow 0.8s ease, background 0.8s ease;
+}
+
+.clockFace::before
+{
+    content: "";
+    position: absolute;
+    inset: -10%;
+    background: repeating-conic-gradient(
+        from 0deg,
+        rgba(234, 179, 8, 0.06) 0deg 4deg,
+        transparent 4deg 8deg
+    ),
+    repeating-conic-gradient(
+        from 1deg,
+        rgba(212, 175, 55, 0.03) 0deg 2deg,
+        transparent 2deg 6deg
+    );
+    z-index: 0;
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.8) 65%, transparent 100%);
+    opacity: 0.8;
+}
+
+.clockFace::after
+{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, rgba(255, 255, 255, 0.08) 0deg, transparent 60deg),
+                repeating-conic-gradient(from 0deg, rgba(255, 255, 255, 0.015) 0deg 3deg, transparent 3deg 6deg),
+                radial-gradient(circle at center, transparent 78%, rgba(245, 215, 110, 0.2) 79%, transparent 81%);
+    animation: slowRotate 20s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes slowRotate
+{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 /* Glass Overlay with Shimmer Visual Effects. */
@@ -59,19 +109,24 @@
     transition: stroke 0.3s, stroke-width 0.3s;
 }
 
-/*.tick
-{
-    stroke: #fef9c3;
-    stroke-width: 1.75;
-    transition: stroke 0.3s, stroke-width 0.3s;
-}*/
-
 /* Golden hour ticks... */
 .hourTick
 {
     stroke-width: 6;
     stroke: #ffe66d;
     filter: drop-shadow(0 0 10px rgba(255, 220, 80, 0.8));
+}
+
+.hourTick::after
+{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #fffbe6, #d4af37);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
 }
 
 .active
@@ -93,10 +148,8 @@
 .numeral
 {
     font-family: 'Cinzel Decorative', 'Cinzel', serif;
-    /*font-size: 3rem;*/
     fill: #fef3c7;
     font-weight: 900;
-    /*letter-spacing: 1px;*/
     text-anchor: middle;
     dominant-baseline: middle;
     text-shadow:
@@ -109,6 +162,32 @@
 {
     position: absolute;
     inset: 0;
+}
+
+.hands::after
+{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff9e6 20%, #d4af37 70%, #a67c00 100%);
+    box-shadow:
+        0 0 8px rgba(255, 255, 240, 0.5),
+        inset 0 0 8px rgba(0, 0, 0, 0.5);
+    border: 2px solid #fcd34d;
+    z-index: 10;
+
+    animation: centerPulse 6s ease-in-out infinite;
+}
+
+@keyframes centerPulse
+{
+    0%, 100% { box-shadow: 0 0 8px rgba(255, 255, 240, 0.5), inset 0 0 8px rgba(0, 0, 0, 0.5); }
+    50% { box-shadow: 0 0 14px rgba(255, 245, 200, 0.8), inset 0 0 10px rgba(0, 0, 0, 0.6); }
 }
 
 .handWrapper
@@ -132,19 +211,19 @@
 
 .hourHand
 {
-    width: 1rem;
-    height: 8rem;
-    background: linear-gradient(to bottom, #ffd700, #a67c00);
-    border-radius: 0.5rem;
-    box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+    width: 1.2rem;
+    height: 7.5rem;
+    background: linear-gradient(to bottom, #fff6cc 0%, #f5d76e 40%, #a67c00 100%);
+    border-radius: 0.6rem;
+    box-shadow: 0 0 8px rgba(252, 211, 77, 0.65);
     transform: rotate(var(--hourDeg, 0deg));
 }
 
 .minuteHand
 {
-    width: 0.6rem;
-    height: 11rem;
-    background: linear-gradient(to bottom, #fef08a, #b58900);
+    width: 0.8rem;
+    height: 10rem;
+    background: linear-gradient(to bottom, #fff9e6 0%, #fcd34d 50%, #b8860b 100%);
     border-radius: 0.35rem;
     box-shadow: 0 0 10px rgba(255, 230, 130, 0.5);
     transform: rotate(var(--minuteDeg, 0deg));
@@ -152,11 +231,11 @@
 
 .secondHand
 {
-    width: 0.3rem;
-    height: 13rem;
-    background: linear-gradient(to bottom, #ff4444, #7f1d1d);
+    width: 0.35rem;
+    height: 12rem;
+    background: linear-gradient(to bottom, #d946ef, #701a75);
     border-radius: 0.2rem;
-    box-shadow: 0 0 12px rgba(255, 80, 80, 0.8);
+    box-shadow: 0 0 8px rgba(217, 70, 239, 0.65);
     transform: rotate(var(--secondDeg, 0deg));
     transition: transform 0.1s linear;
 }
