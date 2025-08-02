@@ -10,17 +10,27 @@
 /* Ticks. */
 .tick
 {
-    stroke: #fef9c3;
-    stroke-width: 1.75;
-    transition: stroke 0.3s, stroke-width 0.3s;
+    stroke: #fef6c9;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    opacity: 0.85;
+
+    transition: stroke 0.4s ease, stroke-width 0.3s ease;
 }
 
 /* Golden hour ticks... */
 .hourTick
 {
-    stroke-width: 6;
-    stroke: #ffe66d;
-    filter: drop-shadow(0 0 10px rgba(255, 220, 80, 0.8));
+    stroke: #ffd700;
+    stroke-width: 3.5;
+    filter: drop-shadow(0 0 2px rgba(255, 225, 100, 0.5));
+}
+
+.quarterTick
+{
+    stroke: #f5c542;
+    stroke-width: 5;
+    filter: drop-shadow(0 0 4px rgba(245, 197, 66, 0.7));
 }
 
 .hourTick::after
