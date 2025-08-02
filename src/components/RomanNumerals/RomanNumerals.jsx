@@ -3,7 +3,7 @@
 //Date: 01 August 2025
 //Description: This file contains the numerals component for the React clock site.
 
-import styles from '../AnalogClock/AnalogClock.module.css';
+import styles from './RomanNumerals.module.css';
 
 const ROMAN = [
     "XII","I","II","III","IV","V",

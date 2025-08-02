@@ -79,12 +79,6 @@
     pointer-events: none;
 }
 
-@keyframes slowRotate
-{
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
 /* Glass Overlay with Shimmer Visual Effects. */
 .glassOverlay
 {
@@ -101,34 +95,6 @@
     z-index: 5;
 }
 
-/* Ticks. */
-.tick
-{
-    stroke: #fef9c3;
-    stroke-width: 1.75;
-    transition: stroke 0.3s, stroke-width 0.3s;
-}
-
-/* Golden hour ticks... */
-.hourTick
-{
-    stroke-width: 6;
-    stroke: #ffe66d;
-    filter: drop-shadow(0 0 10px rgba(255, 220, 80, 0.8));
-}
-
-.hourTick::after
-{
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: radial-gradient(circle, #fffbe6, #d4af37);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
-}
-
 .active
 {
     stroke: #ffd700;
@@ -137,114 +103,17 @@
     animation: pulse 0.4s ease-in-out;
 }
 
+@keyframes slowRotate
+{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 @keyframes pulse
 {
     0% { stroke-opacity: 0.3; transform: scale(1); }
     50% { stroke-opacity: 1; transform: scale(1.25); }
     100% { stroke-opacity: 0.6; transform: scale(1); }
-}
-
-/* Roman Numerals Styles. */
-.numeral
-{
-    font-family: 'Cinzel Decorative', 'Cinzel', serif;
-    fill: #fef3c7;
-    font-weight: 900;
-    text-anchor: middle;
-    dominant-baseline: middle;
-    text-shadow:
-      0 0 8px rgba(255, 215, 0, 0.5),
-      2px 2px 6px rgba(0, 0, 0, 0.8);
-}
-
-/* Hands. */
-.hands
-{
-    position: absolute;
-    inset: 0;
-}
-
-.hands::after
-{
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    background: radial-gradient(circle, #fff9e6 20%, #d4af37 70%, #a67c00 100%);
-    box-shadow:
-        0 0 8px rgba(255, 255, 240, 0.5),
-        inset 0 0 8px rgba(0, 0, 0, 0.5);
-    border: 2px solid #fcd34d;
-    z-index: 10;
-
-    animation: centerPulse 6s ease-in-out infinite;
-}
-
-@keyframes centerPulse
-{
-    0%, 100% { box-shadow: 0 0 8px rgba(255, 255, 240, 0.5), inset 0 0 8px rgba(0, 0, 0, 0.5); }
-    50% { box-shadow: 0 0 14px rgba(255, 245, 200, 0.8), inset 0 0 10px rgba(0, 0, 0, 0.6); }
-}
-
-.handWrapper
-{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-
-    /* Pivot exaclty in the centre of the dial:
-     5 0% 50% = middle of the element itself.
-     translate(-50%, -100%) moves the rectangle so its base
-     sits on the centre point and it points UP by default. */
-    transform: translate(-50%, -100%);
-    transform-origin: 50% 100%;
-}
-
-.hands div
-{
-    transform-origin: 50% 100%;
-}
-
-.hourHand
-{
-    width: 1.2rem;
-    height: 7.5rem;
-    background: linear-gradient(to bottom, #fff6cc 0%, #f5d76e 40%, #a67c00 100%);
-    border-radius: 0.6rem;
-    box-shadow: 0 0 8px rgba(252, 211, 77, 0.65);
-    transform: rotate(var(--hourDeg, 0deg));
-}
-
-.minuteHand
-{
-    width: 0.8rem;
-    height: 10rem;
-    background: linear-gradient(to bottom, #fff9e6 0%, #fcd34d 50%, #b8860b 100%);
-    border-radius: 0.35rem;
-    box-shadow: 0 0 10px rgba(255, 230, 130, 0.5);
-    transform: rotate(var(--minuteDeg, 0deg));
-}
-
-.secondHand
-{
-    width: 0.35rem;
-    height: 12rem;
-    background: linear-gradient(to bottom, #d946ef, #701a75);
-    border-radius: 0.2rem;
-    box-shadow: 0 0 8px rgba(217, 70, 239, 0.65);
-    transform: rotate(var(--secondDeg, 0deg));
-    transition: transform 0.1s linear;
-}
-
-/* Tick Ring Rotation Styles. */
-.tickRing
-{
-    transform: rotate(-90deg);
-    transform-origin: 50% 50%;
 }
 
 @media(min-width: 1024px)
