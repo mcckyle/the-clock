@@ -30,7 +30,6 @@ export default function TickMarks()
                         className={`${styles.tick} ${i % 5 === 0 ? styles.hourTick : ''} ${
                             i % 15 === 0 ? styles.quarterTick : ''
                         }`}
-                         //${((i + 15) % 5 === 0 ? styles.hourTick : '')}`}
                     />
                 );
             })}

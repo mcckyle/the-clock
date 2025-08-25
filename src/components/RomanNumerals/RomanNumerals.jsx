@@ -16,8 +16,8 @@ export default function RomanNumerals()
         <>
             {Array.from({ length: 12 }).map((_, i) => {
                 const angle = (i * 30 - 90) * (Math.PI / 180);
-                const x = 100 + 75 * Math.cos(angle);
-                const y = 100 + 75 * Math.sin(angle);
+                const x = 100 + 70 * Math.cos(angle);
+                const y = 100 + 70 * Math.sin(angle);
 
                 return (
                     <text key = {i} x={x} y={y} className={styles.numeral}>

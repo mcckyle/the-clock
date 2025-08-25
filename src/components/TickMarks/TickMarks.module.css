@@ -10,10 +10,10 @@
 /* Ticks. */
 .tick
 {
-    stroke: #fef6c9;
-    stroke-width: 1.5;
+    stroke: #e6ddc4;
+    stroke-width: 1.2;
     stroke-linecap: round;
-    opacity: 0.85;
+    opacity: 0.8;
 
     transition: stroke 0.4s ease, stroke-width 0.3s ease;
 }
@@ -22,18 +22,20 @@
 .hourTick
 {
     stroke: #ffd700;
-    stroke-width: 3.5;
-    filter: drop-shadow(0 0 2px rgba(255, 225, 100, 0.5));
+    stroke-width: 3.2;
+    filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.5))
+            drop-shadow(0 0 6px rgba(0, 0, 0, 0.7));
 }
 
 .quarterTick
 {
     stroke: #f5c542;
-    stroke-width: 5;
-    filter: drop-shadow(0 0 4px rgba(245, 197, 66, 0.7));
+    stroke-width: 4.5;
+    filter: drop-shadow(0 0 4px rgba(245, 215, 100, 0.8))
+            drop-shadow(0 0 8px rgba(0, 0, 0, 0.6));
 }
 
-.hourTick::after
+/*.hourTick::after
 {
     content: "";
     position: absolute;
@@ -43,4 +45,4 @@
     border-radius: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
-}
+}*/

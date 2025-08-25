@@ -3,34 +3,32 @@
 /* Roman Numerals Styles. */
 .numeral
 {
-    font-family: 'Playfair Display', 'Cinzel Decorative', serif;
+    font-family: 'Cinzel', 'Playfair Display', serif;
     fill: #fff7d6;
     font-weight: 700;
-    font-size: 1.3rem;
-    letter-spacing: 0.05em;
+    font-size: 1vmin;
+    letter-spacing: 0.08em;
     text-anchor: middle;
     dominant-baseline: middle;
 
-    text-shadow:
-      0 0 2px rgba(255, 248, 220, 0.4),
-      0 0 6px rgba(218, 165, 32, 0.3),
-      1px 1px 4px rgba(0, 0, 0, 0.6);
+    paint-order: stroke;
+    stroke: rgba(0, 0, 0, 0.75);
+    stroke-width: 0.8px;
 
-    animation: subtleGlow 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.5))
+            drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
+
+    animation: imperialGlow 12s ease-in-out infinite;
 }
 
 @keyframes subtleGlow
 {
     0%, 100% {
-      text-shadow:
-        0 0 2px rgba(255, 248, 220, 0.4),
-        0 0 6px rgba(218, 165, 32, 0.3),
-        1px 1px 4px rgba(0, 0, 0, 0.6);
+        filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.5))
+                drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
     }
     50% {
-      text-shadow:
-        0 0 4px rgba(255, 248, 220, 0.7),
-        0 0 8px rgba(255, 215, 0, 0.5),
-        1px 1px 4px rgba(0, 0, 0, 0.5);
+        filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.7))
+                drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
     }
 }
