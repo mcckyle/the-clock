@@ -14,6 +14,7 @@
     stroke-width: 1.2;
     stroke-linecap: round;
     opacity: 0.8;
+    filter: drop-shadow(0 0 1px rgba(212, 175, 55, 0.3));
 
     transition: stroke 0.4s ease, stroke-width 0.3s ease;
 }
@@ -22,17 +23,25 @@
 .hourTick
 {
     stroke: #ffd700;
-    stroke-width: 3.2;
+    stroke-width: 3;
     filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.5))
-            drop-shadow(0 0 6px rgba(0, 0, 0, 0.7));
+            drop-shadow(0 0 5px rgba(0, 0, 0, 0.6));
 }
 
 .quarterTick
 {
-    stroke: #f5c542;
+    stroke: #fff2b2;
     stroke-width: 4.5;
-    filter: drop-shadow(0 0 4px rgba(245, 215, 100, 0.8))
+    filter: drop-shadow(0 0 4px rgba(255, 215, 64, 0.8))
             drop-shadow(0 0 8px rgba(0, 0, 0, 0.6));
+
+    animation: tickGlow 2s ease-in-out infinite;
+}
+
+@keyframes tickGlow
+{
+    0%, 100% { stroke-opacity: 0.8; }
+    50% { stroke-opacity: 1; }
 }
 
 /*.hourTick::after

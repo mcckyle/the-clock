@@ -1,6 +1,6 @@
 /* Filename: ClockHands.module.css */
 
-/* Hands. */
+/* Hands Container Styles. */
 .hands
 {
     position: absolute;
@@ -17,8 +17,8 @@
     width: 5vmin;
     height: 5vmin;
     transform: translate(-50%, -50%);
-    border: 2px solid #a67c00;
     border-radius: 50%;
+    border: 2px solid #a67c00;
 
     background: radial-gradient(circle at 40% 40%,
         #fff8dc 0%,
@@ -35,6 +35,7 @@
     animation: centerPulse 14s ease-in-out infinite;
 }
 
+/* Pivot Wrapper For Each Hand Style. */
 .handWrapper
 {
     position: absolute;
@@ -52,6 +53,7 @@
 .hands div
 {
     transform-origin: 50% 100%;
+    border-radius: 0.5vmin;
 }
 
 .hourHand
@@ -67,7 +69,6 @@
         #e6c767 100%
     );
 
-    border-radius: 0.75vmin;
     border: 1px solid #a67c00;
     box-shadow:
         inset 0 0 5px rgba(184, 134, 11, 0.6),
@@ -88,9 +89,7 @@
         #a67c00 100%
     );
 
-    border-radius: 0.6vmin;
     border: 1px solid #b8860b;
-
     box-shadow:
         inset 0 0 4px rgba(218, 165, 32, 0.6),
         0 0 8px rgba(255, 215, 0, 0.4);
@@ -111,14 +110,11 @@
     );
 
     border-radius: 0.25vmin;
-
     box-shadow:
         0 0 8px rgba(139, 0, 0, 0.6),
         0 0 6px rgba(255, 215, 0, 0.4);
 
     transform: rotate(var(--secondDeg, 0deg));
-
-    /*transition: transform 0.1s linear;*/
 }
 
 @keyframes centerPulse

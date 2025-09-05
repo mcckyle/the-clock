@@ -4,10 +4,10 @@
 .numeral
 {
     font-family: 'Cinzel', 'Playfair Display', serif;
-    fill: #fff7d6;
+    fill: #fff7d6; /* Base Ivory Tone. */
     font-weight: 700;
-    font-size: 1vmin;
-    letter-spacing: 0.08em;
+    font-size: 1.2vmin;
+    letter-spacing: 0.1em;
     text-anchor: middle;
     dominant-baseline: middle;
 
@@ -18,17 +18,29 @@
     filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.5))
             drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
 
-    animation: imperialGlow 12s ease-in-out infinite;
+    animation: numeralGlow 15s ease-in-out infinite;
 }
 
-@keyframes subtleGlow
+.numeral:nth-child(1),
+.numeral:nth-child(4),
+.numeral:nth-child(7),
+.numeral:nth-child(10)
+{
+    fill: #ffd700;
+
+    filter: drop-shadow(0 0 4px rgba(255, 215, 64, 0.7))
+            drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.5));
+}
+
+/* Slow Gilded Shimmer Animation Styles. */
+@keyframes numeralGlow
 {
     0%, 100% {
         filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.5))
                 drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
     }
     50% {
-        filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.7))
+        filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.75))
                 drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
     }
 }

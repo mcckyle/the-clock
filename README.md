@@ -21,3 +21,48 @@ A dedicated **Analog Clock** built with **React**, **Vite**, and styled with **C
 - **GitHub Pages** – Deployment
 
 ---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/mcckyle/the-clock.git
+cd the-clock
+```
+
+Install dependencies:
+```bash
+npm install
+```
+
+Start the development server:
+```bash
+npm run dev
+```
+
+---
+
+## Deployment
+
+This project is deployed via **GitHub Pages**. You can view it live here: https://mcckyle.github.io/the-clock/
+
+---
+
+## Contributing
+
+Contributions are welcome! Feel free to fork the repo, create feature branches, and even submit some pull requests.
+
+---
+
+## License
+
+This project is open-source and available under the **MIT License**.
+
+---
+
+## Contact
+
+For questions or feedback, reach out via GitHub.
+
+---

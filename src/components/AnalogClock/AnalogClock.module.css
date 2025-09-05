@@ -7,8 +7,15 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    padding: 0;
-    background: radial-gradient(circle at center, #1a0f1a 0%, #080510 100%);
+    background:
+      radial-gradient(circle at center, #2b1a1a 0%, #0a0615 100%),
+      repeating-conic-gradient(
+          from 0deg,
+          rgba(212, 175, 55, 0.04) 0deg 8deg,
+          transparent 8deg 16deg
+    );
+
+    background-blend-mode: overlay;
 }
 
 .clockContainer::before
@@ -52,27 +59,22 @@
     border-radius: 50%;
 
     background:
-        radial-gradient(ellipse at 30% 30%, #1c1433, #07040d 80%),
-        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.012) 0px 2px, transparent 2px 6px);
+        radial-gradient(ellipse at 30% 30%, #1b1525, #080510 85%),
+        repeating-linear-gradient(90deg, rgba(255, 215, 0, 0.02) 0px 2px, transparent 2px 8px);
 
-    background-image:
-        linear-gradient(120deg, rgba(255, 255, 255, 0.05) 25%, transparent 25% 50%, rgba(255, 255, 255, 0.05) 50% 75%, transparent 75%),
-        radial-gradient(ellipse at 30% 30%, #1c1433, #07040d 80%);
-
-    border: 18px solid transparent;
-    border-image: linear-gradient(135deg, #ffd700, #fff2b2, #d4af37, #b8860b) 1;
+    border: 20px solid transparent;
 
     box-shadow:
-        0 0 200px rgba(212, 175, 55, 0.35),
-        inset 0 0 50px rgba(0, 0, 0, 0.9),
-        inset 0 0 140px rgba(255, 255, 255, 0.08);
+        0 0 180px rgba(212, 175, 55, 0.45),
+        inset 0 0 60px rgba(0, 0, 0, 0.9),
+        inset 0 0 120px rgba(255, 255, 255, 0.08);
 
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 
-    transition: box-shadow 0.8s ease, background 0.8s ease;
+    transition: box-shadow 1s ease;
 }
 
 .clockFace .shimmerLayer
@@ -176,6 +178,8 @@
     stroke: #ffd700;
     stroke-width: 5;
     filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.95));
+    transform-box: fill-box;
+    transform-origin: center;
 
     animation: pulse 0.35s ease-in-out;
 }
@@ -183,11 +187,16 @@
 .rosette
 {
     position: absolute;
-    width: 8vmin;
-    height: 8vmin;
+    width: 9vmin;
+    height: 9vmin;
     border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, #fff7d1, #ffd700, #b8860b);
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), inset 0 0 10px rgba(0, 0, 0, 0.4);
+    background: radial-gradient(circle at 30% 30%, #fff9d6, #ffd700, #b8860b 90%);
+    box-shadow:
+      0 0 25px rgba(255, 215, 0, 0.7),
+      inset 0 0 12px rgba(0, 0, 0, 0.5),
+      0 0 60px rgba(212, 175, 55, 0.45);
+
+    border: 2px solid rgba(255, 215, 0, 0.85);
     z-index: 7;
 }
 
@@ -209,13 +218,3 @@
     0% { background-position: -200% 0; }
     100% { background-position: 200% 0; }
 }
-
-/*
-@media(min-width: 1024px)
-{
-    .clockFace
-    {
-        width: min(92vmin, 42rem);
-        height: min(92vmin, 42rem);
-    }
-}*/
