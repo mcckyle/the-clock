@@ -3,44 +3,65 @@
 /* Roman Numerals Styles. */
 .numeral
 {
-    font-family: 'Cinzel', 'Playfair Display', serif;
-    fill: #fff7d6; /* Base Ivory Tone. */
+    font-family: 'Cinzel Decorative', 'Cinzel', 'Playfair Display', serif;
+    fill: #fff8dc; /* Ivory Parchment Base Tone. */
     font-weight: 700;
-    font-size: 1.2vmin;
-    letter-spacing: 0.1em;
+    font-size: 1vmin;
+    letter-spacing: 0.12em;
     text-anchor: middle;
     dominant-baseline: middle;
 
+    /* Layered Golden Bevel. */
     paint-order: stroke;
-    stroke: rgba(0, 0, 0, 0.75);
-    stroke-width: 0.8px;
+    stroke: rgba(0, 0, 0, 0.8);
+    stroke-width: 0.9px;
 
-    filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.5))
-            drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
+    text-shadow:
+      0 0 2px rgba(255, 255, 200, 0.8),
+      0 0 5px rgba(212, 175, 55, 0.6),
+      1px 1px 1px rgba(0, 0, 0, 0.7);
 
-    animation: numeralGlow 15s ease-in-out infinite;
+    filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.6));
+
+    transition: transform 0.3s ease, fill 0.3s ease;
 }
 
-.numeral:nth-child(1),
-.numeral:nth-child(4),
-.numeral:nth-child(7),
-.numeral:nth-child(10)
+.numeral:hover
 {
     fill: #ffd700;
+    transform: scale(1.15);
+    text-shadow:
+      0 0 4px rgba(255, 215, 64, 0.95),
+      0 0 10px rgba(255, 215, 64, 0.65),
+      1px 1px 2px rgba(0, 0, 0, 0.7);
+}
 
-    filter: drop-shadow(0 0 4px rgba(255, 215, 64, 0.7))
-            drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.5));
+/* Highlight Cardinal Numbers Styles. */
+.numeral:nth-child(1), /* XII. */
+.numeral:nth-child(4), /* III. */
+.numeral:nth-child(7), /* VI. */
+.numeral:nth-child(10) /* IX. */
+{
+    fill: #ffd700;
+    font-size: 1.4vmin;
+    text-shadow:
+      0 0 6px rgba(255, 223, 120, 0.9),
+      0 0 14px rgba(212, 175, 55, 0.7),
+      2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 /* Slow Gilded Shimmer Animation Styles. */
 @keyframes numeralGlow
 {
     0%, 100% {
-        filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.5))
-                drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
+        filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.6));
     }
     50% {
-        filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.75))
-                drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+        filter: drop-shadow(0 0 6px rgba(255, 215, 64, 0.85));
     }
+}
+
+.numeral
+{
+    animation: numeralGlow 12s ease-in-out infinite;
 }

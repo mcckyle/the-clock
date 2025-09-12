@@ -8,49 +8,47 @@
     width: 100vw;
     height: 100vh;
     background:
-      radial-gradient(circle at center, #2b1a1a 0%, #0a0615 100%),
+      radial-gradient(circle at center, #241731 0%, #0a0615 100%),
       repeating-conic-gradient(
           from 0deg,
-          rgba(212, 175, 55, 0.04) 0deg 8deg,
-          transparent 8deg 16deg
+          rgba(212, 175, 55, 0.05) 0deg 10deg,
+          transparent 10deg 20deg
     );
-
     background-blend-mode: overlay;
+    position: relative;
 }
 
 .clockContainer::before
 {
     content: "";
     position: absolute;
-    width: 140vmin;
-    height: 140vmin;
+    width: 150vmin;
+    height: 150vmin;
     border-radius: 50%;
-
     background: repeating-conic-gradient(
         from 0deg,
-        rgba(212, 175, 55, 0.025) 0deg 4deg,
-        transparent 4deg 12deg
+        rgba(212, 175, 55, 0.025) 0deg 5deg,
+        transparent 5deg 15deg
     );
 
-    z-index: 0;
-    opacity: 0.35;
-    filter: blur(2px);
+    opacity: 0.4;
+    filter: blur(3px);
     pointer-events: none;
 }
 
 .clockContainer:hover .clockFace
 {
     box-shadow:
-        0 0 40px rgba(255, 215, 64, 0.8),
-        0 0 160px rgba(212, 175, 55, 0.45),
-        inset 0 0 100px rgba(0, 0, 0, 0.85),
-        inset 0 0 180px rgba(255, 255, 255, 0.07);
+        0 0 50px rgba(255, 215, 64, 0.9),
+        0 0 200px rgba(212, 175, 55, 0.5),
+        inset 0 0 120px rgba(0, 0, 0, 0.85),
+        inset 0 0 200px rgba(255, 255, 255, 0.08);
 
-    transform: scale(1.02);
-    transition: transform 0.6s ease, box-shadow 1.2s ease;
+    transform: scale(1.025);
+    transition: transform 0.6s ease, box-shadow 1.3s ease;
 }
 
-/* Main Clock Face. */
+/* Main Clock Face Styles. */
 .clockFace
 {
     position: relative;
@@ -59,22 +57,22 @@
     border-radius: 50%;
 
     background:
-        radial-gradient(ellipse at 30% 30%, #1b1525, #080510 85%),
-        repeating-linear-gradient(90deg, rgba(255, 215, 0, 0.02) 0px 2px, transparent 2px 8px);
+        radial-gradient(ellipse at 35% 35%, #1b1525, #080510 85%),
+        repeating-linear-gradient(90deg, rgba(255, 215, 0, 0.025) 0px 2px, transparent 2px 10px);
 
-    border: 20px solid transparent;
+    border: 22px solid transparent;
 
     box-shadow:
-        0 0 180px rgba(212, 175, 55, 0.45),
-        inset 0 0 60px rgba(0, 0, 0, 0.9),
-        inset 0 0 120px rgba(255, 255, 255, 0.08);
+        0 0 220px rgba(212, 175, 55, 0.45),
+        inset 0 0 80px rgba(0, 0, 0, 0.92),
+        inset 0 0 140px rgba(255, 255, 255, 0.08);
 
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 
-    transition: box-shadow 1s ease;
+    transition: box-shadow 1.1s ease;
 }
 
 .clockFace .shimmerLayer
@@ -84,9 +82,9 @@
     border-radius: 50%;
     background: linear-gradient(
         120deg,
-        rgba(255, 255, 255, 0.06) 0%,
-        rgba(255, 255, 255, 0.02) 50%,
-        rgba(255, 255, 255, 0.06) 100%
+        rgba(255, 255, 255, 0.07) 0%,
+        rgba(255, 255, 255, 0.025) 50%,
+        rgba(255, 255, 255, 0.07) 100%
     );
 
     background-size: 200% 100%;
@@ -101,24 +99,23 @@
 {
     content: "";
     position: absolute;
-    inset: -18%;
+    inset: -16%;
     background: repeating-conic-gradient(
         from 0deg,
-        rgba(212, 175, 55, 0.12) 0deg 6deg,
+        rgba(212, 175, 55, 0.15) 0deg 6deg,
         transparent 6deg 12deg
     ),
     repeating-conic-gradient(
         from 0deg,
-        rgba(255, 215, 0, 0.07) 0deg 2deg,
-        transparent 2deg 8deg
+        rgba(255, 215, 0, 0.09) 0deg 3deg,
+        transparent 3deg 9deg
     );
     box-shadow:
-        inset 0 0 20px rgba(255, 215, 0, 0.5),
-        inset 0 0 40px rgba(212, 175, 55, 0.25);
+        inset 0 0 30px rgba(255, 215, 0, 0.55),
+        inset 0 0 50px rgba(212, 175, 55, 0.3);
 
     z-index: 0;
-    mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.85) 65%, transparent 100%);
-    opacity: 0.95;
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.9) 65%, transparent 100%);
     pointer-events: none;
 }
 
@@ -137,13 +134,7 @@
 
     z-index: 1;
     pointer-events: none;
-    animation: slowRotate 48s linear infinite;
-}
-
-.clockFace::before,
-.clockFace::after
-{
-    border-radius: 50%;
+    animation: slowRotate 60s linear infinite;
 }
 
 /* Glass Overlay with Shimmer Visual Effects. */
@@ -152,16 +143,32 @@
     position: absolute;
     inset: 0;
     border-radius: 50%;
-
     background: radial-gradient(
         circle at 40% 40%,
         rgba(255, 255, 255, 0.08),
-        rgba(255, 255, 255, 0.03) 50%,
-        transparent 85%);
+        rgba(255, 255, 255, 0.03) 55%,
+        transparent 85%
+    );
 
-    backdrop-filter: blur(2.5px);
+    backdrop-filter: blur(2.8px);
     z-index: 5;
     pointer-events: none;
+}
+
+.sunburstOverlay
+{
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: repeating-conic-gradient(
+        from 0deg,
+        rgba(255, 215, 0, 0.06) 0deg 4deg,
+        transparent 4deg 12deg
+    );
+
+    mix-blend-mode: overlay;
+    z-index: 4;
+    opacity: 0.4;
 }
 
 .ticks
@@ -177,11 +184,11 @@
 {
     stroke: #ffd700;
     stroke-width: 5;
-    filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.95));
+    filter: drop-shadow(0 0 14px rgba(255, 215, 0, 0.95));
     transform-box: fill-box;
     transform-origin: center;
 
-    animation: pulse 0.35s ease-in-out;
+    animation: pulse 0.4s ease-in-out;
 }
 
 .rosette
@@ -190,20 +197,20 @@
     width: 9vmin;
     height: 9vmin;
     border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, #fff9d6, #ffd700, #b8860b 90%);
+    background: radial-gradient(circle at 30% 30%, #fffbe8, #ffd700, #b8860b 90%);
     box-shadow:
-      0 0 25px rgba(255, 215, 0, 0.7),
-      inset 0 0 12px rgba(0, 0, 0, 0.5),
-      0 0 60px rgba(212, 175, 55, 0.45);
+      0 0 30px rgba(255, 215, 0, 0.8),
+      inset 0 0 14px rgba(0, 0, 0, 0.55),
+      0 0 80px rgba(212, 175, 55, 0.55);
 
-    border: 2px solid rgba(255, 215, 0, 0.85);
+    border: 2px solid rgba(255, 215, 0, 0.9);
     z-index: 7;
 }
 
 @keyframes pulse
 {
     0% { stroke-opacity: 0.2; transform: scale(1); }
-    50% { stroke-opacity: 1; transform: scale(1.2); }
+    50% { stroke-opacity: 1; transform: scale(1.25); }
     100% { stroke-opacity: 0.5; transform: scale(1); }
 }
 

@@ -1,7 +1,7 @@
 //File name: TickMarks.jsx
 //Author: Kyle McColgan
-//Date: 01 August 2025
-//Description: This file contains the tick marks component for the React clock site.
+//Date: 10 September 2025
+//Description: This file contains the tick marks component for the React analog clock project.
 
 import styles from './TickMarks.module.css';
 
@@ -11,8 +11,8 @@ export default function TickMarks()
         <g className={styles.tickRing}>
             {Array.from({ length: 60 }).map((_, i) => {
                 const angle = (i * 6) * (Math.PI / 180);
-                const radiusInner = (i % 5 === 0) ? 82 : 87;
-                const radiusOuter = 95;
+                const radiusInner = (i % 5 === 0) ? 80 : 86;
+                const radiusOuter = 96;
 
                 const x1 = 100 + radiusInner * Math.cos(angle);
                 const y1 = 100 + radiusInner * Math.sin(angle);
