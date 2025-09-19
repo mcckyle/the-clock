@@ -11,9 +11,7 @@ export default function useHandAngles({ h, m, s })
     useEffect(() => {
 
         //Continuous time...
-        //const hourDeg = ((h % 12) + m / 60 + s / 3600) * 30;
         const hourDeg = (h % 12) * 30;
-        //const minuteDeg = (m + s / 60) * 6;
         const minuteDeg = m * 6;
         const secondDeg = s * 6;
 

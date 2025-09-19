@@ -9,17 +9,20 @@
     align-items: center;
 
     background:
-        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.08), transparent 70%),
+        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.06), transparent 70%),
         linear-gradient(135deg, #1c162b 0%, #0a0615 90%),
-        repeating-conic-gradient(from 0deg, rgba(212, 175, 55, 0.05) 0deg 15deg, transparent 15deg 30deg);
+        repeating-conic-gradient(from 0deg, rgba(212, 175, 55, 0.04) 0deg 15deg, transparent 15deg 30deg);
     background-blend-mode: overlay;
 
     color: #fdf7e2;
     padding: 2rem;
     overflow: hidden;
     position: relative;
-    border-radius: 20px;
-    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.6);
+    border-radius: 24px;
+
+    box-shadow:
+      inset 0 0 60px rgba(0, 0, 0, 0.6),
+      0 0 40px rgba(0, 0, 0, 0.4);
 }
 
 .app::before
@@ -27,19 +30,21 @@
     content: "";
     position: absolute;
     inset: 0;
-    border: 14px solid transparent;
-    background: linear-gradient(145deg, #ffd700, #e6c200, #d4af37, #b8860b);
+    border: 16px solid transparent;
+    background: linear-gradient(135deg, #ffd700, #e6c200, #d4af37, #b8860b);
     -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
 
-    border-radius: 20px;
-    padding: 14px;
+    border-radius: 24px;
+    padding: 16px;
     pointer-events: none;
-    box-shadow: 0 0 40px rgba(212, 175, 55, 0.5),
-                inset 0 0 20px rgba(0, 0, 0, 0.5);
+
+    box-shadow:
+      0 0 50px rgba(212, 175, 55, 0.55),
+      inset 0 0 25px rgba(0, 0, 0, 0.55);
 }
 
 .app::after
@@ -47,7 +52,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.1), transparent 80%);
+    background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.12), transparent 80%);
     pointer-events: none;
 }
 

@@ -14,26 +14,27 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 5.5vmin;
-    height: 5.5vmin;
+    width: 6vmin;
+    height: 6vmin;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    border: 2px solid #b8860b;
 
     background: radial-gradient(circle at 40% 40%,
-        #fffbea 0%,
-        #ffd700 55%,
-        #b8860b 90%
+        #fffdf2 0%,
+        #ffe066 40%,
+        #b8860b 80%,
+        #5a3b00 100%
     );
 
+    border: 2px solid #8b6508;
     box-shadow:
-        0 0 8px rgba(255, 215, 0, 0.75),
-        inset 0 0 10px rgba(120, 60, 0, 0.65),
-        0 0 18px rgba(255, 223, 128, 0.75);
+        0 0 10px rgba(255, 215, 0, 0.8),
+        inset 0 0 12px rgba(120, 60, 0, 0.75),
+        0 0 20px rgba(255, 223, 128, 0.8);
 
     z-index: 10;
 
-    animation: centerPulse 14s ease-in-out infinite;
+    animation: centerGlow 18s ease-in-out infinite;
 }
 
 /* Pivot Wrapper For Each Hand Style. */
@@ -54,49 +55,51 @@
 .hands div
 {
     transform-origin: 50% 100%;
-    border-radius: 0.4vmin;
+    border-radius: 0.5vmin;
 }
 
 /* Hour Hand Styles. */
 .hourHand
 {
-    width: 1.7vmin;
+    width: 2vmin;
     height: 22vmin;
 
     background: linear-gradient(
         to bottom,
         #fff9dc 0%,
-        #e6c767 40%,
+        #f6d97e 40%,
         #8b6508 85%,
         #e6c767 100%
     );
 
-    border: 1px solid #8b6508;
+    border: 1px solid #704200;
     box-shadow:
-        inset 0 0 6px rgba(139, 101, 8, 0.6),
-        0 0 8px rgba(212, 175, 55, 0.55);
+      inset 0 0 6px rgba(139, 101, 8, 0.7),
+      0 0 8px rgba(212, 175, 55, 0.55);
 
+    clip-path: polygon(50% 0, 70% 20%, 70% 100%, 30% 100%, 30% 20%);
     transform: rotate(var(--hourDeg, 0deg));
 }
 
 /* Minute Hand Styles. */
 .minuteHand
 {
-    width: 1.2vmin;
+    width: 1.4vmin;
     height: 32vmin;
 
     background: linear-gradient(
         to bottom,
         #fffde8 0%,
-        #fbe58f 50%,
-        #b8860b 95%
+        #ffe97a 50%,
+        #a67c00 95%
     );
 
-    border: 1px solid #a67c00;
+    border: 1px solid #8a6e00;
     box-shadow:
-        inset 0 0 5px rgba(218, 165, 32, 0.65),
-        0 0 10px rgba(255, 215, 0, 0.45);
+      inset 0 0 5px rgba(218, 165, 32, 0.65),
+      0 0 12px rgba(255, 215, 0, 0.55);
 
+    clip-path: polygon(50% 0, 65% 15%, 65% 100%, 35% 100%, 35% 15%);
     transform: rotate(var(--minuteDeg, 0deg));
 }
 
@@ -109,39 +112,50 @@
     background: linear-gradient(
         to bottom,
         #7a0000 0%,
-        #b22222 40%,
-        #ffd700 95%
+        #b22222 50%,
+        #ffd700 98%
     );
 
     border-radius: 0.3vmin;
     box-shadow:
-        0 0 8px rgba(139, 0, 0, 0.6),
-        0 0 10px rgba(255, 215, 0, 0.5);
+      0 0 8px rgba(139, 0, 0, 0.6),
+      0 0 12px rgba(255, 215, 0, 0.55);
 
+    clip-path: polygon(50% 0, 70% 20%, 70% 100%, 30% 100%, 30% 20%);
     transform: rotate(var(--secondDeg, 0deg));
 
-    animation: secondPulse 2s ease-in-out infinite;
+    animation: secondGlow 3s ease-in-out infinite;
 }
 
-@keyframes centerPulse
+/* === Animations Styles. === */
+@keyframes centerGlow
 {
     0%, 100% {
         box-shadow:
-            0 0 8px rgba(255, 215, 0, 0.75),
-            inset 0 0 10px rgba(120, 60, 0, 0.65),
-            0 0 18px rgba(255, 223, 128, 0.75);
+          0 0 10px rgba(255, 215, 0, 0.8),
+          inset 0 0 12px rgba(120, 60, 0, 0.75),
+          0 0 20px rgba(255, 223, 128, 0.8);
     }
     50% {
         box-shadow:
-            0 0 12px rgba(255, 230, 140, 0.9),
-            inset 0 0 12px rgba(150, 75, 0, 0.65),
-            0 0 22px rgba(241, 190, 60, 0.9);
+          0 0 14px rgba(255, 230, 160, 0.9),
+          inset 0 0 14px rgba(150, 75, 0, 0.7),
+          0 0 26px rgba(255, 240, 160, 0.95);
     }
 }
 
-@keyframes secondPulse
+@keyframes secondGlow
 {
-    0%, 100% { box-shadow: 0 0 8px rgba(139, 0, 0, 0.6), 0 0 10px rgba(255, 215, 0, 0.5); }
-    50% { box-shadow: 0 0 12px rgba(200, 0, 0, 0.75), 0 0 14px rgba(255, 230, 128, 0.6); }
-
+    0%, 100%
+    {
+        box-shadow:
+          0 0 8px rgba(139, 0, 0, 0.6),
+          0 0 12px rgba(255, 215, 0, 0.5);
+    }
+    50%
+    {
+        box-shadow:
+          0 0 14px rgba(200, 0, 0, 0.75),
+          0 0 16px rgba(255, 235, 160, 0.7);
+    }
 }

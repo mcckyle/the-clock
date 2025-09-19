@@ -6,8 +6,8 @@
     font-family: 'Cinzel Decorative', 'Cinzel', 'Playfair Display', serif;
     fill: #fff8dc; /* Ivory Parchment Base Tone. */
     font-weight: 700;
-    font-size: 1vmin;
-    letter-spacing: 0.12em;
+    font-size: 1.2vmin;
+    letter-spacing: 0.14em;
     text-anchor: middle;
     dominant-baseline: middle;
 
@@ -24,6 +24,7 @@
     filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.6));
 
     transition: transform 0.3s ease, fill 0.3s ease;
+    animation: numeralGlow 12s ease-in-out infinite;
 }
 
 .numeral:hover
@@ -37,13 +38,13 @@
 }
 
 /* Highlight Cardinal Numbers Styles. */
-.numeral:nth-child(1), /* XII. */
-.numeral:nth-child(4), /* III. */
-.numeral:nth-child(7), /* VI. */
-.numeral:nth-child(10) /* IX. */
+.numeral:nth-child(2), /* XII. */
+.numeral:nth-child(5), /* III. */
+.numeral:nth-child(8), /* VI. */
+.numeral:nth-child(11) /* IX. */
 {
     fill: #ffd700;
-    font-size: 1.4vmin;
+    font-size: 1.5vmin;
     text-shadow:
       0 0 6px rgba(255, 223, 120, 0.9),
       0 0 14px rgba(212, 175, 55, 0.7),
@@ -53,15 +54,6 @@
 /* Slow Gilded Shimmer Animation Styles. */
 @keyframes numeralGlow
 {
-    0%, 100% {
-        filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.6));
-    }
-    50% {
-        filter: drop-shadow(0 0 6px rgba(255, 215, 64, 0.85));
-    }
-}
-
-.numeral
-{
-    animation: numeralGlow 12s ease-in-out infinite;
+    0%, 100% { filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.6)); }
+    50% { filter: drop-shadow(0 0 6px rgba(255, 215, 64, 0.85)); }
 }
