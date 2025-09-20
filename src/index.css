@@ -18,8 +18,8 @@ html, body, #root
 
 body
 {
-    font-family: 'Cinzel Decorative', 'Playfair Display', serif;
-    background: radial-gradient(circle at 50% 50%, #2c1a1a, #0a0615 80%);
+    font-family: 'Playfair Display', serif;
+    background: radial-gradient(circle at 50% 50%, #2c1a1a, #0a0615 85%);
     color: #fdf7e2;
     line-height: 1.75;
     font-size: 18px;
@@ -31,13 +31,13 @@ body
     align-items: center;
 }
 
-#root
+/*#root
 {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+}*/
 
 /*h1, h2, h3
 {
