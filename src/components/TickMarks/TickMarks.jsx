@@ -1,12 +1,52 @@
 //File name: TickMarks.jsx
 //Author: Kyle McColgan
-//Date: 18 September 2025
+//Date: 22 September 2025
 //Description: This file contains the tick marks component for the React analog clock project.
 
+import { useMemo } from "react";
 import styles from './TickMarks.module.css';
 
 export default function TickMarks()
 {
+  const ticks = useMemo(() => {
+    return Array.from({ length: 60 }).map((_, i) => {
+      const angle = (i * 6) * (Math.PI / 180);
+      const radiusInner = (i % 5 === 0) ? 76 : 84;
+      const radiusOuter = (i % 15 === 0) ? 100 : (i % 5 === 0 ? 96 : 94);
+
+      const x1 = 100 + radiusInner * Math.cos(angle);
+      const y1 = 100 + radiusInner * Math.sin(angle);
+      const x2 = 100 + radiusOuter * Math.cos(angle);
+      const y2 = 100 + radiusOuter * Math.sin(angle);
+
+      // Pick the gradient based on the tick type.
+      let strokeUrl = "url(#minuteGradient)";
+      if (i % 15 === 0)
+      {
+        strokeUrl = "url(#quarterGradient)";
+      }
+      else if (i % 5 === 0)
+      {
+        strokeUrl = "url(#hourGradient)";
+      }
+
+      return (
+        <line
+          key = {i}
+          x1={x1}
+          y1={y1}
+          x2={x2}
+          y2={y2}
+          data-second={i}
+          className={`${styles.tick} ${i % 5 === 0 ? styles.hourTick : ''} ${
+            i % 15 === 0 ? styles.quarterTick : ''
+          }`}
+          stroke={strokeUrl}
+        />
+      );
+    });
+  }, []);
+
     return (
         <g className={styles.tickRing}>
           <defs>
@@ -26,43 +66,7 @@ export default function TickMarks()
               <stop offset="100%" stopColor="#7a5600" />
             </radialGradient>
           </defs>
-
-            {Array.from({ length: 60 }).map((_, i) => {
-                const angle = (i * 6) * (Math.PI / 180);
-                const radiusInner = (i % 5 === 0) ? 78 : 84;
-                const radiusOuter = (i % 15 === 0) ? 98 : 96;
-
-                const x1 = 100 + radiusInner * Math.cos(angle);
-                const y1 = 100 + radiusInner * Math.sin(angle);
-                const x2 = 100 + radiusOuter * Math.cos(angle);
-                const y2 = 100 + radiusOuter * Math.sin(angle);
-
-                // Pick the gradient based on the tick type.
-                let strokeUrl = "url(#minuteGradient)";
-                if (i % 15 === 0)
-                {
-                    strokeUrl = "url(#quarterGradient)";
-                }
-                else if (i % 5 === 0)
-                {
-                    strokeUrl = "url(#hourGradient)";
-                }
-
-                return (
-                    <line
-                        key = {i}
-                        x1={x1}
-                        y1={y1}
-                        x2={x2}
-                        y2={y2}
-                        data-second={i}
-                        className={`${styles.tick} ${i % 5 === 0 ? styles.hourTick : ''} ${
-                            i % 15 === 0 ? styles.quarterTick : ''
-                        }`}
-                        stroke={strokeUrl}
-                    />
-                );
-            })}
+          {ticks}
         </g>
     );
 }

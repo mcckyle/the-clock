@@ -19,31 +19,14 @@ html, body, #root
 body
 {
     font-family: 'Playfair Display', serif;
-    background: radial-gradient(circle at 50% 50%, #2c1a1a, #0a0615 85%);
+    background: radial-gradient(circle at 50% 50%, #2a153e, #0a0615 85%);
     color: #fdf7e2;
-    line-height: 1.75;
+    line-height: 1.7;
     font-size: 18px;
-    letter-spacing: 0.045em;
+    letter-spacing: 0.05em;
     text-rendering: optimizeLegibility;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-/*#root
-{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}*/
-
-/*h1, h2, h3
-{
-    font-family: 'Cinzel Decorative', serif;
-    font-weight: 700;
-    color: #ffd700;
-    text-shadow: 0 0 18px rgba(212, 175, 55, 0.5);
-    letter-spacing: 0.05em;
-}*/

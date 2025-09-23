@@ -9,14 +9,7 @@
     width: 100vw;
     height: 100vh;
 
-    background:
-      radial-gradient(circle at center, #241731 0%, #0a0615 100%),
-      repeating-conic-gradient(
-          from 0deg,
-          rgba(212, 175, 55, 0.05) 0deg 10deg,
-          transparent 10deg 20deg
-    );
-    background-blend-mode: overlay;
+    background: radial-gradient(circle at center, #241731 0%, #0a0615 100%);
     position: relative;
 }
 
@@ -25,16 +18,16 @@
 {
     content: "";
     position: absolute;
-    width: 150vmin;
-    height: 150vmin;
+    width: 160vmin;
+    height: 160vmin;
     border-radius: 50%;
     background: repeating-conic-gradient(
         from 0deg,
-        rgba(212, 175, 55, 0.02) 0deg 5deg,
+        rgba(212, 175, 55, 0.06) 0deg 5deg,
         transparent 5deg 15deg
     );
 
-    opacity: 0.35;
+    opacity: 0.25;
     filter: blur(3px);
     pointer-events: none;
 }
@@ -43,37 +36,34 @@
 .clockFace
 {
     position: relative;
-    width: 92vmin;
-    height: 92vmin;
+    width: 90vmin;
+    height: 90vmin;
     border-radius: 50%;
 
-    background:
-        radial-gradient(circle at 35% 35%, #1b1525, #080510 85%),
-        repeating-linear-gradient(90deg, rgba(255, 215, 0, 0.025) 0px 2px, transparent 2px 10px);
-
-    border: 22px solid transparent;
+    background: radial-gradient(circle at 40% 40%, #fffef9, #f6e6b8 70%, #d4af37 95%);
+    border: 26px solid transparent;
 
     box-shadow:
-      0 0 200px rgba(212, 175, 55, 0.45),
-      inset 0 0 90px rgba(0, 0, 0, 0.9),
-      inset 0 0 140px rgba(255, 255, 255, 0.08);
+      0 0 140px rgba(212, 175, 55, 0.5),
+      inset 0 0 85px rgba(0, 0, 0, 0.65),
+      inset 0 0 120px rgba(255, 255, 240, 0.12);
 
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 
-    transition: box-shadow 1.1s ease, transform 0.6s ease;
+    transition: box-shadow 0.8s ease, transform 0.4s ease;
 }
 
 /* Hover Glow Styles. */
 .clockContainer:hover .clockFace
 {
     box-shadow:
-      0 0 60px rgba(255, 215, 64, 0.9),
-      0 0 220px rgba(212, 175, 55, 0.55),
-      inset 0 0 120px rgba(0, 0, 0, 0.85),
-      inset 0 0 200px rgba(255, 255, 255, 0.08);
+      0 0 90px rgba(255, 215, 64, 0.9),
+      0 0 220px rgba(212, 175, 55, 0.65),
+      inset 0 0 120px rgba(0, 0, 0, 0.75),
+      inset 0 0 200px rgba(255, 255, 255, 0.1);
 
     transform: scale(1.025);
 }
@@ -117,7 +107,24 @@
     pointer-events: none;
 }
 
-/* ==== SUNBURST STYLES. ==== */
+/* ==== ROSETTE STYLES. ==== */
+.rosette
+{
+    position: absolute;
+    width: 12vmin;
+    height: 12vmin;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #fffef2, #ffd700 65%, #8b6508 100%);
+    box-shadow:
+      0 0 70px rgba(255, 215, 0, 0.95),
+      inset 0 0 25px rgba(0, 0, 0, 0.55),
+      0 0 180px rgba(212, 175, 55, 0.6);
+
+    border: 3px solid rgba(255, 215, 0, 0.95);
+    z-index: 7;
+}
+
+/* ==== SUNBURST AURA STYLES. ==== */
 .sunburstOverlay
 {
     position: absolute;
@@ -125,31 +132,13 @@
     border-radius: 50%;
     background: repeating-conic-gradient(
         from 0deg,
-        rgba(255, 215, 0, 0.05) 0deg 5deg,
-        transparent 5deg 15deg
+        rgba(212, 175, 55, 0.1) 0deg 5deg,
+        transparent 5deg 20deg
     );
 
     mix-blend-mode: overlay;
     z-index: 4;
-    opacity: 0.35;
-    filter: blur(0.5px);
-}
-
-/* ==== ROSETTE STYLES. ==== */
-.rosette
-{
-    position: absolute;
-    width: 10vmin;
-    height: 10vmin;
-    border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, #fffbe8, #ffd700 60%, #a07000 95%);
-    box-shadow:
-      0 0 45px rgba(255, 215, 0, 0.9),
-      inset 0 0 18px rgba(0, 0, 0, 0.6),
-      0 0 120px rgba(212, 175, 55, 0.6);
-
-    border: 3px solid rgba(255, 215, 0, 0.95);
-    z-index: 7;
+    opacity: 0.5;
 }
 
 /* ==== TICKS STYLES. ==== */

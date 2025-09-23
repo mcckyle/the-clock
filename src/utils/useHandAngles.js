@@ -1,6 +1,6 @@
 //File name: useHandAngles.js
 //Author: Kyle McColgan
-//Date: 24 August 2025
+//Date: 22 September 2025
 //Description: This file contains a utility function for the React AnalogClock component.
 
 import { useEffect } from "react";
@@ -30,7 +30,7 @@ export default function useHandAngles({ h, m, s })
         nowTick?.classList.add(styles.active);
         prevTick?.classList.remove(styles.active);
 
-        const timeout = setTimeout(() => nowTick?.classList.remove(styles.active), 450);
+        const timeout = setTimeout(() => nowTick?.classList.remove(styles.active), 600);
         return () => clearTimeout(timeout);
     }, [h, m, s]);
 }
