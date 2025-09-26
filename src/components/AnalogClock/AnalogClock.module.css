@@ -13,7 +13,7 @@
     position: relative;
 }
 
-/* Subtle Radiant Outer Halo Effects Styles. */
+/* Outer Halo Effects Styles. */
 .clockContainer::before
 {
     content: "";
@@ -23,12 +23,12 @@
     border-radius: 50%;
     background: repeating-conic-gradient(
         from 0deg,
-        rgba(212, 175, 55, 0.06) 0deg 5deg,
-        transparent 5deg 15deg
+        rgba(212, 175, 55, 0.06) 0deg 6deg,
+        transparent 6deg 18deg
     );
 
-    opacity: 0.25;
-    filter: blur(3px);
+    opacity: 0.22;
+    filter: blur(4px);
     pointer-events: none;
 }
 
@@ -40,13 +40,13 @@
     height: 90vmin;
     border-radius: 50%;
 
-    background: radial-gradient(circle at 40% 40%, #fffef9, #f6e6b8 70%, #d4af37 95%);
-    border: 26px solid transparent;
+    background: radial-gradient(circle at 40% 40%, #fffef9, #f6e6b8 68%, #d4af37 96%);
+    border: 22px solid transparent;
 
     box-shadow:
-      0 0 140px rgba(212, 175, 55, 0.5),
+      0 0 120px rgba(212, 175, 55, 0.5),
       inset 0 0 85px rgba(0, 0, 0, 0.65),
-      inset 0 0 120px rgba(255, 255, 240, 0.12);
+      inset 0 0 110px rgba(255, 255, 240, 0.12);
 
     display: flex;
     justify-content: center;
@@ -68,6 +68,41 @@
     transform: scale(1.025);
 }
 
+/* ==== ROSETTE STYLES. ==== */
+.rosette
+{
+    position: absolute;
+    width: 11vmin;
+    height: 11vmin;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #fffef2, #ffe169 55%, #8b6508 100%);
+
+    box-shadow:
+      0 0 65px rgba(255, 215, 0, 0.9),
+      inset 0 0 22px rgba(0, 0, 0, 0.55),
+      0 0 180px rgba(212, 175, 55, 0.6);
+
+    border: 3px solid rgba(255, 215, 0, 0.9);
+    z-index: 7;
+}
+
+/* ==== SUNBURST AURA STYLES. ==== */
+.sunburstOverlay
+{
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: repeating-conic-gradient(
+      from 0deg,
+      rgba(212, 175, 55, 0.08) 0deg 5deg,
+      transparent 5deg 15deg
+    );
+
+    mix-blend-mode: overlay;
+    z-index: 4;
+    opacity: 0.45;
+}
+
 /* ==== SHIMMER STYLES. ==== */
 .shimmerLayer
 {
@@ -76,15 +111,14 @@
     border-radius: 50%;
     background: linear-gradient(
         120deg,
-        rgba(255, 255, 255, 0.06) 0%,
-        rgba(255, 255, 255, 0.02) 50%,
-        rgba(255, 255, 255, 0.06) 100%
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 0.015) 50%,
+        rgba(255, 255, 255, 0.05) 100%
     );
 
     background-size: 200% 100%;
     mix-blend-mode: soft-light;
     z-index: 2;
-    pointer-events: none;
 
     animation: shimmer 24s linear infinite;
 }
@@ -105,40 +139,6 @@
     backdrop-filter: blur(3px);
     z-index: 5;
     pointer-events: none;
-}
-
-/* ==== ROSETTE STYLES. ==== */
-.rosette
-{
-    position: absolute;
-    width: 12vmin;
-    height: 12vmin;
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, #fffef2, #ffd700 65%, #8b6508 100%);
-    box-shadow:
-      0 0 70px rgba(255, 215, 0, 0.95),
-      inset 0 0 25px rgba(0, 0, 0, 0.55),
-      0 0 180px rgba(212, 175, 55, 0.6);
-
-    border: 3px solid rgba(255, 215, 0, 0.95);
-    z-index: 7;
-}
-
-/* ==== SUNBURST AURA STYLES. ==== */
-.sunburstOverlay
-{
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    background: repeating-conic-gradient(
-        from 0deg,
-        rgba(212, 175, 55, 0.1) 0deg 5deg,
-        transparent 5deg 20deg
-    );
-
-    mix-blend-mode: overlay;
-    z-index: 4;
-    opacity: 0.5;
 }
 
 /* ==== TICKS STYLES. ==== */

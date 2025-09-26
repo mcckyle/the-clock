@@ -1,6 +1,6 @@
 //File name: TickMarks.jsx
 //Author: Kyle McColgan
-//Date: 22 September 2025
+//Date: 25 September 2025
 //Description: This file contains the tick marks component for the React analog clock project.
 
 import { useMemo } from "react";
@@ -51,13 +51,13 @@ export default function TickMarks()
         <g className={styles.tickRing}>
           <defs>
             <linearGradient id="minuteGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#e6ddc4" />
+              <stop offset="0%" stopColor="#f6f1dc" />
               <stop offset="100%" stopColor="#d4af37" />
             </linearGradient>
 
             <linearGradient id="hourGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#ffd700" />
-              <stop offset="100%" stopColor="#ffae00" />
+              <stop offset="100%" stopColor="#c08a00" />
             </linearGradient>
 
             <radialGradient id="quarterGradient" cx="100" cy="100" r="100" gradientUnits="userSpaceOnUse">

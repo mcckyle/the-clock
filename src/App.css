@@ -7,55 +7,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background:
-        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.08), transparent 70%),
-        linear-gradient(145deg, #1c1035 0%, #05030d 90%);
-    background-blend-mode: overlay;
-
-    color: #fdf7e2;
     padding: 2rem;
+
+    background: radial-gradient(circle at 50% 50%, #1c1035 0%, #05030d 90%);
+    color: #fdf7e2;
+
     overflow: hidden;
     position: relative;
-    border-radius: 40px;
-
-    box-shadow:
-      inset 0 0 70px rgba(0, 0, 0, 0.7),
-      0 0 120px rgba(212, 175, 55, 0.3);
 }
 
-/* Gilded Frame Border Styles. */
+/* Frame w/ Classical Gilding Styles. */
 .app::before
 {
     content: "";
     position: absolute;
     inset: 0;
-    border: 20px solid transparent;
-    border-radius: 40px;
+    border-radius: 36px;
+    border: 18px solid transparent;
 
     background: linear-gradient(135deg, #fffbe8, #ffd700, #a67c00);
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                  linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-
     pointer-events: none;
 
     box-shadow:
-      0 0 80px rgba(212, 175, 55, 0.5),
-      inset 0 0 30px rgba(0, 0, 0, 0.6);
+      0 0 80px rgba(212, 175, 55, 0.45),
+      inset 0 0 28px rgba(0, 0, 0, 0.55);
 }
 
+/* ***Legacy App Styles Past This Line!!!*** */
+
+
 /* Subtle Spotlight Glow Styles. */
-.app::after
+/*.app::after
 {
     content: "";
     position: absolute;
     inset: 0;
     background: radial-gradient(circle at 50% 45%, rgba(255, 215, 0, 0.15), transparent 80%);
     pointer-events: none;
-}
+}*/
 
 /*.app-header
 {
