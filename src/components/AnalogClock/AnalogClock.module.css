@@ -36,17 +36,17 @@
 .clockFace
 {
     position: relative;
-    width: 90vmin;
-    height: 90vmin;
+    width: 88vmin;
+    height: 88vmin;
     border-radius: 50%;
 
-    background: radial-gradient(circle at 40% 40%, #fffef9, #f6e6b8 68%, #d4af37 96%);
-    border: 22px solid transparent;
+    background: radial-gradient(circle at 40% 40%, #fffdf7 0%, #fceea8 68%, #d4af37 96%);
+    border: 18px solid #c5a200;
 
     box-shadow:
-      0 0 120px rgba(212, 175, 55, 0.5),
-      inset 0 0 85px rgba(0, 0, 0, 0.65),
-      inset 0 0 110px rgba(255, 255, 240, 0.12);
+      0 0 90px rgba(212, 175, 55, 0.55),
+      inset 0 0 60px rgba(0, 0, 0, 0.55),
+      inset 0 0 95px rgba(255, 255, 240, 0.15);
 
     display: flex;
     justify-content: center;
@@ -72,17 +72,16 @@
 .rosette
 {
     position: absolute;
-    width: 11vmin;
-    height: 11vmin;
+    width: 13vmin;
+    height: 13vmin;
     border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, #fffef2, #ffe169 55%, #8b6508 100%);
+    background: radial-gradient(circle at 35% 35%, #fffef2, #ffd43b 60%, #6b4b00 100%);
 
     box-shadow:
-      0 0 65px rgba(255, 215, 0, 0.9),
-      inset 0 0 22px rgba(0, 0, 0, 0.55),
-      0 0 180px rgba(212, 175, 55, 0.6);
+      0 0 75px rgba(255, 215, 0, 0.95),
+      inset 0 0 28px rgba(0, 0, 0, 0.55),
+      0 0 200px rgba(212, 175, 55, 0.65);
 
-    border: 3px solid rgba(255, 215, 0, 0.9);
     z-index: 7;
 }
 
@@ -94,13 +93,13 @@
     border-radius: 50%;
     background: repeating-conic-gradient(
       from 0deg,
-      rgba(212, 175, 55, 0.08) 0deg 5deg,
-      transparent 5deg 15deg
+      rgba(212, 175, 55, 0.12) 0deg 4deg,
+      transparent 4deg 14deg
     );
 
     mix-blend-mode: overlay;
     z-index: 4;
-    opacity: 0.45;
+    opacity: 0.55;
 }
 
 /* ==== SHIMMER STYLES. ==== */
