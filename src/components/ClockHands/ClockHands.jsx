@@ -1,7 +1,7 @@
 //File name: ClockHands.jsx
 //Author: Kyle McColgan
-//Date: 01 August 2025
-//Description: This file contains the clock hands component for the React clock site.
+//Date: 1 October 2025
+//Description: This file contains the clock hands component for the React analog clock project.
 
 import styles from './ClockHands.module.css';
 

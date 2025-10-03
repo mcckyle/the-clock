@@ -4,32 +4,27 @@
 .numeral
 {
     font-family: 'Cinzel Decorative', 'Cinzel', serif;
-    fill: #fdf8e1; /* Parchment-Ivory Base Tone. */
+    fill: #f8f4e6; /* Color: Ivory Parchment. */
     font-weight: 700;
-    font-size: 1vmin;
-    letter-spacing: 0.08em;
+    font-size: 1.2vmin;
+    letter-spacing: 0.06em;
     text-anchor: middle;
     dominant-baseline: middle;
 
     /* Subtle Engraved Depth Effect Styles. */
     paint-order: stroke;
-    stroke: rgba(0, 0, 0, 0.7);
-    stroke-width: 0.7px;
+    stroke: #3a2a00; /* Color: Dark Bronze Outline. */
+    stroke-width: 0.6px;
 
-    text-shadow:
-      0 0 2px rgba(255, 248, 200, 0.55),
-      0 0 6px rgba(212, 175, 55, 0.35);
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.45));
 
     transition: transform 0.25s ease, fill 0.25s ease;
 }
 
 .numeral:hover
 {
-    fill: #ffd700;
-    transform: scale(1.1);
-    text-shadow:
-      0 0 6px rgba(255, 223, 120, 0.85),
-      0 0 18px rgba(212, 175, 55, 0.65);
+    fill: #e6c767; /* Color: Refined Muted Gold. */
+    transform: scale(1.05);
 }
 
 /* Highlight Cardinal Numbers Styles. */
@@ -38,16 +33,9 @@
 .numeral:nth-child(8), /* VI. */
 .numeral:nth-child(11) /* IX. */
 {
-    fill: #ffd700;
-    font-size: 1.5vmin;
-    text-shadow:
-      0 0 8px rgba(255, 223, 160, 0.95),
-      0 0 24px rgba(212, 175, 55, 0.85);
-}
+    fill: #d4af37;
+    font-size: 1.6vmin;
+    stroke-width: 0.8px;
 
-/* Slow Gilded Shimmer Animation Styles. */
-/*@keyframes numeralShimmer
-{
-    0%, 100% { filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.5)); }
-    50% { filter: drop-shadow(0 0 10px rgba(255, 215, 64, 0.85)); }
-}*/
+    filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.65));
+}
