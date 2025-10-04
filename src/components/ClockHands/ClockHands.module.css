@@ -60,28 +60,26 @@
 /* Hour Hand Styles. */
 .hourHand
 {
-    width: 2.1vmin;
-    height: 22vmin;
+    width: 2vmin;
+    height: 21vmin;
 
     background: linear-gradient(
         to bottom,
-        #fffbe9 0%,
-        #d4af37 50%,
-        #7a5600 100%
+        #fdfbf5 0%,
+        #d4af37 45%,
+        #5a3b00 100%
     );
 
-    border: 1px solid #4a3200;
-    box-shadow: inset 0 0 3px rgba(60, 40, 0, 0.5);
-
-    clip-path: polygon(50% 0, 65% 18%, 68% 100%, 32% 100%, 35% 18%);
+    border: 1px solid #3a2500;
+    clip-path: polygon(50% 0, 64% 18%, 68% 100%, 32% 100%, 36% 18%);
     transform: rotate(var(--hourDeg, 0deg));
 }
 
 /* Minute Hand Styles. */
 .minuteHand
 {
-    width: 1.4vmin;
-    height: 32vmin;
+    width: 1.3vmin;
+    height: 30vmin;
 
     background: linear-gradient(
         to bottom,
@@ -90,10 +88,8 @@
         #604000 95%
     );
 
-    border: 1px solid #5a3b00;
-    box-shadow: inset 0 0 3px rgba(60, 40, 0, 0.4);
-
-    clip-path: polygon(50% 0, 63% 15%, 66% 100%, 34% 100%, 37% 15%);
+    border: 1px solid #4a2c00;
+    clip-path: polygon(50% 0, 62% 15%, 66% 100%, 34% 100%, 38% 15%);
     transform: rotate(var(--minuteDeg, 0deg));
 }
 
@@ -106,19 +102,15 @@
     background: linear-gradient(
         to bottom,
         #7a0c0c 0%,
-        #a62323 60%,
+        #a62323 70%,
         #d4af37 100%
     );
 
-    border-radius: 0.25vmin;
-    box-shadow: 0 0 4px rgba(100, 0, 0, 0.6);
-
     clip-path: polygon(50% 0, 68% 20%, 68% 100%, 32% 100%, 32% 20%);
     transform: rotate(var(--secondDeg, 0deg));
-
-    /*animation: secondGlow 4s ease-in-out infinite;*/
 }
 
+/*animation: secondGlow 4s ease-in-out infinite;*/
 /* === Animations Styles. === */
 /*@keyframes secondGlow
 {

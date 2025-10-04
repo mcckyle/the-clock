@@ -36,36 +36,35 @@
 .clockFace
 {
     position: relative;
-    width: 88vmin;
-    height: 88vmin;
+    width: 86vmin;
+    height: 86vmin;
     border-radius: 50%;
 
-    background: radial-gradient(circle at 40% 40%, #fffef8 0%, #f8e9b0 65%, #cda434 95%);
-    border: 16px solid #b68a00;
+    background: radial-gradient(circle at 45% 45%, #fffdf5 0%, #f8e9b0 60%, #cfae3d 92%);
+    border: 14px solid #a67800;
 
     box-shadow:
-      0 0 80px rgba(212, 175, 55, 0.55),
-      inset 0 0 60px rgba(0, 0, 0, 0.55),
-      inset 0 0 85px rgba(255, 255, 240, 0.15);
+      0 0 60px rgba(212, 175, 55, 0.45),
+      inset 0 0 40px rgba(0, 0, 0, 0.55),
+      inset 0 0 60px rgba(255, 255, 240, 0.18);
 
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 
-    transition: box-shadow 0.6s ease, transform 0.35s ease;
+    transition: transform 0.35s ease, box-shadow 0.5s ease;
 }
 
 /* Hover Glow Styles. */
 .clockContainer:hover .clockFace
 {
     box-shadow:
-      0 0 90px rgba(255, 215, 64, 0.85),
-      0 0 180px rgba(212, 175, 55, 0.55),
-      inset 0 0 100px rgba(0, 0, 0, 0.75),
-      inset 0 0 160px rgba(255, 255, 255, 0.08);
+      0 0 80px rgba(255, 215, 64, 0.9),
+      0 0 140px rgba(212, 175, 55, 0.55),
+      inset 0 0 80px rgba(0, 0, 0, 0.75);
 
-    transform: scale(1.015);
+    transform: scale(1.01);
 }
 
 /* ==== ROSETTE STYLES. ==== */
@@ -75,12 +74,13 @@
     width: 12vmin;
     height: 12vmin;
     border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, #fffef2, #fcd857 65%, #7a5500 100%);
+    background: radial-gradient(circle at 35% 35%, #fffef5, #fcd857 65%, #6c4b00 100%);
+    border: 2px solid #9c7300;
 
     box-shadow:
-      0 0 60px rgba(255, 215, 0, 0.9),
-      inset 0 0 25px rgba(0, 0, 0, 0.55),
-      0 0 160px rgba(212, 175, 55, 0.55);
+      0 0 30px rgba(255, 215, 0, 0.9),
+      inset 0 0 20px rgba(0, 0, 0, 0.55),
+      0 0 120px rgba(212, 175, 55, 0.55);
 
     z-index: 7;
 }
@@ -93,13 +93,13 @@
     border-radius: 50%;
     background: repeating-conic-gradient(
       from 0deg,
-      rgba(212, 175, 55, 0.14) 0deg 5deg,
-      transparent 5deg 15deg
+      rgba(212, 175, 55, 0.25) 0deg 4deg,
+      transparent 4deg 12deg
     );
 
     mix-blend-mode: overlay;
     z-index: 4;
-    opacity: 0.5;
+    opacity: 0.65;
 }
 
 /* ==== SHIMMER STYLES. ==== */
@@ -110,16 +110,16 @@
     border-radius: 50%;
     background: linear-gradient(
         120deg,
-        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 0.04) 0%,
         rgba(255, 255, 255, 0.015) 50%,
-        rgba(255, 255, 255, 0.05) 100%
+        rgba(255, 255, 255, 0.04) 100%
     );
 
     background-size: 200% 100%;
     mix-blend-mode: soft-light;
     z-index: 2;
 
-    animation: shimmer 18s linear infinite;
+    animation: shimmer 32s linear infinite;
 }
 
 /* ==== GLASS OVERLAY STYLES. ==== */
@@ -130,12 +130,12 @@
     border-radius: 50%;
     background: radial-gradient(
         circle at 40% 40%,
-        rgba(255, 255, 255, 0.1),
-        rgba(255, 255, 255, 0.03) 55%,
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.025) 55%,
         transparent 85%
     );
 
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(2px);
     z-index: 5;
     pointer-events: none;
 }

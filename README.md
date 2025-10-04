@@ -1,6 +1,6 @@
 # ⏰ Analog Clock
 
-A dedicated **Analog Clock** built with **React**, **Vite**, and styled with **CSS Modules**. This project is hosted on **GitHub Pages** for easy access and demonstrates real-time updates with smooth animations.
+A classical **Analog Clock** built with **React**, **Vite**, and styled with **CSS Modules**. This project is hosted on **GitHub Pages** for easy access and demonstrates real-time updates with smooth animations.
 
 ---
 

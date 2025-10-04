@@ -3,20 +3,20 @@
 /* Roman Numerals Styles. */
 .numeral
 {
-    font-family: 'Cinzel Decorative', 'Cinzel', serif;
-    fill: #f8f4e6; /* Color: Ivory Parchment. */
-    font-weight: 700;
-    font-size: 1.2vmin;
-    letter-spacing: 0.06em;
+    font-family: 'Cinzel', serif; /* Was: 'Cinzel Decorative', 'Cinzel', serif */
+    fill: #f9f6ef; /* Color: Ivory / Marble Tone. */
+    font-weight: 600;
+    font-size: 1.5vmin;
+    letter-spacing: 0.04em;
     text-anchor: middle;
     dominant-baseline: middle;
 
     /* Subtle Engraved Depth Effect Styles. */
-    paint-order: stroke;
-    stroke: #3a2a00; /* Color: Dark Bronze Outline. */
+    /*paint-order: stroke;*/
+    stroke: #2d1c00; /* Color: Bronze Outline. */
     stroke-width: 0.6px;
 
-    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.45));
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.35));
 
     transition: transform 0.25s ease, fill 0.25s ease;
 }
@@ -33,9 +33,9 @@
 .numeral:nth-child(8), /* VI. */
 .numeral:nth-child(11) /* IX. */
 {
-    fill: #d4af37;
-    font-size: 1.6vmin;
-    stroke-width: 0.8px;
+    fill: #d4af37; /* Color: Gold. */
+    font-size: 1.9vmin;
+    stroke-width: 0.9px;
 
-    filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.65));
+    filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.6));
 }
