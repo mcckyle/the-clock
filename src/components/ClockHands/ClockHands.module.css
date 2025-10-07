@@ -22,18 +22,16 @@
 
     background: radial-gradient(circle at 40% 40%,
         #fffdf5 0%,
-        #ffe066 30%,
-        #d4af37 65%,
+        #ffec80 35%,
+        #d4af37 70%,
         #5a3b00 100%
     );
 
     border: 2px solid #7a5600;
     box-shadow:
         0 0 14px rgba(255, 215, 0, 0.9),
-        inset 0 0 12px rgba(90, 55, 0, 0.65),
-        0 0 30px rgba(255, 230, 160, 0.85);
-
-    z-index: 10;
+        inset 0 0 12px rgba(80, 55, 0, 0.65),
+        0 0 22px rgba(255, 230, 160, 0.8);
 }
 
 /* Pivot Wrapper For Each Hand Style. */
@@ -54,7 +52,7 @@
 .hands div
 {
     transform-origin: 50% 100%;
-    border-radius: 0.5vmin;
+    border-radius: 0.4vmin;
 }
 
 /* Hour Hand Styles. */
@@ -65,9 +63,9 @@
 
     background: linear-gradient(
         to bottom,
-        #fdfbf5 0%,
-        #d4af37 45%,
-        #5a3b00 100%
+        #faf8f0 0%,
+        #d4af37 40%,
+        #604000 100%
     );
 
     border: 1px solid #3a2500;
@@ -78,14 +76,14 @@
 /* Minute Hand Styles. */
 .minuteHand
 {
-    width: 1.3vmin;
+    width: 1.2vmin;
     height: 30vmin;
 
     background: linear-gradient(
         to bottom,
-        #fffdf2 0%,
-        #e6c767 45%,
-        #604000 95%
+        #fffdf5 0%,
+        #f4d87a 45%,
+        #705000 95%
     );
 
     border: 1px solid #4a2c00;
@@ -101,8 +99,8 @@
 
     background: linear-gradient(
         to bottom,
-        #7a0c0c 0%,
-        #a62323 70%,
+        #a02020 0%,
+        #b03030 70%,
         #d4af37 100%
     );
 

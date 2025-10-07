@@ -9,11 +9,11 @@
     width: 100vw;
     height: 100vh;
 
-    background: radial-gradient(circle at center, #241731 0%, #0a0615 100%);
+    background: radial-gradient(circle at center, #1c1430 0%, #07040f 100%);
     position: relative;
 }
 
-/* Outer Halo Effects Styles. */
+/* Solar Halo Around The Clock Face Styles. */
 .clockContainer::before
 {
     content: "";
@@ -21,14 +21,14 @@
     width: 160vmin;
     height: 160vmin;
     border-radius: 50%;
-    background: repeating-conic-gradient(
+    background: conic-gradient(
         from 0deg,
-        rgba(212, 175, 55, 0.06) 0deg 6deg,
-        transparent 6deg 18deg
+        rgba(212, 175, 55, 0.07) 0deg 8deg,
+        transparent 8deg 18deg
     );
 
     opacity: 0.22;
-    filter: blur(4px);
+    filter: blur(5px);
     pointer-events: none;
 }
 
@@ -36,16 +36,16 @@
 .clockFace
 {
     position: relative;
-    width: 86vmin;
-    height: 86vmin;
+    width: 84vmin;
+    height: 84vmin;
     border-radius: 50%;
 
-    background: radial-gradient(circle at 45% 45%, #fffdf5 0%, #f8e9b0 60%, #cfae3d 92%);
-    border: 14px solid #a67800;
+    background: radial-gradient(circle at 45% 45%, #fdfcf5 0%, #f3e6a5 60%, #b18a00 95%);
+    border: 12px solid #8c6a00;
 
     box-shadow:
-      0 0 60px rgba(212, 175, 55, 0.45),
-      inset 0 0 40px rgba(0, 0, 0, 0.55),
+      0 0 70px rgba(212, 175, 55, 0.5),
+      inset 0 0 50px rgba(0, 0, 0, 0.55),
       inset 0 0 60px rgba(255, 255, 240, 0.18);
 
     display: flex;
@@ -60,9 +60,9 @@
 .clockContainer:hover .clockFace
 {
     box-shadow:
-      0 0 80px rgba(255, 215, 64, 0.9),
-      0 0 140px rgba(212, 175, 55, 0.55),
-      inset 0 0 80px rgba(0, 0, 0, 0.75);
+      0 0 90px rgba(255, 215, 64, 0.9),
+      0 0 150px rgba(212, 175, 55, 0.55),
+      inset 0 0 85px rgba(0, 0, 0, 0.75);
 
     transform: scale(1.01);
 }
@@ -74,13 +74,13 @@
     width: 12vmin;
     height: 12vmin;
     border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, #fffef5, #fcd857 65%, #6c4b00 100%);
-    border: 2px solid #9c7300;
+    background: radial-gradient(circle at 35% 35%, #fffef5, #f5ce3c 60%, #5e3e00 100%);
+    border: 2px solid #8c6a00;
 
     box-shadow:
-      0 0 30px rgba(255, 215, 0, 0.9),
-      inset 0 0 20px rgba(0, 0, 0, 0.55),
-      0 0 120px rgba(212, 175, 55, 0.55);
+      0 0 40px rgba(255, 215, 0, 0.85),
+      inset 0 0 25px rgba(0, 0, 0, 0.55),
+      0 0 130px rgba(212, 175, 55, 0.55);
 
     z-index: 7;
 }
@@ -93,13 +93,13 @@
     border-radius: 50%;
     background: repeating-conic-gradient(
       from 0deg,
-      rgba(212, 175, 55, 0.25) 0deg 4deg,
+      rgba(212, 175, 55, 0.22) 0deg 4deg,
       transparent 4deg 12deg
     );
 
     mix-blend-mode: overlay;
     z-index: 4;
-    opacity: 0.65;
+    opacity: 0.6;
 }
 
 /* ==== SHIMMER STYLES. ==== */
@@ -110,16 +110,16 @@
     border-radius: 50%;
     background: linear-gradient(
         120deg,
-        rgba(255, 255, 255, 0.04) 0%,
-        rgba(255, 255, 255, 0.015) 50%,
-        rgba(255, 255, 255, 0.04) 100%
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 0.02) 50%,
+        rgba(255, 255, 255, 0.05) 100%
     );
 
     background-size: 200% 100%;
     mix-blend-mode: soft-light;
     z-index: 2;
 
-    animation: shimmer 32s linear infinite;
+    animation: shimmer 30s linear infinite;
 }
 
 /* ==== GLASS OVERLAY STYLES. ==== */
@@ -130,8 +130,8 @@
     border-radius: 50%;
     background: radial-gradient(
         circle at 40% 40%,
-        rgba(255, 255, 255, 0.08),
-        rgba(255, 255, 255, 0.025) 55%,
+        rgba(255, 255, 255, 0.07),
+        rgba(255, 255, 255, 0.02) 55%,
         transparent 85%
     );
 

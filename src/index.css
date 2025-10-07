@@ -19,12 +19,11 @@ html, body, #root
 body
 {
     font-family: 'Playfair Display', serif;
-    background: radial-gradient(circle at 50% 50%, #2a153e, #0a0615 85%);
+    background: radial-gradient(circle at 50% 50%, #241a40, #090613 85%);
     color: #fdf7e2;
     line-height: 1.7;
     font-size: 18px;
-    letter-spacing: 0.05em;
-    text-rendering: optimizeLegibility;
+    letter-spacing: 0.045em;
 
     display: flex;
     justify-content: center;

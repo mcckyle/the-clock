@@ -8,11 +8,11 @@
     align-items: center;
     padding: 2rem;
 
-    background: radial-gradient(circle at 50% 50%, #201024 0%, #07050d 85%);
+    background: radial-gradient(circle at 50% 50%, #1a1333 0%, #08050e 85%);
     color: #fdf7e2;
-
     overflow: hidden;
     position: relative;
+    font-family: 'Playfair Display', serif;
 }
 
 /* Classical Gilded Molding Frame Styles. */
@@ -21,10 +21,10 @@
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 40px;
-    border: 24px solid transparent;
+    border-radius: 48px;
+    border: 22px solid transparent;
 
-    background: linear-gradient(145deg, #fffce5, #f9d649 45%, #9c7300 100%);
+    background: linear-gradient(135deg, #fffbe9, #f9d94a 45%, #a17800 100%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box,
                   linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -32,8 +32,8 @@
     pointer-events: none;
 
     box-shadow:
-      0 0 80px rgba(212, 175, 55, 0.45),
-      inset 0 0 30px rgba(0, 0, 0, 0.75);
+      0 0 90px rgba(212, 175, 55, 0.45),
+      inset 0 0 36px rgba(0, 0, 0, 0.8);
 }
 
 /* ***Legacy App Styles Past This Line!!!*** */

@@ -51,20 +51,21 @@ export default function TickMarks()
         <g className={styles.tickRing}>
           <defs>
             <linearGradient id="minuteGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#f9f6ef" />
-              <stop offset="100%" stopColor="#e6c767" />
+              <stop offset="0%" stopColor="#faf8f2" />
+              <stop offset="100%" stopColor="#d6b86c" />
             </linearGradient>
 
             <linearGradient id="hourGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#ffd700" />
+              <stop offset="0%" stopColor="#ffe58f" />
+              <stop offset="50%" stopColor="#d4af37" />
               <stop offset="100%" stopColor="#7a5600" />
             </linearGradient>
 
             <radialGradient id="quarterGradient" cx="100" cy="100" r="100" gradientUnits="userSpaceOnUse">
               <stop offset="0%" stopColor="#fffbe9" />
-              <stop offset="35%" stopColor="#ffd700" />
-              <stop offset="75%" stopColor="#b87333" />
-              <stop offset="100%" stopColor="#7a0c0c" />
+              <stop offset="40%" stopColor="#ffe066" />
+              <stop offset="75%" stopColor="#b88a3e" />
+              <stop offset="100%" stopColor="#5a3b00" />
             </radialGradient>
           </defs>
           {ticks}

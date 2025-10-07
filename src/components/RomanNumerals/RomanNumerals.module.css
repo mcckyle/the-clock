@@ -4,27 +4,28 @@
 .numeral
 {
     font-family: 'Cinzel', serif; /* Was: 'Cinzel Decorative', 'Cinzel', serif */
-    fill: #f9f6ef; /* Color: Ivory / Marble Tone. */
+    fill: #fdfbf5; /* Color: Ivory Tone. */
     font-weight: 600;
-    font-size: 1.5vmin;
+    font-size: 1.6vmin;
     letter-spacing: 0.04em;
     text-anchor: middle;
     dominant-baseline: middle;
 
     /* Subtle Engraved Depth Effect Styles. */
-    /*paint-order: stroke;*/
-    stroke: #2d1c00; /* Color: Bronze Outline. */
-    stroke-width: 0.6px;
+    stroke: #7a5600; /* Color: Bronze Outline. */
+    stroke-width: 0.5px;
 
-    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.35));
+    filter: drop-shadow(0 0 1.2px rgba(60, 35, 0, 0.4))
+            drop-shadow(0 0 2px rgba(255, 230, 140, 0.2));
 
-    transition: transform 0.25s ease, fill 0.25s ease;
+    transition: transform 0.25s ease, fill 0.25s ease, filter 0.25s ease;
 }
 
 .numeral:hover
 {
-    fill: #e6c767; /* Color: Refined Muted Gold. */
-    transform: scale(1.05);
+    fill: #ffd700;
+    filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.6));
+    transform: scale(1.06);
 }
 
 /* Highlight Cardinal Numbers Styles. */
@@ -35,7 +36,8 @@
 {
     fill: #d4af37; /* Color: Gold. */
     font-size: 1.9vmin;
-    stroke-width: 0.9px;
+    font-weight: 700;
 
-    filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.6));
+    filter: drop-shadow(0 0 2.5px rgba(255, 215, 0, 0.75))
+            drop-shadow(0 0 4px rgba(80, 50, 0, 0.5));
 }

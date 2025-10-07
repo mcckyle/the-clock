@@ -10,10 +10,10 @@
 /* Base Minute Tick Marks Styles. */
 .tick
 {
-    stroke-width: 1.1;
+    stroke-width: 1.2;
     stroke-linecap: round;
-    opacity: 0.75;
-    filter: none; /* Remove Fuzzy Shadows. */
+    opacity: 0.82;
+    filter: drop-shadow(0 0 0.6px rgba(0, 0, 0, 0.25));
 
     transition: opacity 0.3s ease;
 }
@@ -21,17 +21,19 @@
 /* Golden Hour Tick Marks Styles. */
 .hourTick
 {
-    stroke-width: 2.5;
+    stroke-width: 2.6;
     opacity: 1;
-    filter: drop-shadow(0 0 2px rgba(140, 100, 20, 0.5));
+    filter: drop-shadow(0 0 2.5px rgba(212, 175, 55, 0.55))
+            drop-shadow(0 0 5px rgba(80, 55, 0, 0.35));
 }
 
 /* Quarter Tick Marks Styles. */
 .quarterTick
 {
-    stroke-width: 4.5;
+    stroke-width: 4.8;
     opacity: 1;
-    filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.65));
+    filter: drop-shadow(0 0 3.2px rgba(255, 215, 0, 0.75))
+            drop-shadow(0 0 6px rgba(100, 60, 0, 0.55));
 }
 
 /*animation: quarterPulse 10s ease-in-out infinite;*/
