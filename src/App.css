@@ -8,23 +8,24 @@
     align-items: center;
     padding: 2rem;
 
-    background: radial-gradient(circle at 50% 50%, #1a1333 0%, #08050e 85%);
+    background: radial-gradient(circle at 50% 45%, #1e1440 0%, #08050e 90%);
     color: #fdf7e2;
     overflow: hidden;
     position: relative;
+
     font-family: 'Playfair Display', serif;
 }
 
-/* Classical Gilded Molding Frame Styles. */
+/* Classical Gilded Frame Styles. */
 .app::before
 {
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 48px;
-    border: 22px solid transparent;
+    border-radius: 40px;
+    border: 18px solid transparent;
 
-    background: linear-gradient(135deg, #fffbe9, #f9d94a 45%, #a17800 100%);
+    background: linear-gradient(145deg, #fff8dc, #f7d450 40%, #b48800 100%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box,
                   linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -32,13 +33,11 @@
     pointer-events: none;
 
     box-shadow:
-      0 0 90px rgba(212, 175, 55, 0.45),
-      inset 0 0 36px rgba(0, 0, 0, 0.8);
+      0 0 70px rgba(212, 175, 55, 0.45),
+      inset 0 0 32px rgba(0, 0, 0, 0.8);
 }
 
 /* ***Legacy App Styles Past This Line!!!*** */
-
-
 /* Subtle Spotlight Glow Styles. */
 /*.app::after
 {

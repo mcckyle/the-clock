@@ -15,23 +15,22 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 5.5vmin;
-    height: 5.5vmin;
+    width: 5.2vmin;
+    height: 5.2vmin;
     transform: translate(-50%, -50%);
     border-radius: 50%;
 
     background: radial-gradient(circle at 40% 40%,
         #fffdf5 0%,
-        #ffec80 35%,
+        #ffeb99 35%,
         #d4af37 70%,
-        #5a3b00 100%
+        #553600 100%
     );
 
-    border: 2px solid #7a5600;
+    border: 1.8px solid #7a5600;
     box-shadow:
-        0 0 14px rgba(255, 215, 0, 0.9),
-        inset 0 0 12px rgba(80, 55, 0, 0.65),
-        0 0 22px rgba(255, 230, 160, 0.8);
+        0 0 14px rgba(255, 215, 0, 0.8),
+        inset 0 0 10px rgba(70, 40, 0, 0.6);
 }
 
 /* Pivot Wrapper For Each Hand Style. */
@@ -64,7 +63,7 @@
     background: linear-gradient(
         to bottom,
         #faf8f0 0%,
-        #d4af37 40%,
+        #d4af37 45%,
         #604000 100%
     );
 
@@ -82,8 +81,8 @@
     background: linear-gradient(
         to bottom,
         #fffdf5 0%,
-        #f4d87a 45%,
-        #705000 95%
+        #f4d87a 50%,
+        #705000 100%
     );
 
     border: 1px solid #4a2c00;
@@ -94,34 +93,16 @@
 /* Second Hand Styles. */
 .secondHand
 {
-    width: 0.5vmin;
-    height: 34vmin;
+    width: 0.45vmin;
+    height: 33vmin;
 
     background: linear-gradient(
         to bottom,
-        #a02020 0%,
-        #b03030 70%,
+        #9a1a1a 0%,
+        #b42c2c 60%,
         #d4af37 100%
     );
 
     clip-path: polygon(50% 0, 68% 20%, 68% 100%, 32% 100%, 32% 20%);
     transform: rotate(var(--secondDeg, 0deg));
 }
-
-/*animation: secondGlow 4s ease-in-out infinite;*/
-/* === Animations Styles. === */
-/*@keyframes secondGlow
-{
-    0%, 100%
-    {
-        box-shadow:
-          0 0 6px rgba(139, 0, 0, 0.65),
-          0 0 12px rgba(255, 215, 0, 0.55);
-    }
-    50%
-    {
-        box-shadow:
-          0 0 12px rgba(200, 0, 0, 0.75),
-          0 0 18px rgba(255, 230, 160, 0.75);
-    }
-}*/

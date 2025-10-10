@@ -7,39 +7,31 @@
     transform-origin: 50% 50%;
 }
 
-/* Base Minute Tick Marks Styles. */
+/* Minute Tick Marks Styles. */
 .tick
 {
     stroke-width: 1.2;
     stroke-linecap: round;
-    opacity: 0.82;
-    filter: drop-shadow(0 0 0.6px rgba(0, 0, 0, 0.25));
+    opacity: 0.9;
+    filter: drop-shadow(0 0 0.4px rgba(0, 0, 0, 0.25));
 
-    transition: opacity 0.3s ease;
+    transition: opacity 0.25s ease;
 }
 
 /* Golden Hour Tick Marks Styles. */
 .hourTick
 {
-    stroke-width: 2.6;
+    stroke-width: 2.4;
     opacity: 1;
-    filter: drop-shadow(0 0 2.5px rgba(212, 175, 55, 0.55))
-            drop-shadow(0 0 5px rgba(80, 55, 0, 0.35));
+    filter: drop-shadow(0 0 1.8px rgba(212, 175, 55, 0.55))
+            drop-shadow(0 0 3.5px rgba(60, 40, 0, 0.35));
 }
 
 /* Quarter Tick Marks Styles. */
 .quarterTick
 {
-    stroke-width: 4.8;
+    stroke-width: 4.6;
     opacity: 1;
-    filter: drop-shadow(0 0 3.2px rgba(255, 215, 0, 0.75))
-            drop-shadow(0 0 6px rgba(100, 60, 0, 0.55));
+    filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.8))
+            drop-shadow(0 0 6px rgba(80, 55, 0, 0.5));
 }
-
-/*animation: quarterPulse 10s ease-in-out infinite;*/
-/* Quarter Ticks Pulse Animation Styles. */
-/*@keyframes quarterPulse
-{
-    0%, 100% { stroke-width: 6; opacity: 0.95; }
-    50% { stroke-width: 7; opacity: 1; }
-}*/
