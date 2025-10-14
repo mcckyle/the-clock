@@ -1,6 +1,6 @@
 //File name: TickMarks.jsx
 //Author: Kyle McColgan
-//Date: 9 October 2025
+//Date: 13 October 2025
 //Description: This file contains the tick marks component for the React analog clock project.
 
 import { useMemo } from "react";
@@ -51,21 +51,21 @@ export default function TickMarks()
       <g className={styles.tickRing}>
         <defs>
           <linearGradient id="minuteGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#f9f7ef" />
-            <stop offset="100%" stopColor="#d1b879" />
+            <stop offset="0%" stopColor="#f8f5e8" />
+            <stop offset="100%" stopColor="#cbb77a" />
           </linearGradient>
 
           <linearGradient id="hourGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#ffecb3" />
-            <stop offset="40%" stopColor="#d4af37" />
-            <stop offset="100%" stopColor="#7a5b00" />
+            <stop offset="0%" stopColor="#fff4c2" />
+            <stop offset="50%" stopColor="#d9b43f" />
+            <stop offset="100%" stopColor="#806200" />
           </linearGradient>
 
           <radialGradient id="quarterGradient" cx="100" cy="100" r="100" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#fff9dc" />
-            <stop offset="40%" stopColor="#f2ce55" />
-            <stop offset="75%" stopColor="#b98b34" />
-            <stop offset="100%" stopColor="#4a3200" />
+            <stop offset="0%" stopColor="#fff6d4" />
+            <stop offset="45%" stopColor="#f2c94c" />
+            <stop offset="80%" stopColor="#b27e2d" />
+            <stop offset="100%" stopColor="#3a2800" />
           </radialGradient>
         </defs>
         {ticks}

@@ -64,10 +64,11 @@
         to bottom,
         #faf8f0 0%,
         #d4af37 45%,
-        #604000 100%
+        #5e4200 100%
     );
 
-    border: 1px solid #3a2500;
+    border: 1px solid #3a2600;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
     clip-path: polygon(50% 0, 64% 18%, 68% 100%, 32% 100%, 36% 18%);
     transform: rotate(var(--hourDeg, 0deg));
 }
