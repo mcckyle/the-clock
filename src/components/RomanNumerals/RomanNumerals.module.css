@@ -3,15 +3,16 @@
 /* Roman Numerals Styles. */
 .numeral
 {
-    font-family: 'Cinzel Decorative', serif; /* Was: 'Cinzel Decorative', 'Cinzel', serif */
-    fill: #fbf9ef;
-    font-weight: 600;
+    font-family: 'Cinzel Decorative', serif;
+    fill: #fdf9e3;
+    stroke: #5a4300;
+    stroke-width: 0.35px;
+    font-weight: 700;
     font-size: 1vmin;
     letter-spacing: 0.04em;
     text-anchor: middle;
     dominant-baseline: middle;
-    stroke: #654b00;
-    stroke-width: 0.4px;
+    text-shadow: 0 0 3px rgba(255, 255, 120, 0.2);
 
     filter:
       drop-shadow(0 0 1px rgba(30, 20, 0, 0.5))
@@ -22,8 +23,8 @@
 
 .numeral:hover
 {
-    fill: #ffdd55;
-    filter: drop-shadow(0 0 2px rgba(255, 215, 0, 0.6));
+    fill: #ffec8b;
+    filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.7));
     transform: scale(1.05);
 }
 
@@ -33,10 +34,8 @@
 .numeral:nth-child(8), /* VI. */
 .numeral:nth-child(11) /* IX. */
 {
-    fill: #d9b43f; /* Color: Gold. */
-    font-size: 2vmin;
-    font-weight: 700;
+    fill: #e0c15b; /* Color: Gold. */
+    font-size: 1.5vmin;
 
-    filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.65))
-            drop-shadow(0 0 5px rgba(60, 45, 0, 0.4));
+    text-shadow: 0 0 3px rgba(255, 215, 0, 0.5);
 }

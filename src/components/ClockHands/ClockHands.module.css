@@ -22,15 +22,15 @@
 
     background: radial-gradient(circle at 40% 40%,
         #fffdf5 0%,
-        #ffeb99 35%,
+        #f7e57d 35%,
         #d4af37 70%,
-        #553600 100%
+        #402d00 100%
     );
 
-    border: 1.8px solid #7a5600;
+    border: 1.4px solid #7a5600;
     box-shadow:
-        0 0 14px rgba(255, 215, 0, 0.8),
-        inset 0 0 10px rgba(70, 40, 0, 0.6);
+        0 0 10px rgba(255, 215, 0, 0.6),
+        inset 0 0 6px rgba(60, 30, 0, 0.6);
 }
 
 /* Pivot Wrapper For Each Hand Style. */
