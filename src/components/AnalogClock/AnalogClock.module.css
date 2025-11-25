@@ -8,12 +8,12 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-
-    background: radial-gradient(circle at 50% 48%, #15122b 0%, #080612 100%);
     position: relative;
+
+    background: radial-gradient(circle at 50% 48%, #120f2a 0%, #050312 100%);
 }
 
-/* Subtle Golden Halo Aura Styles. */
+/* Golden Halo Aura Styles. */
 .clockContainer::before
 {
     content: "";
@@ -23,30 +23,29 @@
     border-radius: 50%;
     background: conic-gradient(
         from 0deg,
-        rgba(212, 175, 55, 0.06) 0deg 12deg,
+        rgba(212, 175, 55, 0.08) 0deg 12deg,
         transparent 12deg 30deg
     );
 
-    opacity: 0.3;
-    filter: blur(4px);
+    opacity: 0.25;
+    filter: blur(6px);
     pointer-events: none;
 }
 
-/* ==== CLOCK FACE ==== */
+/* ==== CLOCK FACE STYLES. ==== */
 .clockFace
 {
     position: relative;
     width: 78vmin;
     height: 78vmin;
     border-radius: 50%;
-
-    background: radial-gradient(circle at 50% 52%, #fcfbf5 0%, #e8dcb2 60%, #a67c00 100%);
-    border: 6px solid #745500;
+    background: radial-gradient(circle at 50% 52%, #fefaf3 0%, #e8d9a8 60%, #b38f1c 100%);
+    border: 8px solid #8b6700;
 
     box-shadow:
-      0 0 70px rgba(212, 175, 55, 0.35),
-      inset 0 0 30px rgba(0, 0, 0, 0.55),
-      inset 0 0 10px rgba(255, 255, 235, 0.15);
+      0 0 90px rgba(212, 175, 55, 0.4),
+      inset 0 0 35px rgba(0, 0, 0, 0.55),
+      inset 0 0 15px rgba(255, 255, 235, 0.2);
 
     display: flex;
     justify-content: center;
@@ -59,27 +58,27 @@
 /* Hover Glow Styles. */
 .clockContainer:hover .clockFace
 {
-    box-shadow:
-      0 0 100px rgba(255, 220, 60, 0.85),
-      0 0 140px rgba(212, 175, 55, 0.45),
-      inset 0 0 80px rgba(0, 0, 0, 0.75);
-
     transform: scale(1.008);
+
+    box-shadow:
+      0 0 120px rgba(255, 220, 60, 0.85),
+      0 0 160px rgba(212, 175, 55, 0.45),
+      inset 0 0 90px rgba(0, 0, 0, 0.75);
 }
 
-/* ==== ROSETTE STYLES. ==== */
+/* ==== ROSETTE CENTER STYLES. ==== */
 .rosette
 {
     position: absolute;
-    width: 8.5vmin;
-    height: 8.5vmin;
+    width: 9vmin;
+    height: 9vmin;
     border-radius: 50%;
-    background: radial-gradient(circle at 42% 38%, #fffef9, #e1c75b 50%, #5a4100 100%);
-    border: 1.4px solid #755800;
+    background: radial-gradient(circle at 42% 38%, #fffef9, #e3c96c 50%, #5f4400 100%);
+    border: 1.6px solid #7b5800;
 
     box-shadow:
-      0 0 20px rgba(245, 205, 70, 0.5),
-      inset 0 0 14px rgba(0, 0, 0, 0.55);
+      0 0 25px rgba(245, 205, 70, 0.5),
+      inset 0 0 16px rgba(0, 0, 0, 0.55);
 
     z-index: 7;
 }
@@ -92,16 +91,16 @@
     border-radius: 50%;
     background: repeating-conic-gradient(
       from 0deg,
-      rgba(212, 175, 55, 0.15) 0deg 4deg,
+      rgba(212, 175, 55, 0.18) 0deg 4deg,
       transparent 4deg 12deg
     );
 
     mix-blend-mode: overlay;
+    opacity: 0.5;
     z-index: 4;
-    opacity: 0.45;
 }
 
-/* ==== SHIMMER OVERLAY STYLES. ==== */
+/* ==== SHIMMER LAYER STYLES. ==== */
 .shimmerLayer
 {
     position: absolute;
@@ -109,8 +108,8 @@
     border-radius: 50%;
     background: linear-gradient(
         130deg,
-        rgba(255, 255, 255, 0.06) 0%,
-        rgba(255, 255, 255, 0.03) 45%,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(255, 255, 255, 0.04) 50%,
         rgba(255, 255, 255, 0.07) 100%
     );
 
@@ -129,7 +128,7 @@
     border-radius: 50%;
     background: radial-gradient(
         circle at 40% 40%,
-        rgba(255, 255, 255, 0.09),
+        rgba(255, 255, 255, 0.1),
         rgba(255, 255, 255, 0.03) 60%,
         transparent 85%
     );
