@@ -6,31 +6,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
-    position: relative;
 
-    background: radial-gradient(circle at 50% 40%, #0b1030 0%, #030211 85%);
-    color: #fefbf3;
-    font-family: 'Playfair Display', serif;
+    position: relative;
+    background: radial-gradient(circle at 50% 30%, #0e143a 0%, #030211 85%);
+    border-radius: 28px;
     overflow: hidden;
+
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.85);
 }
 
-/* Classical Gilded Frame Styles. */
+/* Classical Architectural Frame Styles. */
 .app::before
 {
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 32px;
-    border: 3px solid #b7921a;
+    border-radius: 28px;
+
+    background: linear-gradient(180deg, #f6e7ad 0%, #c9a227 45%, #6a4f00 100%);
+
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
     pointer-events: none;
 
-    /* Triple-band Gilding for Architectural Effects. */
-    background:
-      linear-gradient(145deg, #fff6cc, #e0c25f 50%, #9a7a1b 100%) padding-box,
-      linear-gradient(135deg, #d4af37, #f7e8b3, #b18c0b) border-box;
-
     box-shadow:
-      0 0 60px rgba(212, 175, 55, 0.25),
-      inset 0 0 20px rgba(0, 0, 0, 0.55);
+      inset 0 0 0 2px #2a1d00,
+      inset 0 0 30px rgba(0, 0, 0, 0.55);
 }
