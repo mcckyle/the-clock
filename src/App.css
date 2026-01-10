@@ -1,29 +1,31 @@
-/* Filename: App.css */
+/* Filename: src/App.css */
 .app
 {
     width: 100vw;
     height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
     position: relative;
-    background: radial-gradient(circle at 50% 30%, #0e143a 0%, #030211 85%);
-    border-radius: 28px;
+    background: radial-gradient(circle at 50% 28%, #141a4a 0%, #030211 82%);
+    border-radius: 24px;
     overflow: hidden;
 
-    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.85);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85),
+                inset 0 0 120px rgba(0, 0, 0, 0.55);
 }
 
-/* Classical Architectural Frame Styles. */
+/* Classical Architectural Gilded Casing Styles. */
 .app::before
 {
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 28px;
+    border-radius: 24px;
 
-    background: linear-gradient(180deg, #f6e7ad 0%, #c9a227 45%, #6a4f00 100%);
+    background: linear-gradient(180deg, #f7e9bd 0%, #d1ae34 45%, #7a5a00 100%);
 
     mask:
       linear-gradient(#000 0 0) content-box,
@@ -32,6 +34,6 @@
     pointer-events: none;
 
     box-shadow:
-      inset 0 0 0 2px #2a1d00,
-      inset 0 0 30px rgba(0, 0, 0, 0.55);
+      inset 0 0 0 1px #3a2a00,
+      inset 0 0 24px rgba(0, 0, 0, 0.65);
 }

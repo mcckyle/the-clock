@@ -1,9 +1,9 @@
 //File name: RomanNumerals.jsx
 //Author: Kyle McColgan
-//Date: 18 September 2025
+//Date: 9 January 2026
 //Description: This file contains the numerals component for the React analog clock project.
 
-import styles from './RomanNumerals.module.css';
+import styles from "./RomanNumerals.module.css";
 
 const ROMAN = [
     "XII","I","II","III","IV","V",
@@ -14,14 +14,22 @@ export default function RomanNumerals()
 {
     return (
         <>
-            {Array.from({ length: 12 }).map((_, i) => {
+            {ROMAN.map((value, i) => {
                 const angle = (i * 30 - 90) * (Math.PI / 180);
-                const x = 100 + 68 * Math.cos(angle);
-                const y = 100 + 68 * Math.sin(angle);
+
+                const isCardinal = i === 0 || i === 6;
+                const radius = isCardinal ? 66 : 68;
+
+                const x = 100 + radius * Math.cos(angle);
+                const y = 100 + radius * Math.sin(angle);
 
                 return (
-                    <text key = {i} x={x} y={y} className={styles.numeral}>
-                        {ROMAN[i]}
+                    <text
+                      key={i}
+                      x={x}
+                      y={y}
+                      className={`${styles.numeral} ${isCardinal ? styles.cardinal : ""}`}>
+                        {value}
                     </text>
                 );
             })}

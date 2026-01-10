@@ -1,15 +1,16 @@
 //File name: AnalogClock.jsx
 //Author: Kyle McColgan
-//Date: 12 December 2025
+//Date: 9 January 2026
 //Description: This file contains the Analog clock component for the dedicated React clock project.
 
 import useClockTime from "../../utils/useClockTime";
 import useHandAngles from "../../utils/useHandAngles";
+
 import TickMarks from "../TickMarks/TickMarks.jsx";
 import RomanNumerals from "../RomanNumerals/RomanNumerals.jsx";
 import ClockHands from "../ClockHands/ClockHands.jsx";
 
-import styles from './AnalogClock.module.css';
+import styles from "./AnalogClock.module.css";
 
 export default function AnalogClock()
 {
@@ -21,10 +22,15 @@ export default function AnalogClock()
             <div className = {styles.clockFace}>
               <div className={styles.shimmerLayer} />
 
-              <svg className={styles.ticks} viewBox="0 0 200 200">
+              <svg
+                className={styles.ticks}
+                viewBox="0 0 200 200"
+                aria-hidden="true"
+              >
                 <TickMarks />
                 <RomanNumerals />
               </svg>
+
               <ClockHands />
 
               <div className={styles.rosette} />

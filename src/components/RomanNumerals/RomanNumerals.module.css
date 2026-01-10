@@ -1,39 +1,26 @@
-/* Filename: RomanNumerals.module.css */
+/* Filename: src/components/RomanNumerals/RomanNumerals.module.css */
 
 /* Roman Numerals Styles. */
 .numeral
 {
     font-family: 'Cinzel Decorative', serif;
-    fill: #fdf9e3;
-    stroke: #5a4300;
-    stroke-width: 0.35px;
+    fill: #f7f0d6;
+    stroke: #4a3500;
+    stroke-width: 0.28px;
     font-weight: 700;
-    font-size: 1.2vmin;
-    letter-spacing: 0.04em;
+    font-size: 1.15vmin;
+    letter-spacing: 0.03em;
     text-anchor: middle;
     dominant-baseline: middle;
-    filter:
-      drop-shadow(0 0 1px rgba(30, 20, 0, 0.5))
-      drop-shadow(0 0 2px rgba(240, 220, 160, 0.2));
-
-    transition: transform 0.25s ease, fill 0.25s ease;
-}
-
-.numeral:hover
-{
-    fill: #ffec8b;
-    filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.7));
-    transform: scale(1.05);
+    filter: drop-shadow(0 0 0.6px rgba(0, 0, 0, 0.35));
 }
 
 /* Highlight Cardinal Numbers Styles. */
-.numeral:nth-child(2), /* XII. */
-.numeral:nth-child(5), /* III. */
-.numeral:nth-child(8), /* VI. */
-.numeral:nth-child(11) /* IX. */
+.cardinal
 {
-    fill: #e0c15b; /* Color: Gold. */
-    font-size: 1.5vmin;
+    fill: #e1c15a;
+    font-size: 1.45vmin;
+    stroke-width: 0.35px;
 
-    text-shadow: 0 0 3px rgba(255, 215, 0, 0.5);
+    filter: drop-shadow(0 0 1.2px rgba(90, 65, 10, 0.45));
 }

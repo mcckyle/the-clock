@@ -1,36 +1,36 @@
-/* Filename: ClockHands.module.css */
+/* Filename: src/components/ClockHands/ClockHands.module.css */
 
 /* Hands Container Styles. */
 .hands
 {
     position: absolute;
     inset: 0;
-    z-index: 6;
+    z-index: 7;
 }
 
-/* Center / Hub / Pivot Styles. */
+/* Center Hub / Pivot Styles. */
 .hands::after
 {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 5.5vmin;
-    height: 5.5vmin;
+    width: 5vmin;
+    height: 5vmin;
     transform: translate(-50%, -50%);
     border-radius: 50%;
 
     background: radial-gradient(circle at 40% 40%,
-        #fffdf5 0%,
-        #f8e57c 35%,
-        #d4af37 70%,
-        #402d00 100%
+        #fffde8 0%,
+        #f1d86b 35%,
+        #d4af37 65%,
+        #412f00 100%
     );
 
-    border: 1.6px solid #7a5600;
+    border: 1.4px solid #7a5600;
     box-shadow:
-        0 0 12px rgba(255, 215, 0, 0.6),
-        inset 0 0 6px rgba(60, 30, 0, 0.6);
+        0 0 12px rgba(255, 175, 55, 0.5),
+        inset 0 0 6px rgba(58, 38, 0, 0.4);
 }
 
 /* Pivot Wrapper For Each Hand Style. */
@@ -40,7 +40,7 @@
     left: 50%;
     top: 50%;
 
-    /* Pivot exaclty in the centre of the dial:
+    /* Pivot exactly in the centre of the dial:
      *    5 0% 50% = middle of the element itself.
      *    translate(-50%, -100%) moves the rectangle so its base
      *    sits on the centre point and it points UP by default. */
@@ -51,24 +51,24 @@
 .hands div
 {
     transform-origin: 50% 100%;
-    border-radius: 0.4vmin;
+    border-radius: 0.3vmin;
 }
 
 /* Hour Hand Styles. */
 .hourHand
 {
     width: 2vmin;
-    height: 21vmin;
+    height: 20vmin;
 
     background: linear-gradient(
         to bottom,
-        #faf8f0 0%,
+        #fff9e6 0%,
         #d4af37 45%,
         #5e4200 100%
     );
 
     border: 1px solid #3a2600;
-    clip-path: polygon(50% 0, 64% 18%, 68% 100%, 32% 100%, 36% 18%);
+    clip-path: polygon(50% 0, 64% 15%, 68% 100%, 32% 100%, 36% 15%);
     transform: rotate(var(--hourDeg, 0deg));
 }
 
@@ -76,17 +76,17 @@
 .minuteHand
 {
     width: 1.2vmin;
-    height: 30vmin;
+    height: 28vmin;
 
     background: linear-gradient(
         to bottom,
         #fffdf5 0%,
-        #f4d87a 50%,
+        #f4d87a 45%,
         #705000 100%
     );
 
     border: 1px solid #4a2c00;
-    clip-path: polygon(50% 0, 62% 15%, 66% 100%, 34% 100%, 38% 15%);
+    clip-path: polygon(50% 0, 62% 12%, 66% 100%, 34% 100%, 38% 12%);
     transform: rotate(var(--minuteDeg, 0deg));
 }
 
@@ -94,15 +94,15 @@
 .secondHand
 {
     width: 0.45vmin;
-    height: 33vmin;
+    height: 32vmin;
 
     background: linear-gradient(
         to bottom,
-        #9a1a1a 0%,
-        #b42c2c 60%,
+        #a91c1c 0%,
+        #b53030 60%,
         #d4af37 100%
     );
 
-    clip-path: polygon(50% 0, 68% 20%, 68% 100%, 32% 100%, 32% 20%);
+    clip-path: polygon(50% 0, 68% 18%, 68% 100%, 32% 100%, 32% 18%);
     transform: rotate(var(--secondDeg, 0deg));
 }
