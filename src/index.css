@@ -18,13 +18,14 @@ html, body, #root
 body
 {
     font-family: 'Playfair Display', serif;
-    background: #050312;
+    background: #030212;
     color: #fdf7e2;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    line-height: 1.48;
-    letter-spacing: 0.025em;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
 }
+::selection { background-color: #f736aa; color: #05020c; }

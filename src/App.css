@@ -9,11 +9,11 @@
     align-items: center;
 
     position: relative;
-    background: radial-gradient(circle at 50% 28%, #141a4a 0%, #030211 82%);
+    background: radial-gradient(circle at 50% 28%, #121a42 0%, #02010f 82%);
     border-radius: 24px;
     overflow: hidden;
 
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85),
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85),
                 inset 0 0 120px rgba(0, 0, 0, 0.55);
 }
 
@@ -25,7 +25,7 @@
     inset: 0;
     border-radius: 24px;
 
-    background: linear-gradient(180deg, #f7e9bd 0%, #d1ae34 45%, #7a5a00 100%);
+    background: linear-gradient(180deg, #f8e8be 0%, #d4b534 45%, #805d00 100%);
 
     mask:
       linear-gradient(#000 0 0) content-box,
@@ -34,6 +34,19 @@
     pointer-events: none;
 
     box-shadow:
-      inset 0 0 0 1px #3a2a00,
-      inset 0 0 24px rgba(0, 0, 0, 0.65);
+      inset 0 0 0 1.5px #4a3600,
+      inset 0 0 28px rgba(0, 0, 0, 0.65);
+}
+
+/* Decorative Sunburst Glow Styles. */
+.app::after
+{
+  content: "";
+  position: absolute;
+  inset: -20%;
+  border-radius: 50%;
+
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.08) 0%, transparent 65%);
+  z-index: 0;
+  pointer-events: none;
 }

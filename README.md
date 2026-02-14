@@ -51,7 +51,7 @@ This project is deployed via **GitHub Pages**. You can view it live here: https:
 
 ## Contributing
 
-Contributions are welcome! Feel free to fork the repo, create feature branches, and even submit some pull requests.
+Contributions are welcome! Feel free to fork the repo and submit some pull requests.
 
 ---
 

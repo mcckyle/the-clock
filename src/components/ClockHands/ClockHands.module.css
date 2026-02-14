@@ -22,15 +22,15 @@
 
     background: radial-gradient(circle at 40% 40%,
         #fffde8 0%,
-        #f1d86b 35%,
+        #f4e28a 35%,
         #d4af37 65%,
         #412f00 100%
     );
 
-    border: 1.4px solid #7a5600;
+    border: 1.5px solid #7a5600;
     box-shadow:
-        0 0 12px rgba(255, 175, 55, 0.5),
-        inset 0 0 6px rgba(58, 38, 0, 0.4);
+        0 0 14px rgba(255, 215, 0, 0.6),
+        inset 0 0 6px rgba(60, 30, 0, 0.4);
 }
 
 /* Pivot Wrapper For Each Hand Style. */
@@ -51,7 +51,7 @@
 .hands div
 {
     transform-origin: 50% 100%;
-    border-radius: 0.3vmin;
+    border-radius: 0.25vmin;
 }
 
 /* Hour Hand Styles. */
@@ -63,30 +63,34 @@
     background: linear-gradient(
         to bottom,
         #fff9e6 0%,
-        #d4af37 45%,
+        #e3c453 40%,
+        #d4af37 65%,
         #5e4200 100%
     );
 
     border: 1px solid #3a2600;
-    clip-path: polygon(50% 0, 64% 15%, 68% 100%, 32% 100%, 36% 15%);
+    clip-path: polygon(50% 0, 62% 14%, 64% 100%, 36% 100%, 38% 14%);
+    box-shadow: 0 0 2px rgba(255, 230, 130, 0.4) inset, 0 0 4px rgba(212, 175, 55, 0.2);
     transform: rotate(var(--hourDeg, 0deg));
 }
 
 /* Minute Hand Styles. */
 .minuteHand
 {
-    width: 1.2vmin;
+    width: 1.3vmin;
     height: 28vmin;
 
     background: linear-gradient(
         to bottom,
         #fffdf5 0%,
-        #f4d87a 45%,
+        #f5d77a 45%,
+        #e0b246 75%,
         #705000 100%
     );
 
     border: 1px solid #4a2c00;
-    clip-path: polygon(50% 0, 62% 12%, 66% 100%, 34% 100%, 38% 12%);
+    clip-path: polygon(50% 0, 61% 12%, 63% 100%, 37% 100%, 39% 12%);
+    box-shadow: 0 0 1.5px rgba(255, 230, 90, 0.35) inset, 0 0 3px rgba(212, 175, 55, 0.2);
     transform: rotate(var(--minuteDeg, 0deg));
 }
 
@@ -98,11 +102,12 @@
 
     background: linear-gradient(
         to bottom,
-        #a91c1c 0%,
-        #b53030 60%,
-        #d4af37 100%
+        #b12b2b 0%,
+        #d45b5b 50%,
+        #f3e17a 100%
     );
 
     clip-path: polygon(50% 0, 68% 18%, 68% 100%, 32% 100%, 32% 18%);
+    box-shadow: 0 0 1px rgba(255, 200, 60, 0.4) inset, 0 0 3px rgba(212, 100, 30, 0.25);
     transform: rotate(var(--secondDeg, 0deg));
 }
