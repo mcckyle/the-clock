@@ -11,7 +11,7 @@
     width: 100%;
     height: 100%;
 
-    background: radial-gradient(circle at center, #0d1241 0%, #02010d 80%);
+    background: radial-gradient(circle at center, #121a54 0%, #02010d 82%);
 }
 
 /* Solar Halo Styles. */
@@ -19,12 +19,12 @@
 {
     content: "";
     position: absolute;
-    width: 120vmin;
-    height: 120vmin;
+    width: 125vmin;
+    height: 125vmin;
     border-radius: 50%;
     background: repeating-conic-gradient(
-        rgba(212, 175, 55, 0.07) 0deg 4deg,
-        transparent 4deg 20deg
+        rgba(212, 175, 55, 0.09) 0deg 3deg,
+        transparent 3deg 18deg
     );
 
     opacity: 0.22;
@@ -39,12 +39,17 @@
     width: 72vmin;
     height: 72vmin;
     border-radius: 50%;
-    background: radial-gradient(circle at 50% 55%, #fffdf4 0%, #e9d9a0 55%, #b2892b 100%);
-    border: 8px solid #6d4b00;
+    background: radial-gradient(
+        circle at 50% 56%,
+        #fffef7 0%,
+        #efe2b3 55%,
+        #b89233 100%
+    );
+    border: 9px solid #6a4700;
 
-    box-shadow: inset 0 0 3px #2c1d00,
-                inset 0 0 36px rgba(0, 0, 0, 0.7),
-                0 0 80px rgba(212, 175, 55, 0.28);
+    box-shadow: inset 0 0 4px #2c1d00,
+                inset 0 0 38px rgba(0, 0, 0, 0.65),
+                0 0 90px rgba(212, 175, 55, 0.28);
 
     display: flex;
     justify-content: center;
@@ -59,14 +64,20 @@
 .rosette
 {
     position: absolute;
-    width: 7.5vmin;
-    height: 7.5vmin;
+    width: 7.8vmin;
+    height: 7.8vmin;
     border-radius: 50%;
-    background: radial-gradient(circle at 45% 40%, #fffef7, #d4b540 58%, #3d2600 100%);
+    background: radial-gradient(
+        circle at 45% 40%,
+        #fffef6 0%,
+        #e5c861 45%,
+        #c7a03c 65%,
+        #3d2600 100%
+    );
     border: 2px solid #4d3600;
 
-    box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.7),
-                0 0 14px rgba(212, 175, 55, 0.32);
+    box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.7),
+                0 0 18px rgba(212, 175, 55, 0.38);
 
     z-index: 6;
 }
@@ -79,11 +90,11 @@
     border-radius: 50%;
     background: repeating-conic-gradient(
       from 0deg,
-      rgba(212, 175, 55, 0.12) 0deg 2deg,
-      transparent 2deg 18deg
+      rgba(212, 175, 55, 0.09) 0deg 2deg,
+      transparent 2deg 16deg
     );
 
-    opacity: 0.27;
+    opacity: 0.28;
     z-index: 2;
 }
 
@@ -95,9 +106,9 @@
     border-radius: 50%;
     background: linear-gradient(
         140deg,
-        rgba(255, 255, 255, 0.04),
-        rgba(255, 255, 255, 0.014) 50%,
-        rgba(255, 255, 255, 0.04)
+        rgba(255, 255, 255, 0.045),
+        rgba(255, 255, 255, 0.015) 50%,
+        rgba(255, 255, 255, 0.045)
     );
 
     background-size: 200% 100%;
@@ -115,8 +126,8 @@
     border-radius: 50%;
     background: radial-gradient(
         circle at 36% 36%,
-        rgba(255, 255, 255, 0.09),
-        rgba(255, 255, 255, 0.02) 60%,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.025) 60%,
         transparent 85%
     );
 

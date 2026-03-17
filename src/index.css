@@ -18,7 +18,7 @@ html, body, #root
 body
 {
     font-family: 'Playfair Display', serif;
-    background: #030212;
+    background: radial-gradient(circle at center, #0b0a2a 0%, #02010c 90%);
     color: #fdf7e2;
 
     display: flex;
@@ -26,6 +26,6 @@ body
     align-items: center;
 
     line-height: 1.5;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.035em;
 }
-::selection { background-color: #f736aa; color: #05020c; }
+::selection { background-color: #e8c85c; color: #1a1200; }

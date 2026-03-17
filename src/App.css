@@ -9,44 +9,54 @@
     align-items: center;
 
     position: relative;
-    background: radial-gradient(circle at 50% 28%, #121a42 0%, #02010f 82%);
-    border-radius: 24px;
     overflow: hidden;
-
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85),
-                inset 0 0 120px rgba(0, 0, 0, 0.55);
+    border-radius: 24px;
+    background: radial-gradient(circle at 50% 20%, #1b2464 0%, #08051f 60%, #02010c 100%);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.9),
+                inset 0 0 140px rgba(0, 0, 0, 0.6);
 }
 
-/* Classical Architectural Gilded Casing Styles. */
+/* Classical Architectural Frame Styles. */
 .app::before
 {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: 24px;
+    padding: 14px;
+    pointer-events: none;
 
-    background: linear-gradient(180deg, #f8e8be 0%, #d4b534 45%, #805d00 100%);
+    background: linear-gradient(
+      180deg,
+      #fff1c9 0%,
+      #d4b534 40%,
+      #9a7606 70%,
+      #5e4300 100%
+    );
 
     mask:
       linear-gradient(#000 0 0) content-box,
       linear-gradient(#000 0 0);
     mask-composite: exclude;
-    pointer-events: none;
-
     box-shadow:
-      inset 0 0 0 1.5px #4a3600,
-      inset 0 0 28px rgba(0, 0, 0, 0.65);
+      inset 0 0 2px #fff3c4,
+      inset 0 0 30px rgba(0, 0, 0, 0.55);
 }
 
-/* Decorative Sunburst Glow Styles. */
+/* Solar Radiance Styles. */
 .app::after
 {
   content: "";
   position: absolute;
-  inset: -20%;
+  inset: -25%;
   border-radius: 50%;
 
-  background: radial-gradient(circle, rgba(255, 215, 0, 0.08) 0%, transparent 65%);
-  z-index: 0;
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 0, 0.12) 0%,
+    rgba(255, 215, 0, 0.05) 35%,
+    transparent 70%
+  );
+  filter: blur(6px);
   pointer-events: none;
 }
