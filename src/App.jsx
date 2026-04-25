@@ -1,18 +1,22 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 21 July 2025
+//Date: 24 April 2026
 //Description: This file contains the app entry point for the clock site.
 
 import React from 'react';
 import AnalogClock from './components/AnalogClock/AnalogClock';
+
 import './App.css';
 
 function App()
 {
   return (
-    <div className="app">
+    <main className="app">
+      <div className="aura" />
+      <aiv className="architecturalGlow" />
+
       <AnalogClock />
-    </div>
+    </main>
   );
 }
 

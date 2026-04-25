@@ -11,24 +11,23 @@
     width: 100%;
     height: 100%;
 
-    background: radial-gradient(circle at center, #121a54 0%, #02010d 82%);
+    background: radial-gradient(circle at center, #18215f 0%, #050316 68%,  #02010b 100%);
 }
 
-/* Solar Halo Styles. */
-.clockContainer::before
+/* ==== GRAND SOLAR HALO STYLES. ==== */
+.outerHalo
 {
-    content: "";
     position: absolute;
-    width: 125vmin;
-    height: 125vmin;
+    width: 128vmin;
+    height: 128vmin;
     border-radius: 50%;
     background: repeating-conic-gradient(
-        rgba(212, 175, 55, 0.09) 0deg 3deg,
-        transparent 3deg 18deg
+        rgba(212, 175, 55, 0.08) 0deg 2deg,
+        transparent 2deg 16deg
     );
 
-    opacity: 0.22;
-    filter: blur(4px);
+    opacity: 0.24;
+    filter: blur(5px);
     pointer-events: none;
 }
 
@@ -39,26 +38,84 @@
     width: 72vmin;
     height: 72vmin;
     border-radius: 50%;
-    background: radial-gradient(
-        circle at 50% 56%,
-        #fffef7 0%,
-        #efe2b3 55%,
-        #b89233 100%
-    );
-    border: 9px solid #6a4700;
-
-    box-shadow: inset 0 0 4px #2c1d00,
-                inset 0 0 38px rgba(0, 0, 0, 0.65),
-                0 0 90px rgba(212, 175, 55, 0.28);
 
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 
-    transition: transform 0.35s ease;
+    background: radial-gradient(
+        circle at 50% 56%,
+        #fffef8 0%,
+        #f4e7be 40%,
+        #dec16a 72%,
+        #a97814 100%
+    );
+    border: 0.95vmin solid #6d4b00;
+
+    box-shadow: inset 0 0 3px rgba(255, 248, 220, 0.9),
+                inset 0 0 18px rgba(90, 55, 0, 0.5),
+                inset 0 0 42px rgba(0, 0, 0, 0.68),
+                0 0 90px rgba(212, 175, 55, 0.24),
+                0 0 140px rgba(212, 175, 55, 0.08);
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-.clockContainer:hover .clockFace { transform: scale(1.006); }
+/*.clockContainer:hover .clockFace
+{
+    transform: scale(1.006);
+    box-shadow: inset 0 0 3px rgba(255, 248, 220, 0.95),
+                inset 0 0 18px rgba(90, 55, 0, 0.5),
+                inset 0 0 42px rgba(0, 0, 0, 0.68),
+                0 0 110px rgba(212, 175, 55, 0.34),
+                0 0 170px rgba(212, 175, 55, 0.12);
+}*/
+
+/* ==== OUTER GILT BEZEL STYLES. ==== */
+/*.bezelRing
+{
+    position: absolute;
+    inset: 1.2vmin;
+    border-radius: 50%;
+    z-index: 1;
+
+    border: 0.32vmin solid rgba(255, 238, 180, 0.9);
+
+    box-shadow: inset 0 0 0 0.16vmin #6a4700,
+                0 0 8px rgba(255, 215, 0, 0.22);
+}*/
+
+/* ==== INNER ENAMEL BEZEL STYLES. ==== */
+/*.innerBezel
+{
+    position: absolute;
+    inset: 4.6vmin;
+    border-radius: 50%;
+    border: 0.2vmin solid rgba(120, 82, 8, 0.8);
+    opacity: 0.75;
+    z-index: 1;
+
+    box-shadow: inset 0 0 0 0.12vmin rgba(255, 241, 190, 0.8),
+                inset 0 0 18px rgba(0, 0, 0, 0.24);
+}*/
+
+/* ==== SOLAR CORE STYLES. ==== */
+.solarCore
+{
+    position: absolute;
+    width: 14vmin;
+    height: 14vmin;
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 242, 190, 0.85) 0%,
+        rgba(242, 201, 76, 0.42) 45%,
+        transparent 78%
+    );
+    filter: blur(2px);
+    z-index: 2;
+}
 
 /* ==== ROSETTE CENTER STYLES. ==== */
 .rosette
@@ -68,21 +125,23 @@
     height: 7.8vmin;
     border-radius: 50%;
     background: radial-gradient(
-        circle at 45% 40%,
-        #fffef6 0%,
-        #e5c861 45%,
-        #c7a03c 65%,
-        #3d2600 100%
+        circle at 45% 38%,
+        #fffef7 0%,
+        #f0d46f 35%,
+        #d1a941 58%,
+        #7c5600 82%,
+        #2c1900 100%
     );
-    border: 2px solid #4d3600;
+    border: 0.18vmin solid #4d3600;
 
-    box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.7),
-                0 0 18px rgba(212, 175, 55, 0.38);
+    box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.68),
+                inset 0 0 2px rgba(255, 245, 205, 0.9),
+                0 0 22px rgba(212, 175, 55, 0.4);
 
-    z-index: 6;
+    z-index: 8;
 }
 
-/* ==== SUNBURST AURA STYLES. ==== */
+/* ==== SUNBURST OVERLAY STYLES. ==== */
 .sunburstOverlay
 {
     position: absolute;
@@ -90,11 +149,12 @@
     border-radius: 50%;
     background: repeating-conic-gradient(
       from 0deg,
-      rgba(212, 175, 55, 0.09) 0deg 2deg,
-      transparent 2deg 16deg
+      rgba(212, 175, 55, 0.12) 0deg 1.6deg,
+      transparent 1.6deg 15deg
     );
 
-    opacity: 0.28;
+    mix-blend-mode: soft-light;
+    opacity: 0.3;
     z-index: 2;
 }
 
@@ -105,17 +165,17 @@
     inset: 0;
     border-radius: 50%;
     background: linear-gradient(
-        140deg,
-        rgba(255, 255, 255, 0.045),
-        rgba(255, 255, 255, 0.015) 50%,
-        rgba(255, 255, 255, 0.045)
+        135deg,
+        rgba(255, 255, 255, 0.06),
+        rgba(255, 255, 255, 0.012) 45%,
+        rgba(255, 255, 255, 0.06)
     );
 
-    background-size: 200% 100%;
+    background-size: 220% 100%;
     mix-blend-mode: soft-light;
     z-index: 3;
 
-    animation: shimmer 80s linear infinite;
+    animation: shimmer 90s linear infinite;
 }
 
 /* ==== GLASS EFFECT OVERLAY STYLES. ==== */
@@ -125,13 +185,13 @@
     inset: 0;
     border-radius: 50%;
     background: radial-gradient(
-        circle at 36% 36%,
-        rgba(255, 255, 255, 0.1),
-        rgba(255, 255, 255, 0.025) 60%,
-        transparent 85%
+        circle at 34% 32%,
+        rgba(255, 255, 255, 0.14),
+        rgba(255, 255, 255, 0.03) 42%,
+        transparent 70%
     );
 
-    z-index: 7;
+    z-index: 9;
     pointer-events: none;
 }
 
@@ -141,7 +201,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 4;
+    z-index: 5;
     pointer-events: none;
 }
 
@@ -167,6 +227,6 @@
 
 @keyframes shimmer
 {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+    0% { background-position: -220% 0; }
+    100% { background-position: 220% 0; }
 }

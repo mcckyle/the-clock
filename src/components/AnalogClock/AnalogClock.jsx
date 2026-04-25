@@ -1,6 +1,6 @@
 //File name: AnalogClock.jsx
 //Author: Kyle McColgan
-//Date: 16 March 2026
+//Date: 24 April 2026
 //Description: This file contains the clock component for the clock React project.
 
 import useClockTime from "../../utils/useClockTime";
@@ -18,8 +18,12 @@ export default function AnalogClock()
     useHandAngles(time);
 
     return (
-      <div className = {styles.clockContainer}>
-        <div className = {styles.clockFace}>
+      <div className={styles.clockContainer}>
+        <div className={styles.outerHalo} />
+
+        <div className={styles.clockFace}>
+          <div className={styles.bezelRing} />
+          <div className={styles.innerBezel} />
           <div className={styles.shimmerLayer} />
 
           <svg
@@ -33,7 +37,9 @@ export default function AnalogClock()
 
           <ClockHands />
 
+          <div className={styles.solarCore} />
           <div className={styles.rosette} />
+
           <div className={styles.sunburstOverlay} />
           <div className={styles.glassOverlay} />
         </div>

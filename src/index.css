@@ -18,14 +18,17 @@ html, body, #root
 body
 {
     font-family: 'Playfair Display', serif;
-    background: radial-gradient(circle at center, #0b0a2a 0%, #02010c 90%);
-    color: #fdf7e2;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+
+    background: radial-gradient(circle at center, #0b0a2a 0%, #02010c 92%);
+    color: #fdf7e2;
 
     line-height: 1.5;
     letter-spacing: 0.035em;
+    text-rendering: optimizeLegibility;
 }
-::selection { background-color: #e8c85c; color: #1a1200; }
+::selection { background-color: #f2d56b; color: #1b1200; }
