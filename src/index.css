@@ -14,21 +14,22 @@ html, body, #root
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+html { color-scheme: dark; }
 
 body
 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", "Cormorant Garamond", serif;
 
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 
-    background: radial-gradient(circle at center, #0b0a2a 0%, #02010c 92%);
-    color: #fdf7e2;
+    background: linear-gradient(180deg, #1f2d5a 0%, #0b1024 55%, #03040a 100%);
+    color: #f7edd2;
 
     line-height: 1.5;
-    letter-spacing: 0.035em;
+    letter-spacing: 0.025em;
     text-rendering: optimizeLegibility;
 }
-::selection { background-color: #f2d56b; color: #1b1200; }
+::selection { background-color: #d6b24b; color: #120d02; }

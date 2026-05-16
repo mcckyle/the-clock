@@ -1,6 +1,6 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 24 April 2026
+//Date: 15 May 2026
 //Description: This file contains the app entry point for the clock site.
 
 import React from 'react';
@@ -12,8 +12,8 @@ function App()
 {
   return (
     <main className="app">
-      <div className="aura" />
-      <aiv className="architecturalGlow" />
+      <div className="vaultLight" />
+      <div className="architecturalGlow" />
 
       <AnalogClock />
     </main>
