@@ -8,29 +8,29 @@
     z-index: 7;
 }
 
-/* Center Hub / Pivot Styles. */
+/* Central Pivot Styles. */
 .hands::after
 {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 5vmin;
-    height: 5vmin;
+    width: 4.4vmin;
+    height: 4.4vmin;
     transform: translate(-50%, -50%);
     border-radius: 50%;
 
-    background: radial-gradient(circle at 40% 40%,
-        #fffde8 0%,
-        #f4e28a 35%,
-        #d4af37 65%,
-        #412f00 100%
+    background: radial-gradient(circle at 40% 36%,
+        #fffce8 0%,
+        #efd27a 34%,
+        #c79c35 62%,
+        #4b3200 100%
     );
 
-    border: 1.5px solid #7a5600;
-    box-shadow:
-        0 0 14px rgba(255, 215, 0, 0.6),
-        inset 0 0 6px rgba(60, 30, 0, 0.4);
+    border: 0.12vmin solid #6e4c00;
+    box-shadow: inset 0 0 5x rgba(40, 20, 0, 0.42),
+                inset 0 0 1px rgba(255, 245, 205, 0.8),
+                0 0 10px rgba(214, 170, 54, 0.22);
 }
 
 /* Pivot Wrapper For Each Hand Style. */
@@ -47,69 +47,60 @@
     transform: translate(-50%, -100%);
     transform-origin: 50% 100%;
 }
-
-.hands div
-{
-    transform-origin: 50% 100%;
-    border-radius: 0.25vmin;
-}
+.hands div { transform-origin: 50% 100%; }
 
 /* Hour Hand Styles. */
 .hourHand
 {
-    width: 2.1vmin;
-    height: 20vmin;
+    width: 1.8vmin;
+    height: 18vmin;
 
     background: linear-gradient(
-        to bottom,
-        #fff9e6 0%,
-        #e3c453 40%,
-        #d4af37 65%,
-        #5e4200 100%
+        180deg,
+        #fff6d9 0%,
+        #d7b35d 44%,
+        #8b6112 100%
     );
 
-    border: 1px solid #3a2600;
-    clip-path: polygon(50% 0, 60% 14%, 63% 100%, 37% 100%, 40% 14%);
-    box-shadow: inset 0 0 2px rgba(255, 230, 130, 0.4),
-                0 0 4px rgba(212, 175, 55, 0.2);
+    border: 0.08vmin solid #3f2a00;
+    clip-path: polygon(50% 0, 62% 16%, 60% 100%, 40% 100%, 38% 16%);
+    box-shadow: inset 0 0 1px rgba(255, 235, 170, 0.5);
     transform: rotate(var(--hourDeg, 0deg));
 }
 
 /* Minute Hand Styles. */
 .minuteHand
 {
-    width: 1.25vmin;
-    height: 29vmin;
+    width: 1.05vmin;
+    height: 27vmin;
 
     background: linear-gradient(
-        to bottom,
-        #fffdf5 0%,
-        #f5d77a 45%,
-        #e0b246 75%,
-        #705000 100%
+        180deg,
+        #fffce8 0%,
+        #e4c56c 46%,
+        #8d6215 100%
     );
 
-    border: 1px solid #4a2c00;
-    clip-path: polygon(50% 0, 60% 12%, 63% 100%, 37% 100%, 40% 12%);
-    box-shadow: inset 0 0 1.5px rgba(255, 230, 90, 0.35),
-                0 0 3px rgba(212, 175, 55, 0.2);
+    border: 0.08 solid #422c00;
+    clip-path: polygon(50% 0, 60% 12%, 58% 100%, 42% 100%, 40% 12%);
+    box-shadow: inset 0 0 1px rgba(255, 240, 180, 0.42);
     transform: rotate(var(--minuteDeg, 0deg));
 }
 
 /* Second Hand Styles. */
 .secondHand
 {
-    width: 0.45vmin;
-    height: 32vmin;
+    width: 0.34vmin;
+    height: 30vmin;
+    border-radius: 999px;
 
     background: linear-gradient(
         to bottom,
-        #b12b2b 0%,
-        #d45b5b 50%,
-        #f3e17a 100%
+        #d6b24b 0%,
+        #8d6212 100%
     );
 
     clip-path: polygon(50% 0, 68% 18%, 68% 100%, 32% 100%, 32% 18%);
-    box-shadow: 0 0 1px rgba(255, 200, 60, 0.4) inset, 0 0 3px rgba(212, 100, 30, 0.25);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.35);
     transform: rotate(var(--secondDeg, 0deg));
 }

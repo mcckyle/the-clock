@@ -1,7 +1,7 @@
 //File name: formatTime.js
 //Author: Kyle McColgan
-//Date: 24 August 2025
-//Description: This file contains a custom formatting helper function built for the React timer site.
+//Date: 15 May 2026
+//Description: This file contains a custom formatting helper function built for the Analog Clock React project.
 
 export function formatTime(ms, includeCentiseconds = false)
 {

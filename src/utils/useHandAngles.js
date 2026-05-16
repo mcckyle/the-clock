@@ -1,36 +1,35 @@
 //File name: useHandAngles.js
 //Author: Kyle McColgan
-//Date: 22 September 2025
-//Description: This file contains a utility function for the React AnalogClock component.
+//Date: 15 May 2026
+//Description: This file contains a utility function for the AnalogClock React project.
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import styles from '../components/AnalogClock/AnalogClock.module.css';
 
 export default function useHandAngles({ h, m, s })
 {
-    useEffect(() => {
+    const activeTickRef = useRef(null);
+
+    useEffect(() =>
+    {
+        const root = document.documentElement;
 
         //Continuous time...
-        const hourDeg = (h % 12) * 30;
-        const minuteDeg = m * 6;
-        const secondDeg = s * 6;
-
-        const root = document.documentElement;
-        root.style.setProperty("--hourDeg", `${hourDeg}deg`);
-        root.style.setProperty("--minuteDeg", `${minuteDeg}deg`);
-        root.style.setProperty("--secondDeg", `${secondDeg}deg`);
+        root.style.setProperty("--hourDeg", `${(h % 12) * 30}deg`);
+        root.style.setProperty("--minuteDeg", `${m * 6}deg`);
+        root.style.setProperty("--secondDeg", `${s * 6}deg`);
 
         //Round fractional seconds to nearest int for tick highlighting.
         const secondIndex = Math.floor(s % 60);
 
         // Synchronized tick highlighting.
-        const nowTick = document.querySelector(`line[data-second="${secondIndex}"]`);
-        const prevTick = document.querySelector(`line[data-second="${(secondIndex + 59) % 60}"]`);
+        const activeTick = document.querySelector(`line[data-second="${secondIndex}"]`);
 
-        nowTick?.classList.add(styles.active);
-        prevTick?.classList.remove(styles.active);
-
-        const timeout = setTimeout(() => nowTick?.classList.remove(styles.active), 600);
-        return () => clearTimeout(timeout);
+        if (activeTickRef.current != activeTick)
+        {
+            activeTickRef.current?.classList.remove(styles.active);
+            activeTick?.classList.add(styles.active);
+            activeTickRef.current = activeTick;
+        }
     }, [h, m, s]);
 }

@@ -1,6 +1,6 @@
 //File name: AnalogClock.jsx
 //Author: Kyle McColgan
-//Date: 24 April 2026
+//Date: 15 May 2026
 //Description: This file contains the clock component for the clock React project.
 
 import useClockTime from "../../utils/useClockTime";
@@ -39,8 +39,6 @@ export default function AnalogClock()
 
           <div className={styles.solarCore} />
           <div className={styles.rosette} />
-
-          <div className={styles.sunburstOverlay} />
           <div className={styles.glassOverlay} />
         </div>
       </div>
