@@ -1,6 +1,6 @@
 //File name: TickMarks.jsx
 //Author: Kyle McColgan
-//Date: 16 March 2026
+//Date: 4 June 2026
 //Description: This file contains the tick marks component for the analog clock React project.
 
 import { useMemo } from "react";
@@ -20,8 +20,8 @@ export default function TickMarks()
       const isQuarter = i % 15 === 0;
       const isHour = i % 5 === 0;
 
-      const radiusInner = isQuarter ? 66 : isHour ? 78 : 88;
-      const radiusOuter = isQuarter ? 104 : isHour ? 96 : 92;
+      const radiusInner = isQuarter ? 72 : isHour ? 76 : 88;
+      const radiusOuter = isQuarter ? 101 : isHour ? 96 : 92;
 
       const x1 = 100 + radiusInner * Math.cos(angle);
       const y1 = 100 + radiusInner * Math.sin(angle);

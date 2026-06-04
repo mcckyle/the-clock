@@ -25,11 +25,11 @@ body
     align-items: center;
     overflow: hidden;
 
-    background: linear-gradient(180deg, #1f2d5a 0%, #0b1024 55%, #03040a 100%);
+    background: linear-gradient(180deg, #1b2b56 0%, #0a142d 52%, #02040a 100%);
     color: #f7edd2;
 
     line-height: 1.5;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.018em;
     text-rendering: optimizeLegibility;
 }
 ::selection { background-color: #d6b24b; color: #120d02; }

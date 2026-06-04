@@ -15,8 +15,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 4.4vmin;
-    height: 4.4vmin;
+    width: 3.4vmin;
+    height: 3.4vmin;
     transform: translate(-50%, -50%);
     border-radius: 50%;
 
@@ -52,7 +52,7 @@
 /* Hour Hand Styles. */
 .hourHand
 {
-    width: 1.8vmin;
+    width: 1.25vmin;
     height: 18vmin;
 
     background: linear-gradient(
@@ -71,7 +71,7 @@
 /* Minute Hand Styles. */
 .minuteHand
 {
-    width: 1.05vmin;
+    width: 0.82vmin;
     height: 27vmin;
 
     background: linear-gradient(
@@ -90,9 +90,10 @@
 /* Second Hand Styles. */
 .secondHand
 {
-    width: 0.34vmin;
+    width: 0.18vmin;
     height: 30vmin;
     border-radius: 999px;
+    opacity: 0.85;
 
     background: linear-gradient(
         to bottom,
