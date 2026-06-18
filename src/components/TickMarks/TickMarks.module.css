@@ -4,29 +4,27 @@
 .tickRing
 {
     transform: rotate(-90deg);
-    transform-origin: 50% 50%;
+    transform-origin: center;
 }
 
 /* ==== Minute Tick Marks Styles. ==== */
 .tick
 {
-    stroke-width: 0.8;
-    opacity: 0.68;
-    filter: drop-shadow(0 0 0.2px rgba(0, 0, 0, 0.25));
+    stroke-width: 0.65;
+    opacity: 0.55;
 }
 
 /* ==== Golden Hour Tick Marks Styles. ==== */
 .hourTick
 {
-    stroke-width: 2.4;
+    stroke-width: 2;
     opacity: 1;
-    filter: drop-shadow(0 0 0.45px rgba(80, 52, 0, 0.45));
+    filter: drop-shadow(0 0 0.4px rgba(70, 45, 0, 0.45));
 }
 
 /* ==== Quarter Tick Marks Styles. ==== */
 .quarterTick
 {
-    stroke-width: 3.2;
+    stroke-width: 3;
     opacity: 1;
-    filter: drop-shadow(0 0 0.7px rgba(90, 60, 0, 0.55));
 }

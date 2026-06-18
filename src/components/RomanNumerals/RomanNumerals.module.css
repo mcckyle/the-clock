@@ -4,24 +4,19 @@
 .numeral
 {
     font-family: "Cinzel", serif;
-    fill: #f8eed0;
-    stroke: #5d4300;
-    stroke-width: 0.22px;
-    font-weight: 700;
-    font-size: 1.36vmin;
-    letter-spacing: 0.04em;
+    fill: #806016;
+    stroke: none;
+    font-weight: 600;
+    font-size: 1.42vmin;
+    letter-spacing: 0.06em;
     text-anchor: middle;
     dominant-baseline: middle;
-    filter: drop-shadow(0 0 0.35px rgba(0, 0, 0, 0.32));
 }
 
 /* Highlight Cardinal Numbers Styles. */
 .cardinal
 {
-    fill: #efd27a;
-    font-size: 1.62vmin;
-    stroke-width: 0.3px;
-    letter-spacing: 0.08em;
-
-    filter: drop-shadow(0 0 0.6px rgba(70, 45, 0, 0.5));
+    fill: #5a3d00;
+    font-size: 1.75vmin;
+    font-weight: 700;
 }

@@ -2,51 +2,47 @@
 .app
 {
   position: relative;
+  isolation: isolate;
   overflow: hidden;
 
   width: 100vw;
   height: 100vh;
 
   display: flex;
-  justify-content: center;
   align-items: center;
-  isolation: isolate;
+  justify-content: center;
 
   background: radial-gradient(
-    circle at 50% 16%,
-    rgba(243, 211, 114, 0.08) 0%,
-    rgba(176, 126, 18, 0.04) 24%,
-    transparent 44%
+    circle at 50% 24%,
+    rgba(239, 214, 133, 0.10),
+    transparent 38%
   ),
   linear-gradient(
     180deg,
-    #233566 0%,
-    #142246 32%,
-    #081126 68%,
-    #03050c 100%
+    #243b73 0%,
+    #101d3b 46%,
+    #050916 100%
   );
-  box-shadow: inset 0 0 180px rgba(0, 0, 0, 0.52),
-              inset 0 0 30px rgba(255, 226, 150, 0.04);
+  color: #f7edcf;
 }
 
-/* App Grand Architectural Border Styles. */
+/* App Royal Gilt Frame Styles. */
 .app::before
 {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 20; /* Required for frame to properly render. */
+  z-index: 10; /* Required for frame to properly render. */
 
-  padding: 10px;
+  padding: 12px;
   pointer-events: none;
 
   background: linear-gradient(
     180deg,
-    #f6ebbf 0%,
-    #d8bc63 18%,
-    #b18328 42%,
-    #7a5612 70%,
-    #4a3204 100%
+    #f5e8b0 0%,
+    #d5b75b 22%,
+    #9a701e 55%,
+    #604008 100%
   );
 
   mask:
@@ -54,12 +50,11 @@
     linear-gradient(#000 0 0);
   mask-composite: exclude;
   box-shadow:
-    inset 0 1px 1px rgba(255, 250, 225, 0.9),
-    inset 0 -1px 2px rgba(60, 35, 0, 0.55),
-    inset 0 0 24px rgba(0, 0, 0, 0.28);
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -2px 8px rgba(35, 20, 0, 0.55);
 }
 
-/* App Controlled Edge Vignette Styles. */
+/* App Controlled Royal Vignette Styles. */
 .app::after
 {
   content: "";
@@ -67,42 +62,40 @@
   inset: 0;
   pointer-events: none;
   background: radial-gradient(
-    circle at center,
-    transparent 52%,
-    rgba(0, 0, 0, 0.16) 74%,
-    rgba(0, 0, 0, 0.42) 100%
+    circle,
+    transparent 50%,
+    rgba(0, 0, 0, 0.35) 100%
   );
 }
 
-/* App Central Hall Illumination Styles. */
-.vaultLight
+/* App Central Gilded Illumination Styles. */
+.royalLight
 {
   position: absolute;
-  width: 120vmin;
-  height: 120vmin;
+  width: 110vmin;
+  height: 110vmin;
   border-radius: 50%;
 
   background: radial-gradient(
     circle,
-    rgba(255, 226, 132, 0.10) 0%,
-    rgba(229, 179, 57, 0.05) 28%,
-    rgba(191, 132, 22, 0.02) 52%,
-    transparent 76%
+    rgba(255, 235, 160, 0.12),
+    rgba(214, 175, 74, 0.05) 35%,
+    transparent 70%
   );
-  filter: blur(6px);
-  opacity: 0.8;
+  filter: blur(4px);
+  opacity: 0.9;
 }
 
-/* App Upper Palace Reflection Styles. */
-.architecturalGlow
+/* App Upper Gallery Atmosphere Styles. */
+.galleryAtmosphere
 {
   position: absolute;
   inset: 0;
   pointer-events: none;
   background: linear-gradient(
     180deg,
-    rgba(255, 246, 221, 0.12) 0%,
-    rgba(248, 226, 173, 0.05) 10%,
-    transparent 28%
+    rgba(255, 245, 220, 0.13),
+    transparent 24%
   );
+  opacity: 0.8;
 }

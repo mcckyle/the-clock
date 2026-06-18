@@ -4,158 +4,100 @@
 .clockContainer
 {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* ==== GRAND ATMOSPHERIC HALO STYLES. ==== */
-.outerHalo
-{
-    position: absolute;
-    width: 102vmin;
-    height: 102vmin;
-    border-radius: 50%;
-    background: radial-gradient(
-        circle,
-        rgba(182, 134, 34, 0.08) 0%,
-        rgba(182, 134, 34, 0.03) 40%,
-        transparent 72%
-    );
-
-    opacity: 0.7;
-    filter: blur(5px);
-    pointer-events: none;
-}
-
-/* ==== CLOCK FACE STYLES. ==== */
+/* ==== IVORY ENAMEL DIAL STYLES. ==== */
 .clockFace
 {
     position: relative;
-    width: 72vmin;
-    height: 72vmin;
+    width: 70vmin;
+    height: 70vmin;
     border-radius: 50%;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
 
     background: radial-gradient(
-        circle at 50% 42%,
-        #fffef8 0%,
-        #faf3e2 52%,
-        #efe2bf 82%,
-        #d7c29a 100%
+        circle at 50% 38%,
+        #fffdf5 0%,
+        #f6efd8 58%,
+        #ddd0a8 100%
     );
-    border: 0.55vmin solid #65430a;
+    border: 0.55vmin solid #7b5710;
 
-    box-shadow: inset 0 0 2px rgba(255, 249, 224, 0.95),
-                inset 0 0 12px rgba(92, 58, 0, 0.42),
-                inset 0 0 36px rgba(0, 0, 0, 0.45),
-                0 10px 40px rgba(0, 0, 0, 0.38);
+    box-shadow: inset 0 0 0 0.35vmin #d8bb61,
+                inset 0 0 25px rgba(86, 55, 0, 0.25),
+                0 22px 55px rgba(0, 0, 0, 0.42);
 }
 
-/* ==== OUTER GILT BEZEL STYLES. ==== */
-.bezelRing
+/* ==== ARCHITECTURAL GILT RING STYLES. ==== */
+.giltOuterRing
 {
     position: absolute;
-    inset: 0.9vmin;
+    inset: 1.1vmin;
     border-radius: 50%;
-    border: 0.18vmin solid rgba(88, 58, 0, 0.7);
+    border: 0.18vmin solid rgba(72, 48, 0, 0.75);
 
-    box-shadow: inset 0 0 0 0.12vmin rgba(255, 245, 210, 0.45),
-                inset 0 0 6px rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 0 0 0.12vmin rgba(255, 246, 190, 0.75),
+                0 0 12px rgba(201, 160, 53, 0.25);
 }
 
-/* ==== INNER BRONZE RING STYLES. ==== */
-.innerBezel
-{
-    position: absolute;
-    inset: 5.6vmin;
-    border-radius: 50%;
-    border: 0.14vmin solid rgba(102, 70, 0, 0.5);
-    box-shadow: inset 0 0 8px rgba(255, 234, 170, 0.18),
-                0 0 1px rgba(0, 0, 0, 0.5);
-}
-
-/* ==== CANDLELIGHT REFLECTION STYLES. ==== */
-.shimmerLayer
+/* ==== SUBTLE ENAMEL VARIATION STYLES. ==== */
+.enamelSurface
 {
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.07),
-        rgba(255, 255, 255, 0.015) 34%,
-        rgba(255, 255, 255, 0.05) 100%
+    background: radial-gradient(
+        circle at 32% 20%,
+        rgba(255, 255, 255, 0.25),
+        transparent 42%
     );
-
-    mix-blend-mode: soft-light;
-    opacity: 0.28;
-    z-index: 3;
     pointer-events: none;
 }
 
-/* ==== CENTRAL RADIANCE STYLES. ==== */
-.solarCore
+/* ==== CLASSICAL ROYAL CENTER STYLES. ==== */
+.centerMedallion
 {
     position: absolute;
-    width: 8vmin;
-    height: 8vmin;
+    width: 6.5vmin;
+    height: 6.5vmin;
     border-radius: 50%;
-
     background: radial-gradient(
         circle,
-        rgba(255, 243, 196, 0.45) 0%,
-        rgba(221, 176, 65, 0.18) 55%,
-        transparent 82%
+        #fff6d2 0%,
+        #d8b14d 48%,
+        #765000 100%
     );
-    filter: blur(1px);
-    z-index: 2;
-}
+    border: 0.16vmin solid #4d3400;
 
-/* ==== CENTRAL ROSETTE STYLES. ==== */
-.rosette
-{
-    position: absolute;
-    width: 7vmin;
-    height: 7vmin;
-    border-radius: 50%;
-    background: radial-gradient(
-        circle at 45% 38%,
-        #fffef5 0%,
-        #efd27a 32%,
-        #c7972e 58%,
-        #6b4700 84%,
-        #241400 100%
-    );
-    border: 0.16vmin solid #4a3200;
-
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5),
-                inset 0 0 2px rgba(255, 245, 205, 0.85),
-                0 0 4px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.35),
+                0 2px 8px rgba(0, 0, 0, 0.3);
 
     z-index: 8;
 }
 
-/* ==== GLASS OVERLAY STYLES. ==== */
+/* ==== GLASS REFLECTION STYLES. ==== */
 .glassOverlay
 {
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    background: radial-gradient(
-        circle at 32% 28%,
-        rgba(255, 255, 255, 0.12),
-        rgba(255, 255, 255, 0.02) 38%,
-        transparent 66%
+    background: linear-gradient(
+        125deg,
+        rgba(255, 255, 255, 0.13),
+        transparent 32%
     );
 
-    z-index: 9;
+    z-index: 10;
     pointer-events: none;
 }
 
