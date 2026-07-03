@@ -26,10 +26,21 @@
     overflow: hidden;
 
     background: radial-gradient(
-        circle at 50% 38%,
-        #fffdf5 0%,
-        #f6efd8 58%,
-        #ddd0a8 100%
+        circle at 35% 24%,
+        rgba(255, 255, 255, 0.58),
+        transparent 34%
+    ),
+    radial-gradient(
+        circle at 68% 78%,
+        rgba(214, 192, 132, 0.08),
+        transparent 48%
+    ),
+    linear-gradient(
+        180deg,
+        #fffef9 0%,
+        #faf5e7 42%,
+        #efe5cb 78%,
+        #ded0aa 100%
     );
     border: 0.55vmin solid #7b5710;
 
@@ -42,7 +53,7 @@
 .giltOuterRing
 {
     position: absolute;
-    inset: 1.1vmin;
+    inset: 1.4vmin;
     border-radius: 50%;
     border: 0.18vmin solid rgba(72, 48, 0, 0.75);
 
@@ -93,7 +104,7 @@
     border-radius: 50%;
     background: linear-gradient(
         125deg,
-        rgba(255, 255, 255, 0.13),
+        rgba(255, 255, 255, 0.05),
         transparent 32%
     );
 

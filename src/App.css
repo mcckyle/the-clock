@@ -13,14 +13,20 @@
   justify-content: center;
 
   background: radial-gradient(
-    circle at 50% 24%,
-    rgba(239, 214, 133, 0.10),
-    transparent 38%
+    circle at 50% 18%,
+    rgba(248, 226, 163, 0.08) 0%,
+    transparent 28%
+  ),
+  radial-gradient(
+    circle at 50% 110%,
+    rgba(18, 30, 58, 0.42),
+    transparent 62%
   ),
   linear-gradient(
     180deg,
-    #243b73 0%,
-    #101d3b 46%,
+    #223867 0%,
+    #15294f 36%,
+    #0d1932 68%,
     #050916 100%
   );
   color: #f7edcf;
@@ -34,15 +40,17 @@
   inset: 0;
   z-index: 10; /* Required for frame to properly render. */
 
-  padding: 12px;
+  padding: 18px;
   pointer-events: none;
 
   background: linear-gradient(
     180deg,
-    #f5e8b0 0%,
-    #d5b75b 22%,
-    #9a701e 55%,
-    #604008 100%
+    #fff7d6 0%,
+    #f5d98b 10%,
+    #d6b05b 28%,
+    #aa7723 55%,
+    #7d5511 82%,
+    #4d3107 100%
   );
 
   mask:
@@ -50,8 +58,10 @@
     linear-gradient(#000 0 0);
   mask-composite: exclude;
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.7),
-    inset 0 -2px 8px rgba(35, 20, 0, 0.55);
+    inset 0 2px 0 rgba(255, 255, 255, 0.72),
+    inset 0 -2px 0 rgba(72, 40, 5, 0.45),
+    inset 0 0 18px rgba(255, 236, 180, 0.18),
+    inset 0 0 40px rgba(72, 40, 5, 0.30);
 }
 
 /* App Controlled Royal Vignette Styles. */
@@ -62,9 +72,9 @@
   inset: 0;
   pointer-events: none;
   background: radial-gradient(
-    circle,
-    transparent 50%,
-    rgba(0, 0, 0, 0.35) 100%
+    ellipse,
+    transparent 58%,
+    rgba(0, 0, 0, 0.22) 100%
   );
 }
 
@@ -72,18 +82,18 @@
 .royalLight
 {
   position: absolute;
-  width: 110vmin;
-  height: 110vmin;
+  width: 130vmin;
+  height: 130vmin;
   border-radius: 50%;
 
   background: radial-gradient(
     circle,
-    rgba(255, 235, 160, 0.12),
-    rgba(214, 175, 74, 0.05) 35%,
-    transparent 70%
+    rgba(252, 235, 178, 0.09),
+    rgba(223, 182, 82, 0.04) 36%,
+    transparent 74%
   );
-  filter: blur(4px);
-  opacity: 0.9;
+  filter: blur(10px);
+  opacity: 0.72;
 }
 
 /* App Upper Gallery Atmosphere Styles. */
@@ -94,8 +104,14 @@
   pointer-events: none;
   background: linear-gradient(
     180deg,
-    rgba(255, 245, 220, 0.13),
-    transparent 24%
+    rgba(255, 246, 218, 0.11),
+    rgba(255, 246, 218, 0.04) 14%,
+    transparent 32%
+  ),
+  radial-gradient(
+    ellipse at top,
+    rgba(255, 223, 140, 0.06),
+    transparent 60%
   );
   opacity: 0.8;
 }

@@ -18,12 +18,14 @@ body
 {
     overflow: hidden;
     font-family: "Playfair Display", "Cormorant Garamond", serif;
+    font-feature-settings: "liga", "kern";
+    font-kerning: normal;
 
     background: #050916;
     color: #f7edcf;
 
     line-height: 1.5;
-    letter-spacing: 0.018em;
+    letter-spacing: 0.012em;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
