@@ -10,21 +10,20 @@
 /* ==== Minute Tick Marks Styles. ==== */
 .tick
 {
-    stroke-width: 0.65;
-    opacity: 0.55;
+    stroke-width: 0.58;
+    opacity: 0.48;
 }
 
 /* ==== Golden Hour Tick Marks Styles. ==== */
 .hourTick
 {
-    stroke-width: 2;
+    stroke-width: 1.8;
     opacity: 1;
-    filter: drop-shadow(0 0 0.4px rgba(70, 45, 0, 0.45));
 }
 
 /* ==== Quarter Tick Marks Styles. ==== */
 .quarterTick
 {
-    stroke-width: 2.6;
+    stroke-width: 2.2;
     opacity: 1;
 }

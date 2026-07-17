@@ -26,39 +26,34 @@
     overflow: hidden;
 
     background: radial-gradient(
-        circle at 35% 24%,
-        rgba(255, 255, 255, 0.58),
-        transparent 34%
-    ),
-    radial-gradient(
-        circle at 68% 78%,
-        rgba(214, 192, 132, 0.08),
-        transparent 48%
+        circle at 36% 24%,
+        rgba(255, 255, 255, 0.42),
+        transparent 30%
     ),
     linear-gradient(
         180deg,
-        #fffef9 0%,
-        #faf5e7 42%,
-        #efe5cb 78%,
-        #ded0aa 100%
+        #fffefb 0%,
+        #faf6ea 46%,
+        #efe5cd 82%,
+        #e1d4b2 100%
     );
-    border: 0.55vmin solid #7b5710;
+    border: 0.42vmin solid #7b5710;
 
     box-shadow: inset 0 0 0 0.35vmin #d8bb61,
                 inset 0 0 25px rgba(86, 55, 0, 0.25),
-                0 22px 55px rgba(0, 0, 0, 0.42);
+                0 16px 42px rgba(0, 0, 0, 0.34);
 }
 
 /* ==== ARCHITECTURAL GILT RING STYLES. ==== */
 .giltOuterRing
 {
     position: absolute;
-    inset: 1.4vmin;
+    inset: 1.1vmin;
     border-radius: 50%;
     border: 0.18vmin solid rgba(72, 48, 0, 0.75);
 
     box-shadow: inset 0 0 0 0.12vmin rgba(255, 246, 190, 0.75),
-                0 0 12px rgba(201, 160, 53, 0.25);
+                0 0 6px rgba(201, 160, 53, 0.25);
 }
 
 /* ==== SUBTLE ENAMEL VARIATION STYLES. ==== */
@@ -68,9 +63,14 @@
     inset: 0;
     border-radius: 50%;
     background: radial-gradient(
-        circle at 32% 20%,
-        rgba(255, 255, 255, 0.25),
-        transparent 42%
+        circle at 34% 22%,
+        rgba(255, 255, 255, 0.18),
+        transparent 38%
+    ),
+    radial-gradient(
+        circle at 70% 70%,
+        rgba(214, 196, 150, 0.05),
+        transparent 54%
     );
     pointer-events: none;
 }
@@ -79,8 +79,8 @@
 .centerMedallion
 {
     position: absolute;
-    width: 6.5vmin;
-    height: 6.5vmin;
+    width: 5.8vmin;
+    height: 5.8vmin;
     border-radius: 50%;
     background: radial-gradient(
         circle,
@@ -105,7 +105,7 @@
     background: linear-gradient(
         125deg,
         rgba(255, 255, 255, 0.05),
-        transparent 32%
+        transparent 48%
     );
 
     z-index: 10;
@@ -121,58 +121,3 @@
     z-index: 5;
     pointer-events: none;
 }
-
-/* Highlight For Active Tick Styles. */
-/*.active
-{
-    stroke-width: 7;
-    stroke-opacity: 1;
-    filter: drop-shadow(0 0 12px rgba(255, 220, 70, 0.95));
-    transform-box: fill-box;
-    transform-origin: center;
-
-    animation: pulse 0.45s ease-in-out;
-}*/
-
-/* ==== ANIMATIONS STYLES. ==== */
-/*@keyframes pulse
-{
-    0% { stroke-opacity: 0.3; transform: scale(1); }
-    50% { stroke-opacity: 1; transform: scale(1.18); }
-    100% { stroke-opacity: 0.4; transform: scale(1); }
-}
-
-@keyframes shimmer
-{
-    0% { background-position: -220% 0; }
-    100% { background-position: 220% 0; }
-}*/
-
-/*.clockContainer:hover .clockFace
- {  *
- transform: scale(1.006);
- box-shadow: inset 0 0 3px rgba(255, 248, 220, 0.95),
- inset 0 0 18px rgba(90, 55, 0, 0.5),
- inset 0 0 42px rgba(0, 0, 0, 0.68),
- 0 0 110px rgba(212, 175, 55, 0.34),
- 0 0 170px rgba(212, 175, 55, 0.12);
- }*/
-
-
-
-/* ==== SUNBURST OVERLAY STYLES. ==== */
-/*.sunburstOverlay
- {  *
- position: absolute;
- inset: 0;
- border-radius: 50%;
- background: repeating-conic-gradient(
-     from 0deg,
-rgba(212, 175, 55, 0.12) 0deg 1.6deg,
-transparent 1.6deg 15deg
-);
-
-mix-blend-mode: soft-light;
-opacity: 0.3;
-z-index: 2;
-}*/

@@ -1,6 +1,6 @@
 # ⏰ Analog Clock
 
-A classical **Analog Clock** built with **React**, **Vite**, and styled with **CSS Modules**. This project is hosted on **GitHub Pages** for easy access and demonstrates real-time updates with smooth animations.
+A classical **Analog Clock** built with **React** and **Vite**. This project is hosted on **GitHub Pages** for easy access and demonstrates real-time updates with smooth animations.
 
 ---
 
@@ -39,6 +39,53 @@ npm install
 Start the development server:
 ```bash
 npm run dev
+```
+
+---
+
+## 📁 Project Structure
+
+```
+the-clock/
+├── .github/              # GitHub workflows (CI/CD).
+├── public/               # Static assets (served as-is).
+├── src/                  # Application Source code.
+│   ├── components/       # Reusable React components.
+│   │   ├── AnalogClock/
+│   │   │   ├── AnalogClock.jsx
+│   │   │   └── AnalogClock.module.css
+│   │   │
+│   │   ├── TickMarks/
+│   │   │   ├── TickMarks.jsx
+│   │   │   └── TickMarks.module.css
+│   │   │
+│   │   ├── RomanNumerals/
+│   │   │   ├── RomanNumerals.jsx
+│   │   │   └── RomanNumerals.module.css
+│   │   │
+│   │   ├── ClockHands/
+│   │   │   ├── ClockHands.jsx
+│   │   │   └── ClockHands.module.css
+│   │
+│   ├── utils/
+│   │   ├── useHandAngles.js
+│   │   ├── useClockTime.js
+│   │   ├── clock.js
+│   │   └── formatTime.jsx
+│   │
+│   ├── App.jsx           # Main React application component.
+│   ├── main.jsx          # React DOM entry point.
+│   ├── App.css           # Styles specific to App.jsx.
+│   └── index.css         # Global styles.
+│
+├── .gitignore            # Specifies intentionally untracked files and folders to ignore.
+├── LICENSE               # Open source license for the project.
+├── README.md             # Project overview, instructions, and documentation.
+├── eslint.config.js      # ESLint configuration.
+├── index.html            # HTML entry point.
+├── vite.config.js        # Vite config for build and development.
+├── package.json          # Project metadata, dependencies, and scripts.
+└── package-lock.json     # Exact versions of installed dependencies.
 ```
 
 ---

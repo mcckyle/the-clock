@@ -4,12 +4,12 @@
 .numeral
 {
     font-family: "Cinzel", serif;
-    fill: #3d2a08;
+    fill: #43300f;
     fill-opacity: 0.94;
     stroke: none;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.42vmin;
-    letter-spacing: 0.035em;
+    letter-spacing: 0.02em;
     text-anchor: middle;
     dominant-baseline: middle;
 }
@@ -19,5 +19,5 @@
 {
     fill: #5a3d00;
     font-size: 1.75vmin;
-    font-weight: 700;
+    font-weight: 600;
 }
