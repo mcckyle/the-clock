@@ -19,12 +19,7 @@ export default function useClockTime()
 
         const update = (timestamp) =>
         {
-            if (timestamp - previousFrame >= FRAME_INTERVAL)
-            {
-                previousFrame = timestamp;
-                setTime(getChicagoParts());
-            }
-
+            setTime(getChicagoParts());
             frameId = requestAnimationFrame(update); //~30 FPS.
         };
 

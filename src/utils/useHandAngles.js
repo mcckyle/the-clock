@@ -1,6 +1,6 @@
 //File name: useHandAngles.js
 //Author: Kyle McColgan
-//Date: 15 May 2026
+//Date: 5 August 2026
 //Description: This file contains a utility function for the AnalogClock React project.
 
 import { useEffect, useRef } from "react";
@@ -20,7 +20,7 @@ export default function useHandAngles({ h, m, s })
         root.style.setProperty("--secondDeg", `${s * 6}deg`);
 
         //Round fractional seconds to nearest int for tick highlighting.
-        const secondIndex = Math.floor(s % 60);
+        const secondIndex = Math.round(s) % 60;
 
         // Synchronized tick highlighting.
         const activeTick = document.querySelector(`line[data-second="${secondIndex}"]`);

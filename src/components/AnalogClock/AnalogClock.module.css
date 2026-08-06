@@ -16,8 +16,8 @@
 .clockFace
 {
     position: relative;
-    width: 70vmin;
-    height: 70vmin;
+    width: 64vmin;
+    height: 64vmin;
     border-radius: 50%;
 
     display: flex;
@@ -32,10 +32,10 @@
     ),
     linear-gradient(
         180deg,
-        #fffefb 0%,
-        #faf6ea 46%,
-        #efe5cd 82%,
-        #e1d4b2 100%
+        #fffffd 0%,
+        #fdf9f0 46%,
+        #f7f0e1 82%,
+        #eadfca 100%
     );
     border: 0.42vmin solid #7b5710;
 
@@ -79,8 +79,8 @@
 .centerMedallion
 {
     position: absolute;
-    width: 5.8vmin;
-    height: 5.8vmin;
+    width: 4.6vmin;
+    height: 4.6vmin;
     border-radius: 50%;
     background: radial-gradient(
         circle,

@@ -11,19 +11,19 @@
 .tick
 {
     stroke-width: 0.58;
-    opacity: 0.48;
+    opacity: 0.62;
 }
 
 /* ==== Golden Hour Tick Marks Styles. ==== */
 .hourTick
 {
-    stroke-width: 1.8;
+    stroke-width: 1.55;
     opacity: 1;
 }
 
 /* ==== Quarter Tick Marks Styles. ==== */
 .quarterTick
 {
-    stroke-width: 2.2;
+    stroke-width: 2;
     opacity: 1;
 }

@@ -1,6 +1,6 @@
 //File name: RomanNumerals.jsx
 //Author: Kyle McColgan
-//Date: 16 March 2026
+//Date: 5 August 2026
 //Description: This file contains the numerals component for the analog clock React project.
 
 import styles from "./RomanNumerals.module.css";
@@ -18,7 +18,7 @@ export default function RomanNumerals()
                 const angle = (i * 30 - 90) * (Math.PI / 180);
 
                 const isCardinal = i === 0 || i === 6;
-                const radius = isCardinal ? 60 : 67;
+                const radius = isCardinal ? 60 : 65;
 
                 const x = 100 + radius * Math.cos(angle);
                 const y = 100 + radius * Math.sin(angle);

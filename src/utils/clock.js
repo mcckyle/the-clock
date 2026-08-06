@@ -1,6 +1,6 @@
 //File name: clock.js
 //Author: Kyle McColgan
-//Date: 15 May 2026
+//Date: 5 August 2026
 //Description: This file contains a helper function for the AnalogClock React project.
 
 export const getChicagoParts = () => {
@@ -23,6 +23,5 @@ export const getChicagoParts = () => {
     const minutes = getPart("minute") + seconds / 60;
     const hours = getPart("hour") + minutes / 60;
 
-    //return { h, m, s };
     return { h: hours, m: minutes, s: seconds, };
 }

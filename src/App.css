@@ -65,7 +65,7 @@
   background: radial-gradient(
     ellipse,
     transparent 62%,
-    rgba(0, 0, 0, 0.32) 100%
+    rgba(0, 0, 0, 0.24) 100%
   );
 }
 
@@ -74,11 +74,11 @@
 {
   position: absolute;
   width: 150vmin;
-  height: 150vmin;
+  height: 110vmin;
   border-radius: 50%;
 
   background: radial-gradient(
-    circle,
+    ellipse at 50% 8%,
     rgba(245, 225, 170, 0.14),
     rgba(190, 145, 55, 0.04) 38%,
     transparent 72%
@@ -88,7 +88,7 @@
 }
 
 /* App Subtle Marble / Gallery Depth Styles. */
-.galleryAtmosphere
+.marbleAtmosphere
 {
   position: absolute;
   inset: 0;

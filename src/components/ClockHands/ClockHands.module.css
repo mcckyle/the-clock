@@ -15,8 +15,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 2.8vmin;
-    height: 2.8vmin;
+    width: 2.3vmin;
+    height: 2.3vmin;
     transform: translate(-50%, -50%);
     border-radius: 50%;
 
@@ -76,9 +76,9 @@
 
     background: linear-gradient(
         180deg,
-        #fffce8 0%,
+        #f4e7bf 0%,
         #e4c56c 46%,
-        #8d6215 100%
+        #8d6630 100%
     );
 
     border: 0.08vmin solid #422c00;
