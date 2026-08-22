@@ -19,16 +19,16 @@
     width: 64vmin;
     height: 64vmin;
     border-radius: 50%;
+    overflow: hidden;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-
     background: radial-gradient(
-        circle at 36% 24%,
-        rgba(255, 255, 255, 0.42),
-        transparent 30%
+        ellipse 58% 48% at 34% 20%,
+        rgba(255, 255, 255, 0.22) 0%,
+        rgba(255, 255, 255, 0.06) 34%,
+        transparent 70%
     ),
     linear-gradient(
         180deg,
@@ -37,63 +37,66 @@
         #f7f0e1 82%,
         #eadfca 100%
     );
-    border: 0.42vmin solid #7b5710;
+    border: 0.38vmin solid #76541b;
 
-    box-shadow: inset 0 0 0 0.35vmin #d8bb61,
-                inset 0 0 25px rgba(86, 55, 0, 0.25),
-                0 16px 42px rgba(0, 0, 0, 0.34);
+    box-shadow: inset 0 0 0 0.12vmin rgba(248, 229, 177, 0.82),
+                inset 0 0 0 0.34vmin #b58a3d,
+                inset 0 -0.7vmin 1.8vmin rgba(72, 46, 10, 0.20),
+                0 1.2vmin 3.2vmin rgba(0, 0, 0, 0.34);
 }
 
 /* ==== ARCHITECTURAL GILT RING STYLES. ==== */
 .giltOuterRing
 {
     position: absolute;
-    inset: 1.1vmin;
+    inset: 1.05vmin;
     border-radius: 50%;
-    border: 0.18vmin solid rgba(72, 48, 0, 0.75);
+    border: 0.13vmin solid rgba(66, 43, 11, 0.82);
 
-    box-shadow: inset 0 0 0 0.12vmin rgba(255, 246, 190, 0.75),
-                0 0 6px rgba(201, 160, 53, 0.25);
+    box-shadow: inset 0 0 0 0.08vmin rgba(250, 232, 184, 0.86),
+                inset 0 0 0 0.22vmin rgba(164, 120, 48, 0.48),
+                inset 0 -0.16vmin 0 rgba(65, 41, 8, 0.48);
 }
 
-/* ==== SUBTLE ENAMEL VARIATION STYLES. ==== */
+/* ==== FIRED-ENAMEL SURFACE VARIATION STYLES. ==== */
 .enamelSurface
 {
     position: absolute;
     inset: 0;
     border-radius: 50%;
+    pointer-events: none;
     background: radial-gradient(
-        circle at 34% 22%,
-        rgba(255, 255, 255, 0.18),
-        transparent 38%
+        ellipse 46% 40% at 34% 22%,
+        rgba(255, 255, 255, 0.055),
+        transparent 72%
     ),
     radial-gradient(
-        circle at 70% 70%,
-        rgba(214, 196, 150, 0.05),
-        transparent 54%
+        ellipse 52% 46% at 70% 74%,
+        rgba(188, 158, 100, 0.025),
+        transparent 72%
     );
-    pointer-events: none;
 }
 
 /* ==== CLASSICAL ROYAL CENTER STYLES. ==== */
 .centerMedallion
 {
     position: absolute;
-    width: 4.6vmin;
-    height: 4.6vmin;
+    width: 4.25vmin;
+    height: 4.25vmin;
     border-radius: 50%;
-    background: radial-gradient(
-        circle,
-        #fff6d2 0%,
-        #d8b14d 48%,
-        #765000 100%
-    );
-    border: 0.16vmin solid #4d3400;
-
-    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.35),
-                0 2px 8px rgba(0, 0, 0, 0.3);
-
     z-index: 8;
+    background: radial-gradient(
+        circle at 38% 32%,
+        #f5e7bf 0%,
+        #d2ae61 34%,
+        #a4772f 63%,
+        #5b3d10 100%
+    );
+    border: 0.13vmin solid #5b3d10;
+
+    box-shadow: inset 0 0 0.08vmin rgba(255, 241, 201, 0.72),
+                inset 0 -0.2vmin 0.5vmin rgba(45, 27, 4, 0.48),
+                0 0.2vmin 0.55vmin rgba(0, 0, 0, 0.25);
 }
 
 /* ==== GLASS REFLECTION STYLES. ==== */
@@ -102,14 +105,18 @@
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    background: linear-gradient(
-        125deg,
-        rgba(255, 255, 255, 0.05),
-        transparent 48%
-    );
-
     z-index: 10;
     pointer-events: none;
+    background: radial-gradient(
+        ellipse 46% 24% at 29% 13%,
+        rgba(255, 255, 255, 0.065),
+        transparent 72%
+    ),
+    linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.018) 0%,
+        transparent 34%
+    );
 }
 
 /* ==== SVG TICKS STYLES. ==== */

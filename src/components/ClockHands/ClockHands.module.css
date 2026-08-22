@@ -15,22 +15,23 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 2.3vmin;
-    height: 2.3vmin;
+    width: 2.25vmin;
+    height: 2.25vmin;
     transform: translate(-50%, -50%);
     border-radius: 50%;
 
-    background: radial-gradient(circle at 40% 36%,
-        #fffce8 0%,
-        #efd27a 34%,
-        #c79c35 62%,
-        #4b3200 100%
+    background: radial-gradient(
+        circle at 37% 32%,
+        #f3e5bd 0%,
+        #d1aa5c 34%,
+        #9b712d 66%,
+        #573a0e 100%
     );
 
-    border: 0.12vmin solid #6e4c00;
-    box-shadow: inset 0 0 5px rgba(40, 20, 0, 0.42),
-                inset 0 0 1px rgba(255, 245, 205, 0.8),
-                0 0 10px rgba(214, 170, 54, 0.22);
+    border: 0.11vmin solid #5f4215;
+    box-shadow: inset 0 0 0.07vmin rgba(255, 239, 198, 0.72),
+                inset 0 -0.2vmin 0.45vmin rgba(40, 24, 5, 0.45),
+                0 0.18vmin 0.5vmin rgba(0, 0, 0, 0.25);
 }
 
 /* Pivot Wrapper For Each Hand Style. */
@@ -52,56 +53,59 @@
 /* Hour Hand Styles. */
 .hourHand
 {
-    width: 1.05vmin;
-    height: 18vmin;
+    width: 0.96vmin;
+    height: 17.5vmin;
 
     background: linear-gradient(
-        180deg,
-        #fff6d9 0%,
-        #d7b35d 44%,
-        #8b6112 100%
+        90deg,
+        #74521f 0%,
+        #c49a4d 24%,
+        #f0dfb5 48%,
+        #b1843b 74%,
+        #6b4918 100%
     );
 
-    border: 0.08vmin solid #3f2a00;
-    clip-path: polygon(50% 0, 58% 14%, 56% 100%, 44% 100%, 42% 14%);
-    box-shadow: inset 0 0 1px rgba(255, 235, 170, 0.5);
+    border: 0.065vmin solid #573b12;
+    clip-path: polygon(50% 0, 59% 12%, 57% 18%, 53% 100%, 47% 100%, 43% 18%, 41% 12%);
+    box-shadow: inset 0 0 0.08vmin rgba(255, 241, 200, 0.55);
     transform: rotate(var(--hourDeg, 0deg));
 }
 
 /* Minute Hand Styles. */
 .minuteHand
 {
-    width: 0.68vmin;
-    height: 27vmin;
+    width: 0.61vmin;
+    height: 26.5vmin;
 
     background: linear-gradient(
-        180deg,
-        #f4e7bf 0%,
-        #e4c56c 46%,
-        #8d6630 100%
+        90deg,
+        #6d4b19 0%,
+        #b98b3e 25%,
+        #eeddb2 49%,
+        #a87931 75%,
+        #624115 100%
     );
 
-    border: 0.08vmin solid #422c00;
-    clip-path: polygon(50% 0, 60% 12%, 58% 100%, 42% 100%, 40% 12%);
-    box-shadow: inset 0 0 1px rgba(255, 240, 180, 0.42);
+    border: 0.06vmin solid #513610;
+    clip-path: polygon(50% 0, 58% 11%, 55% 17%, 52% 100%, 48% 100%, 45% 17%, 42% 11%);
+    box-shadow: inset 0 0 0.08vmin rgba(255, 242, 204, 0.48);
     transform: rotate(var(--minuteDeg, 0deg));
 }
 
 /* Second Hand Styles. */
 .secondHand
 {
-    width: 0.12vmin;
-    height: 30vmin;
-    border-radius: 999px;
-    opacity: 0.95;
+    width: 0.10vmin;
+    height: 29vmin;
+    opacity: 0.88;
 
     background: linear-gradient(
-        to bottom,
-        #d6b24b 0%,
-        #8d6212 100%
+        180deg,
+        #b88b3d 0%,
+        #79531e 100%
     );
 
-    clip-path: polygon(50% 0, 68% 18%, 68% 100%, 32% 100%, 32% 18%);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.35);
+    clip-path: polygon(50% 0, 62% 14%, 57% 84%, 50% 100%, 43% 84%, 38% 14%);
+    box-shadow: 0 0 0.08vmin rgba(35, 22, 5, 0.42);
     transform: rotate(var(--secondDeg, 0deg));
 }

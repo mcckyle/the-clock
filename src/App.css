@@ -13,15 +13,17 @@
   justify-content: center;
 
   background: radial-gradient(
-    ellipse at 50% 15%,
-    rgba(238, 218, 166, 0.12),
-    transparent 38%
+    ellipse 72% 54% at 50% 7%,
+    rgba(237, 218, 171, 0.105) 0%,
+    rgba(198, 161, 86, 0.035) 42%,
+    transparent 76%
   ),
   linear-gradient(
     180deg,
-    #243d69 0%,
-    #162b62 34%,
-    #0c1832 70%,
+    #30476f 0%,
+    #223b69 31%,
+    #17284c 64%,
+    #0d1731 84%,
     #080b12 100%
   );
   color: #f2e5c4;
@@ -40,10 +42,11 @@
 
   background: linear-gradient(
     180deg,
-    #f4df9c 0%,
-    #c49b42 20%,
-    #8b6421 55%,
-    #4c320d 100%
+    #f1dfad 0%,
+    #d1ae62 14%,
+    #a27631 42%,
+    #7c5420 68%,
+    #4a3010 100%
   );
 
   mask:
@@ -51,8 +54,8 @@
     linear-gradient(#000 0 0);
   mask-composite: exclude;
   box-shadow:
-    inset 0 2px 0 rgba(255, 255, 255, 0.65),
-    inset 0 -3px 8px rgba(0, 0, 0, 0.45);
+    inset 0 1px 0 rgba(255, 248, 220, 0.58),
+    inset 0 -3px 9px rgba(28, 16, 2, 0.52);
 }
 
 /* App Controlled Royal Vignette Styles. */
@@ -63,9 +66,10 @@
   inset: 0;
   pointer-events: none;
   background: radial-gradient(
-    ellipse,
-    transparent 62%,
-    rgba(0, 0, 0, 0.24) 100%
+    ellipse 86% 82% at 50% 44%,
+    transparent 58%,
+    rgba(2, 5, 12, 0.11) 79%,
+    rgba(2, 5, 12, 0.22) 100%
   );
 }
 
@@ -73,21 +77,25 @@
 .galleryLight
 {
   position: absolute;
+  top: -16vmin;
+  left: 50%;
   width: 150vmin;
   height: 110vmin;
+  transform: translateX(-50%);
   border-radius: 50%;
+  pointer-events: none;
 
   background: radial-gradient(
     ellipse at 50% 8%,
-    rgba(245, 225, 170, 0.14),
-    rgba(190, 145, 55, 0.04) 38%,
+    rgba(247, 229, 181, 0.16) 0%,
+    rgba(213, 176, 101, 0.055) 34%,
     transparent 72%
   );
   filter: blur(19px);
-  opacity: 0.80;
+  opacity: 0.78;
 }
 
-/* App Subtle Marble / Gallery Depth Styles. */
+/* App Subtle Gallery Veil Styles. */
 .marbleAtmosphere
 {
   position: absolute;
@@ -95,8 +103,9 @@
   pointer-events: none;
   background: linear-gradient(
     180deg,
-    rgba(255, 248, 225, 0.08),
-    transparent 28%
+    rgba(255, 249, 228, 0.055) 0%,
+    rgba(255, 249, 228, 0.018) 20%,
+    transparent 42%
   );
-  opacity: 0.65;
+  opacity: 0.72;
 }
