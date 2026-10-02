@@ -1,26 +1,36 @@
 [![Deploy to GitHub Pages](https://github.com/mcckyle/the-clock/actions/workflows/deploy.yml/badge.svg)](https://github.com/mcckyle/the-clock/actions/workflows/deploy.yml)
 [![License](https://img.shields.io/badge/License-MIT-blue)](./LICENSE)
-# ⏰ Analog Clock
+
+# Horologium Regale
 
 A classical **Analog Clock** built with **React** and **Vite**. This project is hosted on **GitHub Pages** for easy access and demonstrates real-time updates with smooth animations.
 
----
-
-## 🚀 Features
-- Real-time clock synchronized with your system time.
-- Modular design with dedicated, single-responsibility React components.
-- Classic **Roman numerals** and **animated hands** (hour, minute, second).
-- Smooth **tick highlight effect** for the current second.
-- Fully responsive layout with a **dark-themed design**.
-- Built using **React + Vite** for speed and simplicity.
+[View the live clock](https://mcckyle.github.io/the-clock/)
 
 ---
 
-## 🛠️ Tech Stack
-- **React** – UI library
-- **Vite** – Fast bundler & dev environment
-- **CSS Modules** – Scoped styling
-- **GitHub Pages** – Deployment
+## Features
+- **Real-time Central Time** - The clock follows `America/Chicago`, including daylight-saving transitions.
+- **Continuous hand movement** - Hour, minute, and second hands track fractional time for smooth motion rather than stepping between whole seconds.
+- **Classical Roman dial**  - Roman numerals and graduated minute divisions establish a formal horological composition.
+- **Responsive presentation** - The clock scales with the viewport while preserving its circular proportions and visual hierarchy.
+- **Component-based architecture** - The dial, numerals, divisions, and hands are separated into focused React components.
+- **CSS-driven craftsmanship** - CSS modules provide scoped styling for the clock's individual visual systems.
+- **Accessible presentation** - The clock exposes a concise accessible label while decorative SVG elements remain hidden from assistive technology.
+- **GitHub Pages deployment** - The application is built for a lightweight static deployment with Vite.
+
+---
+
+## Technology
+
+| Technology | Purpose |
+| --- | --- |
+| [**React**](https://react.dev/) | Component-based application architecture |
+| [**Vite**](https://vite.dev/) | Development server and production build tooling |
+| **CSS Modules** | Scoped component styling |
+| **SVG** | Precision dial divisions and Roman numerals |
+| **JavaScript** | Time calculations and hand positioning |
+| **GitHub Pages** | Static hosting and deployment |
 
 ---
 
@@ -45,7 +55,7 @@ npm run dev
 
 ---
 
-## 📁 Project Structure
+## Architecture
 
 ```
 the-clock/
@@ -72,8 +82,7 @@ the-clock/
 │   ├── utils/
 │   │   ├── useHandAngles.js
 │   │   ├── useClockTime.js
-│   │   ├── clock.js
-│   │   └── formatTime.jsx
+│   │   └── clock.js
 │   │
 │   ├── App.jsx           # Main React application component.
 │   ├── main.jsx          # React DOM entry point.
@@ -94,7 +103,9 @@ the-clock/
 
 ## Deployment
 
-This project is deployed via **GitHub Pages**. You can view it live here: https://mcckyle.github.io/the-clock/
+This project is deployed automatically to GitHub Pages through the repository's GitHub Actions workflow.
+
+You can view it live here: https://mcckyle.github.io/the-clock/
 
 ---
 
@@ -106,12 +117,12 @@ Contributions are welcome! Feel free to fork the repo and submit some pull reque
 
 ## License
 
-This project is open-source and available under the **MIT License**.
+This project is open source and available under the [**MIT License**](./LICENSE).
 
 ---
 
-## Contact
+## Author
 
-For questions or feedback, reach out via GitHub.
+Kyle McColgan
 
----
+[GitHub](https://github.com/mcckyle)
