@@ -4,20 +4,22 @@
 .numeral
 {
     font-family: "Cinzel", serif;
-    fill: #33240e;
-    fill-opacity: 0.96;
+    fill: #35250f;
+    fill-opacity: 0.97;
     stroke: none;
     font-weight: 600;
-    font-size: 1.42vmin;
-    letter-spacing: 0.008em;
+    font-size: 1.48vmin;
+    letter-spacing: 0.006em;
     text-anchor: middle;
     dominant-baseline: middle;
+    paint-order: fill;
+    text-rendering: geometricPrecision;
 }
 
 /* Highlight Cardinal Numbers Styles. */
-.cardinal
+/*.cardinal
 {
     fill: #3d290b;
     font-size: 1.72vmin;
     font-weight: 700;
-}
+}*/

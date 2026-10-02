@@ -1,6 +1,6 @@
 //File name: useClockTime.js
 //Author: Kyle McColgan
-//Date: 15 May 2026
+//Date: 2 October 2026
 //Description: This file contains a utility function for the AnalogClock React project.
 
 import { useState, useEffect } from "react";
@@ -19,7 +19,12 @@ export default function useClockTime()
 
         const update = (timestamp) =>
         {
-            setTime(getChicagoParts());
+            if (timestamp - previousFrame >= FRAME_INTERVAL)
+            {
+                previousFrame = timestamp;
+                setTime(getChicagoParts());
+            }
+
             frameId = requestAnimationFrame(update); //~30 FPS.
         };
 

@@ -1,7 +1,7 @@
 //File name: ClockHands.jsx
 //Author: Kyle McColgan
-//Date: 1 October 2025
-//Description: This file contains the clock hands component for the React analog clock project.
+//Date: 2 October 2026
+//Description: This file contains the clock hands component for the Analog Clock React project.
 
 import styles from './ClockHands.module.css';
 
@@ -10,13 +10,13 @@ export default function ClockHands()
     return (
         <div className={styles.hands}>
             <div className={styles.handWrapper}>
-                <div className = {styles.hourHand} />
+                <div className={styles.hourHand} />
             </div>
             <div className={styles.handWrapper}>
-                <div className = {styles.minuteHand} />
+                <div className={styles.minuteHand} />
             </div>
             <div className={styles.handWrapper}>
-                <div className = {styles.secondHand} />
+                <div className={styles.secondHand} />
             </div>
         </div>
     );

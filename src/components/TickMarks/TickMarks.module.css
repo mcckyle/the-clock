@@ -1,32 +1,35 @@
 /* Filename: src/components/TickMarks/TickMarks.module.css */
 
-/* ==== Tick Ring Rotation Styles. ==== */
+/* ==== TICKMARKS TICK RING ORIENTATION STYLES. ==== */
 .tickRing
 {
     transform: rotate(-90deg);
     transform-origin: center;
 }
 
-/* ==== Minute Tick Marks Styles. ==== */
+/* ==== TICKMARKS MINUTE DIVISIONS STYLES. ==== */
 .tick
 {
-    stroke: #9b793b;
-    stroke-width: 0.58;
-    opacity: 0.68;
+    stroke: #b69a61;
+    stroke-width: 0.42;
+    opacity: 0.58;
+    stroke-linecap: round;
 }
 
-/* ==== Golden Hour Tick Marks Styles. ==== */
+/* ==== TICKMARKS HOUR DIVISIONS STYLES. ==== */
 .hourTick
 {
-    stroke: #7f5d25;
-    stroke-width: 1.5;
-    opacity: 0.96;
+    stroke: #896729;
+    stroke-width: 1.15;
+    opacity: 0.90;
+    stroke-linecap: butt;
 }
 
-/* ==== Quarter Tick Marks Styles. ==== */
+/* ==== TICKMARKS QUARTER DIVISIONS STYLES. ==== */
 .quarterTick
 {
-    stroke: #6c4b19;
-    stroke-width: 1.9;
-    opacity: 1;
+    stroke: #654715;
+    stroke-width: 1.55;
+    opacity: 0.98;
+    stroke-linecap: butt;
 }

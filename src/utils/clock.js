@@ -1,13 +1,13 @@
 //File name: clock.js
 //Author: Kyle McColgan
-//Date: 5 August 2026
+//Date: 2 October 2026
 //Description: This file contains a helper function for the AnalogClock React project.
 
 export const getChicagoParts = () => {
 
     const now = new Date();
 
-    //Get the current time in CST (Chicago Time).
+    //Get the current time in Chicago Time.
     const formatter = new Intl.DateTimeFormat("en-US", {
         timeZone: "America/Chicago",
         hour: "2-digit",
