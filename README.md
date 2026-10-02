@@ -1,3 +1,5 @@
+[![Deploy to GitHub Pages](https://github.com/mcckyle/the-clock/actions/workflows/deploy.yml/badge.svg)](https://github.com/mcckyle/the-clock/actions/workflows/deploy.yml)
+[![License](https://img.shields.io/badge/License-MIT-blue)](./LICENSE)
 # ⏰ Analog Clock
 
 A classical **Analog Clock** built with **React** and **Vite**. This project is hosted on **GitHub Pages** for easy access and demonstrates real-time updates with smooth animations.

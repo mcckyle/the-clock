@@ -5,76 +5,70 @@
   isolation: isolate;
   overflow: hidden;
 
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  display: grid;
+  place-items: center;
   background: radial-gradient(
-    ellipse 72% 54% at 50% 7%,
-    rgba(237, 218, 171, 0.105) 0%,
-    rgba(198, 161, 86, 0.035) 42%,
-    transparent 76%
+    ellipse 58% 50% at 50% 43%,
+    rgba(239, 222, 181, 0.085) 0%,
+    rgba(209, 174, 99, 0.035) 35%,
+    transparent 72%
   ),
   linear-gradient(
     180deg,
-    #30476f 0%,
-    #223b69 31%,
-    #17284c 64%,
-    #0d1731 84%,
-    #080b12 100%
+    #344b70 0%,
+    #2b4268 24%,
+    #1e355b 52%,
+    #152849 76%,
+    #0b1427 100%
   );
   color: #f2e5c4;
 }
 
-/* App Classical Architectural Gilt Border Styles. */
+/* App Restrained Classical Gilt Frame Styles. */
 .app::before
 {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: 10px;
   z-index: 5;
-
-  padding: 18px;
   pointer-events: none;
-
-  background: linear-gradient(
-    180deg,
-    #f1dfad 0%,
-    #d1ae62 14%,
-    #a27631 42%,
-    #7c5420 68%,
-    #4a3010 100%
-  );
-
-  mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  mask-composite: exclude;
+  border: 1px solid rgba(196, 153, 72, 0.82);
   box-shadow:
-    inset 0 1px 0 rgba(255, 248, 220, 0.58),
-    inset 0 -3px 9px rgba(28, 16, 2, 0.52);
+    inset 0 0 0 1px rgba(246, 226, 170, 0.36),
+    inset 0 0 0 4px rgba(94, 61, 20, 0.34),
+    inset 0 0 0 5px rgba(221, 181, 99, 0.34),
+    0 0 0 1px rgba(52, 32, 8, 0.70);
 }
 
-/* App Controlled Royal Vignette Styles. */
+/* App Subtle Architectural Depth Styles. */
 .app::after
 {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: -1;
   pointer-events: none;
-  background: radial-gradient(
-    ellipse 86% 82% at 50% 44%,
-    transparent 58%,
-    rgba(2, 5, 12, 0.11) 79%,
-    rgba(2, 5, 12, 0.22) 100%
+  background: linear-gradient(
+    180deg,
+    rgba(255, 245, 216, 0.055) 0%,
+    transparent 18%,
+    transparent 76%,
+    rgba(3, 7, 15, 0.16) 100%
+  ),
+  radial-gradient(
+    ellipse 74% 78% at 50% 48%,
+    transparent 54%,
+    rgba(3, 7, 15, 0.075) 78%,
+    rgba(3, 7, 15, 0.18) 100%
   );
 }
 
 /* App Central Illumination Styles. */
-.galleryLight
+/*.galleryLight
 {
   position: absolute;
   top: -16vmin;
@@ -93,10 +87,10 @@
   );
   filter: blur(19px);
   opacity: 0.78;
-}
+}*/
 
 /* App Subtle Gallery Veil Styles. */
-.marbleAtmosphere
+/*.marbleAtmosphere
 {
   position: absolute;
   inset: 0;
@@ -108,4 +102,4 @@
     transparent 42%
   );
   opacity: 0.72;
-}
+}*/
