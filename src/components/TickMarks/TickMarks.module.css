@@ -1,6 +1,6 @@
 /* Filename: src/components/TickMarks/TickMarks.module.css */
 
-/* ==== TICKMARKS TICK RING ORIENTATION STYLES. ==== */
+/* ==== TICKMARKS DIAL RING ORIENTATION STYLES. ==== */
 .tickRing
 {
     transform: rotate(-90deg);
@@ -12,8 +12,8 @@
 {
     stroke: #b69a61;
     stroke-width: 0.42;
-    opacity: 0.58;
     stroke-linecap: round;
+    opacity: 0.55;
 }
 
 /* ==== TICKMARKS HOUR DIVISIONS STYLES. ==== */
@@ -21,8 +21,8 @@
 {
     stroke: #896729;
     stroke-width: 1.15;
-    opacity: 0.90;
     stroke-linecap: butt;
+    opacity: 0.90;
 }
 
 /* ==== TICKMARKS QUARTER DIVISIONS STYLES. ==== */
@@ -30,6 +30,6 @@
 {
     stroke: #654715;
     stroke-width: 1.55;
-    opacity: 0.98;
     stroke-linecap: butt;
+    opacity: 0.98;
 }

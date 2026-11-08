@@ -9,32 +9,6 @@
     pointer-events: none;
 }
 
-/* CLOCKHANDS CENTRAL PIVOT STYLES. */
-.hands::after
-{
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 2.05vmin;
-    height: 2.05vmin;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-
-    background: radial-gradient(
-        circle at 36% 30%,
-        #f6e8c2 0%,
-        #d5b064 31%,
-        #a4772f 61%,
-        #604113 100%
-    );
-
-    border: 0.10vmin solid #5c3f12;
-    box-shadow: inset 0 0 0.05vmin rgba(255, 241, 202, 0.78),
-                inset 0 -0.18vmin 0.40vmin rgba(40, 24, 4, 0.44),
-                0 0.14vmin 0.38vmin rgba(0, 0, 0, 0.22);
-}
-
 /* Pivot Wrapper For Each Hand Style. */
 .handWrapper
 {
@@ -46,10 +20,9 @@
      *    5 0% 50% = middle of the element itself.
      *    translate(-50%, -100%) moves the rectangle so its base
      *    sits on the centre point and it points UP by default. */
-    transform: translate(-50%, -100%) rotate(0deg);
+    transform: translate(-50%, -100%);
     transform-origin: 50% 100%;
 }
-.hands div { transform-origin: 50% 100%; }
 
 /* Hour Hand Styles. */
 .hourHand
@@ -69,6 +42,7 @@
     border: 0.055vmin solid #563910;
     clip-path: polygon(50% 0, 62% 8%, 59% 17%, 54% 30%, 53% 100%, 47% 100%, 46% 30%, 41% 17%, 38% 8%);
     box-shadow: inset 0 0 0.06vmin rgba(255, 239, 195, 0.54);
+    transform-origin: 50% 100%;
     transform: rotate(var(--hourDeg, 0deg));
 }
 
@@ -90,6 +64,7 @@
     border: 0.05vmin solid #4f330d;
     clip-path: polygon(50% 0, 59% 8%, 56% 15%, 52% 25%, 52% 100%, 48% 100%, 48% 25%, 44% 15%, 41% 8%);
     box-shadow: inset 0 0 0.06vmin rgba(255, 239, 195, 0.46);
+    transform-origin: 50% 100%;
     transform: rotate(var(--minuteDeg, 0deg));
 }
 
@@ -107,5 +82,6 @@
     );
 
     clip-path: polygon(50% 0, 60% 11%, 56% 82%, 50% 100%, 44% 82%, 40% 11%);
+    transform-origin: 50% 100%;
     transform: rotate(var(--secondDeg, 0deg));
 }

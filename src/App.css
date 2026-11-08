@@ -12,23 +12,23 @@
   display: grid;
   place-items: center;
   background: radial-gradient(
-    ellipse 58% 50% at 50% 43%,
-    rgba(239, 222, 181, 0.085) 0%,
-    rgba(209, 174, 99, 0.035) 35%,
-    transparent 72%
+    ellipse 58% 52% at 50% 43%,
+    rgba(229, 201, 145, 0.075) 0%,
+    rgba(205, 170, 104, 0.025) 40%,
+    transparent 74%
   ),
   linear-gradient(
     180deg,
     #344b70 0%,
-    #2b4268 24%,
-    #1e355b 52%,
-    #152849 76%,
+    #2b4268 26%,
+    #20375d 54%,
+    #152849 80%,
     #0b1427 100%
   );
-  color: #f2e5c4;
+  color: #f4ead2;
 }
 
-/* App Restrained Classical Gilt Frame Styles. */
+/* ==== CLASSICAL GILT ARCHITECTURAL FRAME STYLES. ==== */
 .app::before
 {
   content: "";
@@ -36,15 +36,15 @@
   inset: 10px;
   z-index: 5;
   pointer-events: none;
-  border: 1px solid rgba(196, 153, 72, 0.82);
+  border: 1px solid rgba(198, 158, 83, 0.84);
   box-shadow:
-    inset 0 0 0 1px rgba(246, 226, 170, 0.36),
-    inset 0 0 0 4px rgba(94, 61, 20, 0.34),
-    inset 0 0 0 5px rgba(221, 181, 99, 0.34),
-    0 0 0 1px rgba(52, 32, 8, 0.70);
+    inset 0 0 0 1px rgba(246, 226, 178, 0.38),
+    inset 0 0 0 4px rgba(91, 62, 25, 0.3),
+    inset 0 0 0 5px rgba(219, 181, 106, 0.32),
+    0 0 0 1px rgba(43, 28, 12, 0.72);
 }
 
-/* App Subtle Architectural Depth Styles. */
+/* ==== APP SUBTLE ARCHITECTURAL LIGHTING STYLES. ==== */
 .app::after
 {
   content: "";
@@ -54,16 +54,16 @@
   pointer-events: none;
   background: linear-gradient(
     180deg,
-    rgba(255, 245, 216, 0.055) 0%,
-    transparent 18%,
+    rgba(255, 244, 218, 0.045) 0%,
+    transparent 20%,
     transparent 76%,
-    rgba(3, 7, 15, 0.16) 100%
+    rgba(3, 7, 15, 0.17) 100%
   ),
   radial-gradient(
-    ellipse 74% 78% at 50% 48%,
+    ellipse 76% 80% at 50% 48%,
     transparent 54%,
-    rgba(3, 7, 15, 0.075) 78%,
-    rgba(3, 7, 15, 0.18) 100%
+    rgba(3, 7, 15, 0.07) 80%,
+    rgba(3, 7, 15, 0.17) 100%
   );
 }
 

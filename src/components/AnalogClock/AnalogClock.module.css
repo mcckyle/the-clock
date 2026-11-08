@@ -4,19 +4,21 @@
 .clockContainer
 {
     position: relative;
+    z-index: 1;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
 
     display: grid;
     place-items: center;
 }
 
-/* ==== ROYAL ENAMEL DIAL STYLES. ==== */
+/* ==== ROYAL ENAMEL CLOCK FACE STYLES. ==== */
 .clockFace
 {
     position: relative;
-    width: 64vmin;
-    height: 64vmin;
+    width: min(64vmin, 76vw);
+    aspect-ratio: 1;
     border-radius: 50%;
     overflow: hidden;
 
@@ -24,39 +26,40 @@
     place-items: center;
     background: radial-gradient(
         ellipse 62% 58% at 34% 24%,
-        rgba(255, 255, 255, 0.42) 0%,
-        rgba(255, 255, 255, 0.12) 30%,
-        transparent 68%
+        rgba(255, 255, 255, 0.44) 0%,
+        rgba(255, 255, 255, 0.13) 32%,
+        transparent 70%
     ),
     linear-gradient(
         180deg,
         #fffef9 0%,
-        #fbf7ec 45%,
-        #f6efdf 78%,
-        #ebe0c9 100%
+        #fbf7ed 46%,
+        #f5eedf 80%,
+        #eaddc3 100%
     );
     border: 0.30vmin solid #76541b;
 
-    box-shadow: inset 0 0 0 0.10vmin rgba(255, 239, 191, 0.92),
+    box-shadow: inset 0 0 0 0.10vmin rgba(255, 239, 191, 0.94),
                 inset 0 0 0 0.24vmin #b68a3d,
-                inset 0 0 0 0.48vmin rgba(86, 57, 15, 0.30),
-                inset 0 -0.65vmin 1.5vmin rgba(68, 43, 10, 0.16),
-                0 1.1vmin 2.8vmin rgba(0, 0, 0, 0.30);
+                inset 0 0 0 0.48vmin rgba(86, 57, 15, 0.28),
+                inset 0 -0.65vmin 1.5vmin rgba(68, 43, 10, 0.15),
+                0 0.2vmin 0.35vmin rgba(255, 224, 164, 0.2),
+                0 1.1vmin 2.8vmin rgba(0, 0, 0, 0.3);
 }
 
-/* ==== ARCHITECTURAL GILT OUTER RING STYLES. ==== */
+/* ==== INNER GILT BEZEL STYLES. ==== */
 .giltOuterRing
 {
     position: absolute;
     inset: 0.95vmin;
     border-radius: 50%;
-    border: 0.11vmin solid #6e4b16;
+    border: 0.11vmin solid #79571d;
     box-shadow: inset 0 0 0 0.07vmin rgba(255, 237, 184, 0.90),
-                inset 0 0 0 0.20vmin rgba(171, 126, 51, 0.56),
-                inset 0 -0.14vmin 0 rgba(69, 43, 9, 0.44);
+                inset 0 0 0 0.20vmin rgba(171, 126, 51, 0.54),
+                inset 0 -0.14vmin 0 rgba(69, 43, 9, 0.42);
 }
 
-/* ==== ENAMEL SURFACE STYLES. ==== */
+/* ==== POLISHED ENAMEL SURFACE STYLES. ==== */
 .enamelSurface
 {
     position: absolute;
@@ -65,7 +68,7 @@
     pointer-events: none;
     background: radial-gradient(
         ellipse 50% 43% at 33% 21%,
-        rgba(255, 255, 255, 0.12) 0%,
+        rgba(255, 255, 255, 0.14) 0%,
         transparent 72%
     ),
     radial-gradient(
@@ -91,10 +94,11 @@
 .centerMedallion
 {
     position: absolute;
-    width: 3.55vmin;
-    height: 3.55vmin;
-    border-radius: 50%;
     z-index: 8;
+    width: 3.55vmin;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    pointer-events: none;
     background: radial-gradient(
         circle at 36% 30%,
         #f7e9c2 0%,
@@ -108,10 +112,11 @@
                 0 0.16vmin 0.42vmin rgba(0, 0, 0, 0.23);
 }
 
-/* ==== SVG TICKS STYLES. ==== */
+/* ==== SVG DIAL MARKINGS STYLES. ==== */
 .ticks
 {
     position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     z-index: 5;
